@@ -20,7 +20,7 @@ const components = {
       id: 'components-buttons',
       title: 'Button',
       type: 'item',
-      url: '/components/components-button',
+      url: '/components-button',
       icon: icons.IconTypography,
       breadcrumbs: false
     },
@@ -28,7 +28,7 @@ const components = {
       id: 'components-radio',
       title: 'Radio',
       type: 'item',
-      url: '/components/components-radio',
+      url: '/components-radio',
       icon: icons.IconPalette,
       breadcrumbs: false
     },
@@ -36,7 +36,7 @@ const components = {
       id: 'components-checkbox',
       title: 'Checkbox',
       type: 'item',
-      url: '/components/components-checkbox',
+      url: '/components-checkbox',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
@@ -44,7 +44,7 @@ const components = {
       id: 'components-menu',
       title: 'Menu',
       type: 'item',
-      url: '/components/components-menu',
+      url: '/components-menu',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
@@ -52,7 +52,7 @@ const components = {
       id: 'components-circular-progress',
       title: 'Circular Progress',
       type: 'item',
-      url: '/components/components-circular-progress',
+      url: '/components-circular-progress',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
@@ -60,7 +60,7 @@ const components = {
       id: 'components-linear-progress',
       title: 'Linear Progress',
       type: 'item',
-      url: '/components/components-linear-progress',
+      url: '/components-linear-progress',
       icon: icons.IconShadow,
       breadcrumbs: false
     }

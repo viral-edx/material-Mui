@@ -174,11 +174,11 @@ const SearchSection = () => {
           }
           endAdornment={
             <InputAdornment position="end">
-              <ButtonBase sx={{ borderRadius: '12px' }}>
+              {/* <ButtonBase sx={{ borderRadius: '12px' }}>
                 <HeaderAvatarStyle variant="rounded">
                   <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
                 </HeaderAvatarStyle>
-              </ButtonBase>
+              </ButtonBase> */}
             </InputAdornment>
           }
           aria-describedby="search-helper-text"
