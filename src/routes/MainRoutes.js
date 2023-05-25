@@ -4,6 +4,11 @@ import { lazy } from 'react';
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 import Button from 'components/button';
+import RadioPage from 'components/radio';
+import MenuPage from 'components/menu';
+import CheckboxPage from 'components/checkbox';
+import SelectPage from 'components/select';
+import SwitchPage from 'components/switch';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -86,9 +91,31 @@ const MainRoutes = {
       path: 'sample-page',
       element: <SamplePage />
     },
+
+    //  components rendering
     {
       path: '/components-button',
       element: <Button />
+    },
+    {
+      path: '/components-radio',
+      element: <RadioPage />
+    },
+    {
+      path: '/components-menu',
+      element: <MenuPage />
+    },
+    {
+      path: '/components-checkbox',
+      element: <CheckboxPage />
+    },
+    {
+      path: '/components-select',
+      element: <SelectPage />
+    },
+    {
+      path: '/components-switch',
+      element: <SwitchPage />
     }
   ]
 };
