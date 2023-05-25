@@ -49,18 +49,18 @@ const components = {
       breadcrumbs: false
     },
     {
-      id: 'components-circular-progress',
-      title: 'Circular Progress',
+      id: 'components-switch',
+      title: 'Switch',
       type: 'item',
-      url: '/components-circular-progress',
+      url: '/components-Switch',
       icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
-      id: 'components-linear-progress',
-      title: 'Linear Progress',
+      id: 'components-select',
+      title: 'Select',
       type: 'item',
-      url: '/components-linear-progress',
+      url: '/components-select',
       icon: icons.IconShadow,
       breadcrumbs: false
     }
