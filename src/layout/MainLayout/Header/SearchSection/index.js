@@ -3,28 +3,16 @@ import { useState } from 'react';
 
 // material-ui
 import { useTheme, styled } from '@mui/material/styles';
-import { Avatar, Box, ButtonBase, Card, Grid, InputAdornment, OutlinedInput, Popper } from '@mui/material';
+import { Avatar, Box, ButtonBase, InputAdornment, OutlinedInput } from '@mui/material';
 
 // third-party
-import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
+import PopupState, { bindToggle } from 'material-ui-popup-state';
 
 // project imports
-import Transitions from 'ui-component/extended/Transitions';
 
 // assets
 import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons';
 import { shouldForwardProp } from '@mui/system';
-
-// styles
-const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
-  zIndex: 1100,
-  width: '99%',
-  top: '-55px !important',
-  padding: '0 12px',
-  [theme.breakpoints.down('sm')]: {
-    padding: '0 10px'
-  }
-}));
 
 const OutlineInputStyle = styled(OutlinedInput, { shouldForwardProp })(({ theme }) => ({
   width: 434,
@@ -132,31 +120,6 @@ const SearchSection = () => {
                   </HeaderAvatarStyle>
                 </ButtonBase>
               </Box>
-              <PopperStyle {...bindPopper(popupState)} transition>
-                {({ TransitionProps }) => (
-                  <>
-                    <Transitions type="zoom" {...TransitionProps} sx={{ transformOrigin: 'center left' }}>
-                      <Card
-                        sx={{
-                          background: '#fff',
-                          [theme.breakpoints.down('sm')]: {
-                            border: 0,
-                            boxShadow: 'none'
-                          }
-                        }}
-                      >
-                        <Box sx={{ p: 2 }}>
-                          <Grid container alignItems="center" justifyContent="space-between">
-                            <Grid item xs>
-                              <MobileSearch value={value} setValue={setValue} popupState={popupState} />
-                            </Grid>
-                          </Grid>
-                        </Box>
-                      </Card>
-                    </Transitions>
-                  </>
-                )}
-              </PopperStyle>
             </>
           )}
         </PopupState>
