@@ -1,5 +1,8 @@
 // import { useEffect, useState } from 'react';
 
+import { Typography } from '@mui/material';
+import { Container } from '@mui/system';
+
 // material-ui
 // import { Grid } from '@mui/material';
 
@@ -56,7 +59,10 @@ const Dashboard = () => {
     //   </Grid>
     // </>
     <>
-      <h1>Dashboard Page</h1>
+      <Container className="dashboard-container">
+        <Typography variant="h1">Coming Soon</Typography>
+        <Typography variant="body1"> We are working on something awesome. Stay tuned!</Typography>
+      </Container>
     </>
   );
 };
