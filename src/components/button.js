@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, Grid, Stack, Paper, Divider, CardContent, Button } from '@mui/material';
+import { Typography, Box, Grid, Stack, Paper, CardContent, Button } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import HomeIcon from '@mui/icons-material/Home';
@@ -53,7 +53,7 @@ function ButtonPage() {
               <Typography variant="body1" title className="demo-typography">
                 Text Button
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
                 <Grid container spacing={2} className="grid-card">
                   <Button>Default</Button>
@@ -71,7 +71,7 @@ function ButtonPage() {
               <Typography variant="body1" title className="demo-typography">
                 Sizes
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
                 <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" size="small">
@@ -95,7 +95,7 @@ function ButtonPage() {
               <Typography variant="body1" title className="demo-typography">
                 Outlined Button
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
                 <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined">Default</Button>
@@ -123,7 +123,7 @@ function ButtonPage() {
               <Typography variant="body1" title className="demo-typography">
                 Disabled Button
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
                 <Grid container spacing={2} className="grid-card">
                   <Button disabled>Default</Button>
@@ -151,7 +151,7 @@ function ButtonPage() {
               <Typography variant="body1" title className="demo-typography">
                 With Icon
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
                 <Grid container spacing={2} className="grid-card">
                   <Button startIcon={<HomeIcon />}>Home</Button>

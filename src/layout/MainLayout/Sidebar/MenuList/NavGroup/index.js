@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { Divider, List, Typography } from '@mui/material';
+import { List, Typography } from '@mui/material';
 
 // project imports
 import NavItem from '../NavItem';
 import NavCollapse from '../NavCollapse';
+import DividerPage from 'utils/divider';
 
 // ==============================|| SIDEBAR MENU LIST GROUP ||============================== //
 
@@ -49,7 +50,7 @@ const NavGroup = ({ item }) => {
       </List>
 
       {/* group divider */}
-      <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+      <DividerPage />
     </>
   );
 };

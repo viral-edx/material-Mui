@@ -63,6 +63,14 @@ const components = {
       url: '/components-select',
       icon: icons.IconShadow,
       breadcrumbs: false
+    },
+    {
+      id: 'components-rating',
+      title: 'Rating',
+      type: 'item',
+      url: '/components-rating',
+      icon: icons.IconShadow,
+      breadcrumbs: false
     }
     // {
     //   id: 'icons',

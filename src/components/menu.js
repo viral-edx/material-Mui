@@ -18,9 +18,8 @@ import ContentCut from '@mui/icons-material/ContentCut';
 import ContentCopy from '@mui/icons-material/ContentCopy';
 import ContentPaste from '@mui/icons-material/ContentPaste';
 import Cloud from '@mui/icons-material/Cloud';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
-import HomeIcon from '@mui/icons-material/Home';
+import DividerPage from 'utils/divider';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 const MenuPage = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -50,9 +49,9 @@ const MenuPage = () => {
               <Typography variant="body1" title className="demo-typography">
                 Basic Menu
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+                <Grid container spacing={2} className="grid-card" style={{ marginLeft: '200px' }}>
                   <Button
                     id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -84,9 +83,9 @@ const MenuPage = () => {
               <Typography variant="body1" title className="demo-typography">
                 Icon menu
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+                <Grid container spacing={2} className="grid-card" style={{ marginLeft: '150px' }}>
                   <MenuList>
                     <MenuItem>
                       <ListItemIcon>
@@ -126,102 +125,33 @@ const MenuPage = () => {
                 </Grid>
               </CardContent>
             </Paper>
-
-            {/* Sizes Button */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
-                Sizes
-              </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
-                  <Button variant="outlined" size="small">
-                    Small
-                  </Button>
-                  <Button variant="outlined" size="medium">
-                    Medium
-                  </Button>
-                  <Button variant="outlined" size="large">
-                    Large
-                  </Button>
-                </Grid>
-              </CardContent>
-            </Paper>
           </Stack>
 
           {/* Right Stack (Right Side) */}
+
           <Stack className="stack" spacing={2}>
-            {/* Outlined Button */}
+            {/* Popup-state */}
             <Paper root elevation rounded elevation0 className="demo-paper">
               <Typography variant="body1" title className="demo-typography">
-                Outlined Button
+                Popup-state
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
-                  <Button variant="outlined">Default</Button>
-                  <Button variant="outlined" color="secondary">
-                    Secondary
-                  </Button>
-                  <Button variant="outlined" color="info">
-                    Info
-                  </Button>
-                  <Button variant="outlined" color="success">
-                    Success
-                  </Button>
-                  <Button variant="outlined" color="warning">
-                    Warning
-                  </Button>
-                  <Button variant="outlined" color="error">
-                    Error
-                  </Button>
-                </Grid>
-              </CardContent>
-            </Paper>
-
-            {/* Disabled Button */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
-                Disabled Button
-              </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
-                  <Button disabled>Default</Button>
-                  <Button variant="contained" disabled>
-                    Contained
-                  </Button>
-                  <Button variant="outlined" disabled>
-                    Outlined
-                  </Button>
-                  <Button startIcon={<HomeIcon />} disabled>
-                    Home
-                  </Button>
-                  <Button variant="contained" endIcon={<SendIcon />} disabled>
-                    Send
-                  </Button>
-                  <Button variant="outlined" startIcon={<DeleteIcon />} disabled>
-                    Delete
-                  </Button>
-                </Grid>
-              </CardContent>
-            </Paper>
-
-            {/* With Icon */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
-                With Icon
-              </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
-                  <Button startIcon={<HomeIcon />}>Home</Button>
-                  <Button variant="contained" endIcon={<SendIcon />}>
-                    Send
-                  </Button>
-                  <Button variant="outlined" startIcon={<DeleteIcon />}>
-                    Delete
-                  </Button>
+                <Grid container spacing={2} className="grid-card" style={{ marginLeft: '200px' }}>
+                  <PopupState variant="popover" popupId="demo-popup-menu">
+                    {(popupState) => (
+                      <React.Fragment>
+                        <Button variant="contained" {...bindTrigger(popupState)}>
+                          Dashboard
+                        </Button>
+                        <Menu {...bindMenu(popupState)}>
+                          <MenuItem onClick={popupState.close}>Profile</MenuItem>
+                          <MenuItem onClick={popupState.close}>My account</MenuItem>
+                          <MenuItem onClick={popupState.close}>Logout</MenuItem>
+                        </Menu>
+                      </React.Fragment>
+                    )}
+                  </PopupState>
                 </Grid>
               </CardContent>
             </Paper>
