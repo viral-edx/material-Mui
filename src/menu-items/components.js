@@ -1,13 +1,5 @@
 // assets
-import { IconTypography, IconPalette, IconShadow, IconWindmill } from '@tabler/icons';
 
-// constant
-const icons = {
-  IconTypography,
-  IconPalette,
-  IconShadow,
-  IconWindmill
-};
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
@@ -21,7 +13,6 @@ const components = {
       title: 'Button',
       type: 'item',
       url: '/components-button',
-      icon: icons.IconTypography,
       breadcrumbs: false
     },
     {
@@ -29,7 +20,6 @@ const components = {
       title: 'Radio',
       type: 'item',
       url: '/components-radio',
-      icon: icons.IconPalette,
       breadcrumbs: false
     },
     {
@@ -37,7 +27,6 @@ const components = {
       title: 'Checkbox',
       type: 'item',
       url: '/components-checkbox',
-      icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
@@ -45,7 +34,6 @@ const components = {
       title: 'Menu',
       type: 'item',
       url: '/components-menu',
-      icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
@@ -53,7 +41,6 @@ const components = {
       title: 'Switch',
       type: 'item',
       url: '/components-Switch',
-      icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
@@ -61,7 +48,6 @@ const components = {
       title: 'Select',
       type: 'item',
       url: '/components-select',
-      icon: icons.IconShadow,
       breadcrumbs: false
     },
     {
@@ -72,30 +58,7 @@ const components = {
       icon: icons.IconShadow,
       breadcrumbs: false
     }
-    // {
-    //   id: 'icons',
-    //   title: 'Icons',
-    //   type: 'collapse',
-    //   icon: icons.IconWindmill,
-    //   children: [
-    //     {
-    //       id: 'tabler-icons',
-    //       title: 'Tabler Icons',
-    //       type: 'item',
-    //       url: '/icons/tabler-icons',
-    //       breadcrumbs: false
-    //     },
-    //     {
-    //       id: 'material-icons',
-    //       title: 'Material Icons',
-    //       type: 'item',
-    //       external: true,
-    //       target: '_blank',
-    //       url: 'https://mui.com/material-ui/material-icons/',
-    //       breadcrumbs: false
-    //     }
-    //   ]
-    // }
+   
   ]
 };
 
