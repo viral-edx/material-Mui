@@ -1,6 +1,5 @@
 // assets
 
-
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
 const components = {
@@ -55,10 +54,8 @@ const components = {
       title: 'Rating',
       type: 'item',
       url: '/components-rating',
-      icon: icons.IconShadow,
       breadcrumbs: false
     }
-   
   ]
 };
 
