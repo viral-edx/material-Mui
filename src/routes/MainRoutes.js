@@ -3,7 +3,7 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
-import Button from 'components/button';
+import ButtonPage from 'components/button';
 import RadioPage from 'components/radio';
 import MenuPage from 'components/menu';
 import CheckboxPage from 'components/checkbox';
@@ -95,7 +95,7 @@ const MainRoutes = {
     //  components rendering
     {
       path: '/components-button',
-      element: <Button />
+      element: <ButtonPage />
     },
     {
       path: '/components-radio',
