@@ -3,6 +3,7 @@ import { Typography, Box, Grid, Stack, Paper, Divider, CardContent, Button } fro
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import HomeIcon from '@mui/icons-material/Home';
+import DividerPage from 'utils/divider';
 
 function ButtonPage() {
   return (
@@ -24,7 +25,7 @@ function ButtonPage() {
               <Typography variant="body1" title className="demo-typography">
                 Basic Button
               </Typography>
-              <Divider sx={{ mt: 0.25, mb: 1.25 }} />
+              <DividerPage />
               <CardContent className="demo-output">
                 <Grid container spacing={2} className="grid-card">
                   <Button variant="contained">Default</Button>
