@@ -12,6 +12,8 @@ import SearchSection from './SearchSection';
 
 // assets
 import { IconMenu2 } from '@tabler/icons';
+import NotificationSection from './NotificationSection';
+import ProfileSection from './ProfileSection';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
@@ -54,15 +56,12 @@ const Header = ({ handleLeftDrawerToggle }) => {
           </Avatar>
         </ButtonBase>
       </Box>
-
       {/* header search */}
       <SearchSection />
       <Box sx={{ flexGrow: 1 }} />
       <Box sx={{ flexGrow: 1 }} />
-
-      {/* notification & profile */}
-      {/* <NotificationSection />
-      <ProfileSection /> */}
+      <NotificationSection />
+      <ProfileSection />
     </>
   );
 };
