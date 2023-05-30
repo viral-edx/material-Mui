@@ -15,6 +15,7 @@ import { SET_MENU } from 'store/actions';
 
 // assets
 import { IconChevronRight } from '@tabler/icons';
+import FixedSideBar from './FixedSideBar';
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
@@ -34,7 +35,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({
         }
   ),
   [theme.breakpoints.up('md')]: {
-    marginLeft: open ? 0 : -(drawerWidth - 20),
+    marginLeft: open ? 80 : -(drawerWidth - 85),
     width: `calc(100% - ${drawerWidth}px)`
   },
   [theme.breakpoints.down('md')]: {
@@ -65,6 +66,7 @@ const MainLayout = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
+
       {/* header */}
       <AppBar
         enableColorOnDark
@@ -80,6 +82,9 @@ const MainLayout = () => {
           <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
         </Toolbar>
       </AppBar>
+
+      {/* fixed side bar */}
+      <FixedSideBar />
 
       {/* drawer */}
       <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
