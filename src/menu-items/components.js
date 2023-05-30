@@ -4,6 +4,7 @@
 
 const components = {
   id: 'components',
+  title: 'Components',
   type: 'group',
   children: [
     {

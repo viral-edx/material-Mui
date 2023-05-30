@@ -7,7 +7,7 @@ import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material'
 
 // project imports
 import Breadcrumbs from 'ui-component/extended/Breadcrumbs';
-// import Header from './Header';
+import Header from './Header';
 import Sidebar from './Sidebar';
 import navigation from 'menu-items';
 import { drawerWidth } from 'store/constant';
@@ -76,7 +76,9 @@ const MainLayout = () => {
           transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
         }}
       >
-        <Toolbar>{/* <Header handleLeftDrawerToggle={handleLeftDrawerToggle} /> */}</Toolbar>
+        <Toolbar>
+          <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
+        </Toolbar>
       </AppBar>
 
       {/* drawer */}
