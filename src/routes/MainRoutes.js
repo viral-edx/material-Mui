@@ -10,6 +10,7 @@ import CheckboxPage from 'components/checkbox';
 import SelectPage from 'components/select';
 import SwitchPage from 'components/switch';
 import RatingPage from 'components/rating';
+import EmailPage from 'components/email';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -61,6 +62,10 @@ const MainRoutes = {
     {
       path: '/components-rating',
       element: <RatingPage />
+    },
+    {
+      path: '/email',
+      element: <EmailPage />
     }
   ]
 };

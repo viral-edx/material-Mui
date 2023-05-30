@@ -1,5 +1,6 @@
 import components from './components';
 import dashboard from './dashboard';
+import email from './email';
 
 // ==============================|| MENU ITEMS ||============================== //
 
@@ -8,7 +9,7 @@ import dashboard from './dashboard';
 // };
 
 const menuItems = {
-  items: [dashboard, components]
+  items: [dashboard, components, email]
 };
 
 export default menuItems;
