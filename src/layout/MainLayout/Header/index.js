@@ -32,7 +32,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
           }
         }}
       >
-        <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }}>
+        <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }} className="btn_base">
           <Avatar
             variant="rounded"
             sx={{
