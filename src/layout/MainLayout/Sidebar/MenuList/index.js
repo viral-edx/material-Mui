@@ -79,10 +79,14 @@ const MenuList = () => {
           ))}
         </List>
       )}
-      {navigate.pathname === '/dashboard/default' && (
+      {(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && (
         <List>
           {['Dashboard'].map((text, index) => (
-            <ListItem key={text} disablePadding className={navigate.pathname === '/dashboard/default' && 'selected_menu'}>
+            <ListItem
+              key={text}
+              disablePadding
+              className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selected_menu'}
+            >
               <ListItemButton>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />

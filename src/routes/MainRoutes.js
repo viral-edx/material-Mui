@@ -24,7 +24,7 @@ const MainRoutes = {
   children: [
     {
       path: '/',
-      element: <ButtonPage />
+      element: <DashboardDefault />
     },
     {
       path: 'dashboard',
