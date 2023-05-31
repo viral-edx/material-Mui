@@ -7,7 +7,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 
 const MenuList = () => {
@@ -64,6 +64,7 @@ const MenuList = () => {
   ];
 
   const navigate = useLocation();
+  const redirect = useNavigate();
 
   return (
     <>
@@ -87,7 +88,7 @@ const MenuList = () => {
               disablePadding
               className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selected_menu'}
             >
-              <ListItemButton>
+              <ListItemButton className="option-selected">
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -98,8 +99,13 @@ const MenuList = () => {
       {navigate.pathname.includes('/components') && (
         <List>
           {components.map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton onClick={() => redirect(text.url)} className={navigate.pathname === text.url && 'selected_menu'}>
+            <ListItem
+              key={text}
+              disablePadding
+              onClick={() => redirect(text.url)}
+              className={navigate.pathname === text.url && 'selected_menu'}
+            >
+              <ListItemButton className="option-selected">
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text.title} />
               </ListItemButton>
