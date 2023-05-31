@@ -25,8 +25,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
       {/* logo & toggler button */}
       <Box
         sx={{
-          width: 290,
-          display: 'flex',
+          width: 100,
           [theme.breakpoints.down('md')]: {
             width: 'auto'
           }
@@ -53,13 +52,15 @@ const Header = ({ handleLeftDrawerToggle }) => {
           </Avatar>
         </ButtonBase>
       </Box>
-      <Box component="span">
+
+      <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px' }}>
         <LogoSection />
       </Box>
       {/* header search */}
+
       <SearchSection />
-      <Box sx={{ flexGrow: 1 }} />
-      <Box sx={{ flexGrow: 1 }} />
+
+      {/* notification and profile section */}
       <NotificationSection />
       <ProfileSection />
     </>

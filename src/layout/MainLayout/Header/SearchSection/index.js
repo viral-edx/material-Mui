@@ -109,7 +109,7 @@ const SearchSection = () => {
 
   return (
     <>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+      <Box sx={{ display: { xs: 'block', md: 'none' }, paddingTop: '14px', paddingLeft: '2px' }}>
         <PopupState variant="popper" popupId="demo-popup-popper">
           {(popupState) => (
             <>
@@ -124,7 +124,7 @@ const SearchSection = () => {
           )}
         </PopupState>
       </Box>
-      <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+      <Box sx={{ display: { xs: 'none', md: 'block' }, paddingTop: '14px', paddingLeft: '2px' }}>
         <OutlineInputStyle
           id="input-search-header"
           value={value}

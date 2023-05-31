@@ -96,13 +96,8 @@ const MenuList = () => {
       {navigate.pathname.includes('/components') && (
         <List>
           {components.map((text, index) => (
-            <ListItem
-              key={text}
-              disablePadding
-              onClick={() => redirect(text.url)}
-              className={navigate.pathname === text.url && 'selected_menu'}
-            >
-              <ListItemButton>
+            <ListItem key={text} disablePadding>
+              <ListItemButton onClick={() => navigate(text.url)} className={navigate.pathname === text.url && 'selected_menu'}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text.title} />
               </ListItemButton>
