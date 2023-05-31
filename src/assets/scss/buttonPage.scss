@@ -93,3 +93,27 @@
     grid-row-gap: 10px;
     padding: 15px;
 }
+
+.dateLables {
+    font-size: 12px;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    padding-right: 16px;
+    text-align: right;
+}
+
+.action {
+    color: rgba(0, 0, 0, 0.54);
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.MailListItem-checked {
+    color: rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.87);
+    }
+}

@@ -18,7 +18,7 @@ const FixedSideBar = () => {
         flexShrink: { md: 0 },
         width: '70px',
         top: '83px',
-        position: 'absolute',
+        position: 'fixed',
         zIndex: '100',
         height: '100%',
         backgroundColor: 'rgb(238,242,246)'
