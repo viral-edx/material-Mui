@@ -1,7 +1,11 @@
 import React from 'react';
 
 function MeetPage() {
-  return <div>meet</div>;
+  return (
+    <>
+      <h1>Meet Page</h1>
+    </>
+  );
 }
 
 export default MeetPage;

@@ -20,8 +20,9 @@
 
 .scrollbar-container {
   .ps__rail-y {
-    &:hover > .ps__thumb-y,
-    &:focus > .ps__thumb-y,
+
+    &:hover>.ps__thumb-y,
+    &:focus>.ps__thumb-y,
     &.ps--clicking .ps__thumb-y {
       background-color: $grey500;
       width: 5px;
@@ -37,8 +38,8 @@
 }
 
 .scrollbar-container.ps,
-.scrollbar-container > .ps {
-  &.ps--active-y > .ps__rail-y {
+.scrollbar-container>.ps {
+  &.ps--active-y>.ps__rail-y {
     width: 5px;
     background-color: transparent !important;
     z-index: 999;
@@ -50,8 +51,8 @@
     }
   }
 
-  &.ps--scrolling-y > .ps__rail-y,
-  &.ps--scrolling-x > .ps__rail-x {
+  &.ps--scrolling-y>.ps__rail-y,
+  &.ps--scrolling-x>.ps__rail-x {
     opacity: 0.4;
     background-color: transparent;
   }
@@ -80,6 +81,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   53%,
@@ -110,6 +112,7 @@
 }
 
 @keyframes slideY {
+
   0%,
   50%,
   100% {
@@ -126,6 +129,7 @@
 }
 
 @keyframes slideX {
+
   0%,
   50%,
   100% {
@@ -191,7 +195,30 @@
   padding: 0;
 }
 
+.selected_fixed_menu {
+  background-color: #bb9cf9;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: #5e35b1;
+    color: #ede7f6;
+  }
+}
+
 .selected_menu {
   background-color: #ede7f6;
   color: #5e35b1;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+  &:hover {
+    border-radius: 10px;
+  }
+}
+
+.option-selected:hover {
+  border-radius: 10px;
 }

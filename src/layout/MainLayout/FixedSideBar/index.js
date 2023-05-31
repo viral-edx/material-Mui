@@ -58,13 +58,15 @@ const FixedSideBar = () => {
       }}
     >
       <Box sx={{ display: { xs: 'block' }, fontSize: '10px' }}>
-        <Box sx={{ display: 'flex', p: 2, mx: 'auto', flexDirection: 'column', cursor: 'pointer' }}>
+        <Box
+          sx={{ display: 'flex', p: 2, mx: 'auto', flexDirection: 'column', cursor: 'pointer', paddingLeft: '5px', paddingRight: '5px' }}
+        >
           {components.map((key) => {
             console.log('key', key);
             const IconComponent = key.icon;
             return (
               <Box
-                className={key.url === state && 'selected_menu'}
+                className={key.url === state && 'selected_fixed_menu'}
                 onClick={() => {
                   navigate(key.url);
                   setState(key.url);

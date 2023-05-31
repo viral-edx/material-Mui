@@ -97,7 +97,7 @@ const NotificationSection = () => {
             mr: 2
           }
         }}
-        marginLeft="580px"
+        marginLeft="580px" // For Dev = 580 and Viral = 810
         marginTop="15px"
       >
         <ButtonBase sx={{ borderRadius: '12px' }}>
