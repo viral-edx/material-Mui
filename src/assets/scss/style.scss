@@ -20,8 +20,9 @@
 
 .scrollbar-container {
   .ps__rail-y {
-    &:hover > .ps__thumb-y,
-    &:focus > .ps__thumb-y,
+
+    &:hover>.ps__thumb-y,
+    &:focus>.ps__thumb-y,
     &.ps--clicking .ps__thumb-y {
       background-color: $grey500;
       width: 5px;
@@ -37,8 +38,8 @@
 }
 
 .scrollbar-container.ps,
-.scrollbar-container > .ps {
-  &.ps--active-y > .ps__rail-y {
+.scrollbar-container>.ps {
+  &.ps--active-y>.ps__rail-y {
     width: 5px;
     background-color: transparent !important;
     z-index: 999;
@@ -50,8 +51,8 @@
     }
   }
 
-  &.ps--scrolling-y > .ps__rail-y,
-  &.ps--scrolling-x > .ps__rail-x {
+  &.ps--scrolling-y>.ps__rail-y,
+  &.ps--scrolling-x>.ps__rail-x {
     opacity: 0.4;
     background-color: transparent;
   }
@@ -80,6 +81,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   53%,
@@ -110,6 +112,7 @@
 }
 
 @keyframes slideY {
+
   0%,
   50%,
   100% {
@@ -126,6 +129,7 @@
 }
 
 @keyframes slideX {
+
   0%,
   50%,
   100% {
@@ -182,9 +186,10 @@
 
 .btn_base {
   padding: 15px;
-  background-color: rgb(238, 242, 246);
   width: 70px;
+  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
   border-radius: 0;
+  border-bottom: 1px solid #ffffff;
 }
 
 .css-kvip5o-MuiToolbar-root {
@@ -192,14 +197,14 @@
 }
 
 .selected_fixed_menu {
-  background-color: #bb9cf9;
+  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
   color: black;
   border-radius: 10px;
   margin-bottom: 5px;
 
   &:hover {
     border-radius: 10px;
-    background-color: #5e35b1;
+    background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
     color: #ede7f6;
   }
 }
@@ -216,4 +221,20 @@
 
 .option-selected:hover {
   border-radius: 10px;
+}
+
+.css-7nfl7h{
+  background-color: #f8fde5;;
+}
+
+.css-1kx402m{
+  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
+}
+
+.css-1pxvvms-MuiButtonBase-root-MuiListItemButton-root{
+  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
+}
+
+.css-o4begf-MuiAvatar-root{
+  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
 }
