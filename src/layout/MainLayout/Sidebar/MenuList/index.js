@@ -96,7 +96,7 @@ const MenuList = () => {
         <List>
           {components.map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => navigate(text.url)}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text.title} />
               </ListItemButton>

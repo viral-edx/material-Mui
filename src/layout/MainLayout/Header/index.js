@@ -25,8 +25,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
       {/* logo & toggler button */}
       <Box
         sx={{
-          width: 290,
-          display: 'flex',
+          width: 100,
           [theme.breakpoints.down('md')]: {
             width: 'auto'
           }
@@ -52,14 +51,16 @@ const Header = ({ handleLeftDrawerToggle }) => {
             <IconMenu2 stroke={1.5} size="1.3rem" />
           </Avatar>
         </ButtonBase>
-        <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'flex-end' }}>
-          <LogoSection />
-        </Box>
+      </Box>
+
+      <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px' }}>
+        <LogoSection />
       </Box>
       {/* header search */}
+
       <SearchSection />
-      <Box sx={{ flexGrow: 1 }} />
-      <Box sx={{ flexGrow: 1 }} />
+
+      {/* notification and profile section */}
       <NotificationSection />
       <ProfileSection />
     </>

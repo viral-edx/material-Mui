@@ -20,8 +20,9 @@
 
 .scrollbar-container {
   .ps__rail-y {
-    &:hover > .ps__thumb-y,
-    &:focus > .ps__thumb-y,
+
+    &:hover>.ps__thumb-y,
+    &:focus>.ps__thumb-y,
     &.ps--clicking .ps__thumb-y {
       background-color: $grey500;
       width: 5px;
@@ -37,8 +38,8 @@
 }
 
 .scrollbar-container.ps,
-.scrollbar-container > .ps {
-  &.ps--active-y > .ps__rail-y {
+.scrollbar-container>.ps {
+  &.ps--active-y>.ps__rail-y {
     width: 5px;
     background-color: transparent !important;
     z-index: 999;
@@ -50,8 +51,8 @@
     }
   }
 
-  &.ps--scrolling-y > .ps__rail-y,
-  &.ps--scrolling-x > .ps__rail-x {
+  &.ps--scrolling-y>.ps__rail-y,
+  &.ps--scrolling-x>.ps__rail-x {
     opacity: 0.4;
     background-color: transparent;
   }
@@ -80,6 +81,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   53%,
@@ -110,6 +112,7 @@
 }
 
 @keyframes slideY {
+
   0%,
   50%,
   100% {
@@ -126,6 +129,7 @@
 }
 
 @keyframes slideX {
+
   0%,
   50%,
   100% {
@@ -166,6 +170,7 @@
     font-size: 22px;
   }
 }
+
 .css-9d4wr9 {
   border-radius: 12px;
   min-height: calc(100vh - 158px);
@@ -184,4 +189,8 @@
   background-color: rgb(238, 242, 246);
   width: 70px;
   border-radius: 0;
+}
+
+.css-kvip5o-MuiToolbar-root {
+  padding: 0px
 }
