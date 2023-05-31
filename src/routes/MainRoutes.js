@@ -11,6 +11,7 @@ import SelectPage from 'components/select';
 import SwitchPage from 'components/switch';
 import RatingPage from 'components/rating';
 import EmailPage from 'components/email';
+import MeetPage from 'components/meetPage';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -66,6 +67,10 @@ const MainRoutes = {
     {
       path: '/email',
       element: <EmailPage />
+    },
+    {
+      path: '/meet',
+      element: <MeetPage />
     }
   ]
 };

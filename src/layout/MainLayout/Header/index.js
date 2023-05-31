@@ -52,9 +52,9 @@ const Header = ({ handleLeftDrawerToggle }) => {
             <IconMenu2 stroke={1.5} size="1.3rem" />
           </Avatar>
         </ButtonBase>
-        <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'flex-end' }}>
-          <LogoSection />
-        </Box>
+      </Box>
+      <Box component="span">
+        <LogoSection />
       </Box>
       {/* header search */}
       <SearchSection />

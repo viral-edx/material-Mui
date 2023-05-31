@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import { IconDashboard, IconMail, IconComponents, IconBrandZoom } from '@tabler/icons';
 import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
 const components = [
   {
@@ -31,17 +32,18 @@ const components = [
     breadcrumbs: false
   },
   {
-    id: 'components-menu',
+    id: 'components-meet',
     title: 'Meet',
     type: 'item',
     icon: IconBrandZoom,
-    url: '/components-menu',
+    url: '/meet',
     breadcrumbs: false
   }
 ];
 
 const FixedSideBar = () => {
   const navigate = useNavigate();
+  const [state, setState] = useState('/dashboard/default');
   return (
     <Box
       component="nav"
@@ -62,7 +64,11 @@ const FixedSideBar = () => {
             const IconComponent = key.icon;
             return (
               <Box
-                onClick={() => navigate(key.url)}
+                className={key.url === state && 'selected_menu'}
+                onClick={() => {
+                  navigate(key.url);
+                  setState(key.url);
+                }}
                 key={key.id}
                 sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '10px', marginTop: '10px' }}
               >
