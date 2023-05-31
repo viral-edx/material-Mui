@@ -7,7 +7,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation } from 'react-router';
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 
 const MenuList = () => {
@@ -64,9 +64,7 @@ const MenuList = () => {
   ];
 
   const navigate = useLocation();
-  const redirect = useNavigate();
 
-  console.log('navigate', navigate);
   return (
     <>
       {navigate.pathname === '/email' && (
