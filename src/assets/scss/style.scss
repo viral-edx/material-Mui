@@ -196,37 +196,46 @@
 }
 
 .selected_fixed_menu {
-  background-color: #d0bff1;
+  background-color: $primaryGreenColor;
   color: black;
   border-radius: 10px;
   margin-bottom: 5px;
 
   &:hover {
     border-radius: 10px;
-    background-color: #5e35b1;
-    color: #ede7f6;
+    background-color: $primaryGreenColor;
+    color: black;
   }
 }
 
 .selected_menu {
-  color: #5e35b1;
+  color: $secondaryDark;
   border-radius: 10px;
+  background-color: $primaryGreenColor;
 
   &:hover {
-    border-radius: 10px !important;
+    border-radius: 10px;
   }
 }
 
 .option-selected {
   border-radius: 10px;
-  margin-bottom: 5px;
 }
 
 .option-selected:hover {
-  border-radius: 10px;
+  background-color: #b7eb0047;
 }
 
-.css-7nfl7h {
-  background-color: #f8fde5;
-  ;
+.css-doacsn-MuiListItem-root {
+  margin-bottom: 5px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #b7eb0047;
+  }
+}
+
+.css-1nzjds7-MuiAvatar-root {
+  color: #364152;
+  background: #b7eb0047;
 }
