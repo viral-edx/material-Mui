@@ -186,10 +186,9 @@
 
 .btn_base {
   padding: 15px;
+  background-color: rgb(238, 242, 246);
   width: 70px;
-  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
   border-radius: 0;
-  border-bottom: 1px solid #ffffff;
 }
 
 .css-kvip5o-MuiToolbar-root {
@@ -197,20 +196,19 @@
 }
 
 .selected_fixed_menu {
-  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
+  background-color: #bb9cf9;
   color: black;
   border-radius: 10px;
   margin-bottom: 5px;
 
   &:hover {
     border-radius: 10px;
-    background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
+    background-color: #5e35b1;
     color: #ede7f6;
   }
 }
 
 .selected_menu {
-  background-color: #ede7f6;
   color: #5e35b1;
   border-radius: 10px;
 
@@ -219,22 +217,16 @@
   }
 }
 
+.option-selected {
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
 .option-selected:hover {
   border-radius: 10px;
 }
 
-.css-7nfl7h{
-  background-color: #f8fde5;;
-}
-
-.css-1kx402m{
-  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
-}
-
-.css-1pxvvms-MuiButtonBase-root-MuiListItemButton-root{
-  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
-}
-
-.css-o4begf-MuiAvatar-root{
-  background-image: radial-gradient(closest-corner, #b7eb00, rgb(183 235 0 / 60%));
+.css-7nfl7h {
+  background-color: #f8fde5;
+  ;
 }
