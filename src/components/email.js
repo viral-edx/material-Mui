@@ -1,21 +1,10 @@
 import React from 'react';
 import { Box, IconButton, MenuItem, Checkbox, Menu } from '@mui/material';
 import MailListItem from './MailListItem';
-import { styled } from '@mui/system';
 import { KeyboardArrowDownOutlined, KeyboardArrowLeft, KeyboardArrowRight, MoreVert, Refresh } from '@mui/icons-material';
-
-const Div = styled('div')`
-  height: 48px;
-  box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
-  display: flex;
-  align-items: center;
-`;
 
 const EmailPage = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [selectedOption, setSelectedOption] = React.useState('');
-
-  console.log('selectedOption', selectedOption);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,34 +14,15 @@ const EmailPage = () => {
     setAnchorEl(null);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleMenuItemClick = (option) => {
-    setSelectedOption(option);
-    handleClose();
-  };
-
   return (
     <>
-      <Div>
+      <Box className="email-div">
         <Box display="inline-flex">
-          <Checkbox color="default" onChange={handleClick} />
-          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-            <MenuItem onClick={() => handleMenuItemClick('All')}>All</MenuItem>
-            <MenuItem onClick={() => handleMenuItemClick('None')}>None</MenuItem>
-            <MenuItem onClick={() => handleMenuItemClick('Read')}>Read</MenuItem>
-            <MenuItem onClick={() => handleMenuItemClick('Unread')}>Unread</MenuItem>
-          </Menu>
+          <Checkbox color="default" />
+          <IconButton onClick={handleMenuOpen}>
+            <KeyboardArrowDownOutlined />
+          </IconButton>
         </Box>
-        <IconButton onClick={handleMenuOpen}>
-          <KeyboardArrowDownOutlined />
-        </IconButton>
         <IconButton>
           <Refresh />
         </IconButton>
@@ -71,7 +41,7 @@ const EmailPage = () => {
             <KeyboardArrowRight />
           </IconButton>
         </Box>
-      </Div>
+      </Box>
 
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
         <MenuItem onClick={handleMenuClose}>All</MenuItem>

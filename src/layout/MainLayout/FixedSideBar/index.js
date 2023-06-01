@@ -58,9 +58,7 @@ const FixedSideBar = () => {
       }}
     >
       <Box sx={{ display: { xs: 'block' }, fontSize: '10px' }}>
-        <Box
-          sx={{ display: 'flex', p: 2, mx: 'auto', flexDirection: 'column', cursor: 'pointer', paddingLeft: '5px', paddingRight: '5px' }}
-        >
+        <Box className="fixedSideBar">
           {components.map((key) => {
             console.log('key', key);
             const IconComponent = key.icon;

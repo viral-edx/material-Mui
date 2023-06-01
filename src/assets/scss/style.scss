@@ -1,9 +1,9 @@
 // color variants
 @import 'themes-vars.module.scss';
 @import './buttonPage.scss';
+@import './colorCode.scss';
 
 // third-party
-@import '~react-perfect-scrollbar/dist/css/styles.css';
 
 // ==============================|| LIGHT BOX ||============================== //
 .fullscreen .react-images__blanket {
@@ -19,6 +19,7 @@
 // ==============================|| PERFECT SCROLLBAR ||============================== //
 
 .scrollbar-container {
+
   .ps__rail-y {
 
     &:hover>.ps__thumb-y,
@@ -160,15 +161,62 @@
   box-shadow: rgba(80, 63, 111, 0.805) 0px 2px 14px 0px;
 
   h1 {
-    color: black;
+    color: var(--black-color);
     padding-top: 20%;
   }
 
   p {
-    color: black;
+    color: var(--black-color);
     padding-top: 20px;
     font-size: 22px;
   }
+}
+
+.scrollBarDiv {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.profileChipSection {
+  height: 48px;
+  align-items: center;
+  border-radius: 27px;
+  transition: all .2s ease-in-out;
+  margin-top: 15px;
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+
+  &[aria-controls="menu-list-grow"],
+  &:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-color) !important;
+  }
+
+  .MuiChip-label {
+    line-height: 0;
+  }
+}
+
+.profileAvatar {
+  margin: 8px 0 8px 8px !important;
+  cursor: pointer;
+  background-color: var(--text-color);
+
+  svg {
+    color: var(--primary-color);
+  }
+}
+
+.fixedSideBar {
+  display: flex;
+  padding: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 40px;
 }
 
 .css-9d4wr9 {
@@ -181,7 +229,20 @@
 }
 
 .scroll-nav {
-  overflow-x: hidden !important;
+  height: 100%;
+  max-height: calc(100vh - 250px);
+  margin-top: -21px;
+
+  nav {
+    width: 100%;
+    min-width: 350px;
+    max-width: 400px;
+    border-radius: 10px;
+
+    .MuiListItemButton-root {
+      margin-top: 0.5px;
+    }
+  }
 }
 
 .btn_base {
@@ -196,22 +257,21 @@
 }
 
 .selected_fixed_menu {
-  background-color: $primaryGreenColor;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--black-color);
   border-radius: 10px;
-  margin-bottom: 5px;
 
   &:hover {
     border-radius: 10px;
-    background-color: $primaryGreenColor;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--black-color);
   }
 }
 
 .selected_menu {
   color: $secondaryDark;
   border-radius: 10px;
-  background-color: $primaryGreenColor;
+  background-color: var(--primary-color);
 
   &:hover {
     border-radius: 10px;
@@ -223,7 +283,7 @@
 }
 
 .option-selected:hover {
-  background-color: #b7eb0047;
+  background-color: var(--secondaryColor);
 }
 
 .css-doacsn-MuiListItem-root {
@@ -231,11 +291,34 @@
   border-radius: 10px;
 
   &:hover {
-    background-color: #b7eb0047;
+    background-color: $primaryHoverGreenColor;
   }
 }
 
-.css-1nzjds7-MuiAvatar-root {
-  color: #364152;
-  background: #b7eb0047;
+.button-hamburger {
+  transition: all 0.2s ease-in-out;
+  background: $primaryHoverGreenColor;
+  color: var(--text-color);
+
+  &[aria-controls="menu-list-grow"],
+  &:hover {
+    background: var(--primary-color);
+    color: var(--text-color);
+  }
+}
+
+.email-div {
+  height: 48px;
+  box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+  display: flex;
+  align-items: center;
+}
+
+.hoveredBox {
+  display: flex;
+  width: 150px;
+  flex-shrink: 0;
+  margin-left: 1px;
+  margin-right: 0.5px;
+  justify-content: space-between;
 }

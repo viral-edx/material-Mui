@@ -2,19 +2,7 @@ import PropTypes from 'prop-types';
 
 // material-ui
 import { styled, useTheme } from '@mui/material/styles';
-import {
-  // Avatar,
-  // Card,
-  // CardContent,
-  Grid,
-  LinearProgress,
-  // List,
-  // ListItem,
-  // ListItemAvatar,
-  // ListItemText,
-  Typography,
-  linearProgressClasses
-} from '@mui/material';
+import { Grid, LinearProgress, Typography, linearProgressClasses } from '@mui/material';
 
 // assets
 // import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';

@@ -8,8 +8,6 @@ import { Avatar, Box, ButtonBase, InputAdornment, OutlinedInput } from '@mui/mat
 // third-party
 import PopupState, { bindToggle } from 'material-ui-popup-state';
 
-// project imports
-
 // assets
 import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons';
 import { shouldForwardProp } from '@mui/system';
@@ -118,15 +116,6 @@ const SearchSection = () => {
           startAdornment={
             <InputAdornment position="start">
               <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
-            </InputAdornment>
-          }
-          endAdornment={
-            <InputAdornment position="end">
-              {/* <ButtonBase sx={{ borderRadius: '12px' }}>
-                <HeaderAvatarStyle variant="rounded">
-                  <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-                </HeaderAvatarStyle>
-              </ButtonBase> */}
             </InputAdornment>
           }
           aria-describedby="search-helper-text"

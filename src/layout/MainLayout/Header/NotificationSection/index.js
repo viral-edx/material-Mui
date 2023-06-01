@@ -95,19 +95,19 @@ const NotificationSection = () => {
           mr: 3,
           [theme.breakpoints.down('md')]: {
             mr: 2,
-            marginLeft: '590px' 
+            marginLeft: '590px'
           },
           [theme.breakpoints.down('lg')]: {
             marginLeft: '590px'
           },
           [theme.breakpoints.down('xl')]: {
-            marginLeft: '590px' 
+            marginLeft: '590px'
           },
           [theme.breakpoints.up('xl')]: {
             marginLeft: '890px' // Adjusted margin-left for my screen
           },
           [theme.breakpoints.down('xxl')]: {
-            marginLeft: '890px' 
+            marginLeft: '890px'
           }
         }}
         marginTop="15px"
@@ -115,24 +115,16 @@ const NotificationSection = () => {
         <ButtonBase sx={{ borderRadius: '12px' }}>
           <Avatar
             variant="rounded"
+            className="button-hamburger"
             sx={{
-              ...theme.typography.commonAvatar,
-              ...theme.typography.mediumAvatar,
-              transition: 'all .2s ease-in-out',
-              background: theme.palette.secondary.light,
-              color: theme.palette.secondary.dark,
-              '&[aria-controls="menu-list-grow"],&:hover': {
-                background: theme.palette.secondary.dark,
-                color: theme.palette.secondary.light
-              }
+              ...theme.typography.mediumAvatar
             }}
             ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             onClick={handleToggle}
-            color="inherit"
           >
-            <IconBell stroke={1.5} size="1.3rem" />
+            <IconBell stroke={1.5} size="1.4rem" />
           </Avatar>
         </ButtonBase>
       </Box>

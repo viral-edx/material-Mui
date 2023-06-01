@@ -34,19 +34,11 @@ const Header = ({ handleLeftDrawerToggle }) => {
         <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }} className="btn_base">
           <Avatar
             variant="rounded"
+            className="button-hamburger"
             sx={{
-              ...theme.typography.commonAvatar,
-              ...theme.typography.mediumAvatar,
-              transition: 'all .2s ease-in-out',
-              background: theme.palette.secondary.light,
-              color: theme.palette.secondary.dark,
-              '&:hover': {
-                background: theme.palette.secondary.dark,
-                color: theme.palette.secondary.light
-              }
+              ...theme.typography.mediumAvatar
             }}
             onClick={handleLeftDrawerToggle}
-            color="inherit"
           >
             <IconMenu2 stroke={1.5} size="1.5rem" />
           </Avatar>
