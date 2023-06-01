@@ -94,10 +94,22 @@ const NotificationSection = () => {
         sx={{
           mr: 3,
           [theme.breakpoints.down('md')]: {
-            mr: 2
+            mr: 2,
+            marginLeft: '590px' 
+          },
+          [theme.breakpoints.down('lg')]: {
+            marginLeft: '590px'
+          },
+          [theme.breakpoints.down('xl')]: {
+            marginLeft: '590px' 
+          },
+          [theme.breakpoints.up('xl')]: {
+            marginLeft: '890px' // Adjusted margin-left for my screen
+          },
+          [theme.breakpoints.down('xxl')]: {
+            marginLeft: '890px' 
           }
         }}
-        marginLeft="890px"
         marginTop="15px"
       >
         <ButtonBase sx={{ borderRadius: '12px' }}>

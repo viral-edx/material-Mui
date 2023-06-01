@@ -109,21 +109,6 @@ const SearchSection = () => {
 
   return (
     <>
-      <Box sx={{ display: { xs: 'block', md: 'none' }, paddingTop: '14px', paddingLeft: '2px' }}>
-        <PopupState variant="popper" popupId="demo-popup-popper">
-          {(popupState) => (
-            <>
-              <Box sx={{ ml: 2 }}>
-                <ButtonBase sx={{ borderRadius: '12px' }}>
-                  <HeaderAvatarStyle variant="rounded" {...bindToggle(popupState)}>
-                    <IconSearch stroke={1.5} size="1.2rem" />
-                  </HeaderAvatarStyle>
-                </ButtonBase>
-              </Box>
-            </>
-          )}
-        </PopupState>
-      </Box>
       <Box sx={{ display: { xs: 'none', md: 'block' }, paddingTop: '14px', paddingLeft: '2px' }}>
         <OutlineInputStyle
           id="input-search-header"
