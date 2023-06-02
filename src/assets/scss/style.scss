@@ -280,3 +280,25 @@
   margin-right: 0.5px;
   justify-content: space-between;
 }
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  flex-shrink: 0px;
+  margin-right: 0.5px;
+}
+
+.dateLabels {
+  margin-left: 50px;
+  margin-top: 18px;
+}
+
+.description-table {
+  width: 745px;
+  padding-left: 18px;
+}
+
+.option-selected-icon {
+  color: var(--text-color);
+}
