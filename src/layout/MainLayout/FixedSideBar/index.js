@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Box } from '@mui/material';
 import React from 'react';
 import { IconDashboard, IconMail, IconComponents, IconBrandZoom } from '@tabler/icons';
@@ -45,26 +43,14 @@ const FixedSideBar = () => {
   const navigate = useNavigate();
   const [state, setState] = useState('/dashboard/default');
   return (
-    <Box
-      component="nav"
-      sx={{
-        flexShrink: { md: 0 },
-        width: '70px',
-        top: '45px',
-        position: 'fixed',
-        zIndex: '100',
-        height: '100%',
-        backgroundColor: 'rgb(238,242,246)'
-      }}
-    >
+    <Box component="nav" className="fixedSideBarNavbar">
       <Box sx={{ display: { xs: 'block' }, fontSize: '10px' }}>
         <Box className="fixedSideBar">
           {components.map((key) => {
-            console.log('key', key);
             const IconComponent = key.icon;
             return (
               <Box
-                className={key.url === state && 'selected_fixed_menu'}
+                className={key.url === state && 'selectedFixedMenu'}
                 onClick={() => {
                   navigate(key.url);
                   setState(key.url);

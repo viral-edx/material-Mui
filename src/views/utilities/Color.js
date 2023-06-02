@@ -24,11 +24,7 @@ const ColorBox = ({ bgcolor, title, data, dark }) => (
           color: dark ? 'grey.800' : '#ffffff'
         }}
       >
-        {title && (
-          <Typography variant="subtitle1" color="inherit">
-            {title}
-          </Typography>
-        )}
+        {title && <Typography variant="subtitle1">{title}</Typography>}
         {!title && <Box sx={{ p: 1.15 }} />}
       </Box>
     </Card>

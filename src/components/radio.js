@@ -42,16 +42,16 @@ const RadioPage = () => {
         </Typography>
       </Box>
       {/* basic radio button */}
-      <Box className="demo-box">
-        <Grid container className="demo-grid">
+      <Box className="demoBox">
+        <Grid container className="demoGrid">
           <Stack className="stack" spacing={2}>
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <RadioGroup aria-label="gender" defaultValue="female" name="radio-buttons-group" row>
                     <FormControlLabel value="female" control={<Radio />} label="Female" />
                     <FormControlLabel value="male" control={<Radio />} label="Male" />
@@ -62,13 +62,13 @@ const RadioPage = () => {
             </Paper>
 
             {/* colored radio button */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <RadioGroup aria-label="gender" defaultValue="Primary" name="radio-buttons-group" row>
                     <FormControlLabel value="Primary" control={<Radio {...controlColorProps('a')} />} label="Primary" />
                     <FormControlLabel
@@ -130,13 +130,13 @@ const RadioPage = () => {
 
           <Stack className="stack" spacing={2}>
             {/* size radio button */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Size
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <RadioGroup aria-label="gender" defaultValue="Default" name="radio-buttons-group" row>
                     <FormControlLabel value="Default" control={<Radio {...controlProps('a')} size="small" />} label="Default" />
                     <FormControlLabel value="Medium" control={<Radio {...controlProps('b')} />} label="Medium" />
@@ -161,13 +161,13 @@ const RadioPage = () => {
             </Paper>
 
             {/* label placement radio */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Label placement
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <RadioGroup row aria-labelledby="demo-form-control-label-placement" name="position" defaultValue="top">
                     <FormControlLabel value="top" control={<Radio />} label="Top" labelPlacement="top" />
                     <FormControlLabel value="start" control={<Radio />} label="Start" labelPlacement="start" />

@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { Box, Chip, Drawer, Stack, useMediaQuery } from '@mui/material';
+import { Box, Drawer, useMediaQuery } from '@mui/material';
 
 // third-party
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 // project imports
@@ -22,27 +21,20 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
   const drawer = (
     <>
       <BrowserView>
-        <PerfectScrollbar
+        <Box
           component="div"
-          className="scrollBarDiv"
+          className="scrollBarDrawer"
           style={{
             height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)'
           }}
         >
           <MenuList />
           <MenuCard />
-          <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
-            <Chip label={process.env.REACT_APP_VERSION} disabled chipcolor="secondary" size="small" sx={{ cursor: 'pointer' }} />
-          </Stack>
-        </PerfectScrollbar>
+        </Box>
       </BrowserView>
       <MobileView>
         <Box sx={{ px: 2 }}>
           <MenuList />
-          {/* <MenuCard /> */}
-          <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
-            <Chip label={process.env.REACT_APP_VERSION} disabled chipcolor="secondary" size="small" sx={{ cursor: 'pointer' }} />
-          </Stack>
         </Box>
       </MobileView>
     </>
@@ -71,7 +63,6 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
           }
         }}
         ModalProps={{ keepMounted: true }}
-        color="inherit"
       >
         {drawer}
       </Drawer>

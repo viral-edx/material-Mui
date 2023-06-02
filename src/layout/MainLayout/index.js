@@ -71,7 +71,6 @@ const MainLayout = () => {
       <AppBar
         enableColorOnDark
         position="fixed"
-        color="inherit"
         elevation={0}
         sx={{
           bgcolor: theme.palette.background.default,

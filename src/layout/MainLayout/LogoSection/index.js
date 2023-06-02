@@ -7,7 +7,7 @@ import logo from '../../../assets/images/logo.svg';
 const LogoSection = () => {
   return (
     <Link to="/">
-      <img src={logo} alt="main-logo" className="main-logo" />
+      <img src={logo} alt="mainLogo" className="mainLogo" />
     </Link>
   );
 };

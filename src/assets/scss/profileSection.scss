@@ -1,0 +1,52 @@
+.profileChipSection {
+    height: 48px;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    margin-top: 15px;
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+
+    &[aria-controls='menu-list-grow'],
+    &:hover {
+        border-color: var(--primary-color);
+        background: var(--primary-color) !important;
+    }
+
+    .MuiChip-label {
+        line-height: 0;
+    }
+
+    .profileAvatar {
+        margin: 8px 0 8px 8px !important;
+        cursor: pointer;
+        background-color: var(--text-color);
+
+        svg {
+            color: var(--primary-color);
+        }
+    }
+}
+
+
+.scrollNav {
+    height: 100%;
+    max-height: calc(100vh - 250px);
+    margin-top: -21px;
+
+    nav {
+        width: 100%;
+        min-width: 350px;
+        max-width: 400px;
+        border-radius: 10px;
+
+        .MuiListItemButton-root {
+            margin-top: 0.5em;
+        }
+    }
+}
+
+.profileSectionChip {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}

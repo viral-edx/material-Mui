@@ -40,18 +40,18 @@ const MenuPage = () => {
           Menus display a list of choices on temporary surfaces.
         </Typography>
       </Box>
-      <Box className="demo-box">
-        <Grid container className="demo-grid">
+      <Box className="demoBox">
+        <Grid container className="demoGrid">
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Menu */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Basic Menu
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card" style={{ marginLeft: '200px' }}>
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard" style={{ marginLeft: '200px' }}>
                   <Button
                     id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -79,13 +79,13 @@ const MenuPage = () => {
             </Paper>
 
             {/* Icon menu */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Icon menu
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card" style={{ marginLeft: '150px' }}>
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard" style={{ marginLeft: '150px' }}>
                   <MenuList>
                     <MenuItem>
                       <ListItemIcon>
@@ -131,13 +131,13 @@ const MenuPage = () => {
 
           <Stack className="stack" spacing={2}>
             {/* Popup-state */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Popup-state
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card" style={{ marginLeft: '200px' }}>
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard" style={{ marginLeft: '200px' }}>
                   <PopupState variant="popover" popupId="demo-popup-menu">
                     {(popupState) => (
                       <React.Fragment>

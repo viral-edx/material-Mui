@@ -29,7 +29,7 @@ const MailListItem = ({ read, initialStarred = false, description, date, title }
       <td>
         <div style={{ display: 'flex' }}>{title}</div>
       </td>
-      <td className="description-table">
+      <td className="descriptionTable">
         <div style={{ display: 'flex' }}>{description}</div>
       </td>
       <td>

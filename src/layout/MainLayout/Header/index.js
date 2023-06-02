@@ -34,7 +34,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
         <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }} className="btn_base">
           <Avatar
             variant="rounded"
-            className="button-hamburger"
+            className="buttonHamburger"
             sx={{
               ...theme.typography.mediumAvatar
             }}

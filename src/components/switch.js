@@ -29,18 +29,18 @@ const SwitchPage = () => {
           Switches toggle the state of a single setting on or off.
         </Typography>
       </Box>
-      <Box className="demo-box">
-        <Grid container className="demo-grid">
+      <Box className="demoBox">
+        <Grid container className="demoGrid">
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Switch */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Switch {...label} defaultChecked />
                   <Switch {...label} />
                   <Switch {...label} disabled defaultChecked />
@@ -50,13 +50,13 @@ const SwitchPage = () => {
             </Paper>
 
             {/* Labeled Switch */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Labeled Switch
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControlLabel control={<Switch defaultChecked />} label="Label" />
                   <FormControlLabel required control={<Switch />} label="Required" />
                   <FormControlLabel disabled control={<Switch />} label="Disabled" />
@@ -64,13 +64,13 @@ const SwitchPage = () => {
               </CardContent>
             </Paper>
             {/* With Size */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Size
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Switch {...label} defaultChecked size="small" />
                   <Switch {...label} defaultChecked />
                 </Grid>
@@ -81,13 +81,13 @@ const SwitchPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Color Switch */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Switch {...colorLabel} defaultChecked />
                   <Switch {...colorLabel} defaultChecked color="secondary" />
                   <Switch {...colorLabel} defaultChecked color="warning" />
@@ -98,13 +98,13 @@ const SwitchPage = () => {
             </Paper>
 
             {/* Label placement Switch */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Label placement
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControlLabel value="top" control={<Switch color="primary" />} label="Top" labelPlacement="top" />
                   <FormControlLabel value="start" control={<Switch color="primary" />} label="Start" labelPlacement="start" />
                   <FormControlLabel value="bottom" control={<Switch color="primary" />} label="Bottom" labelPlacement="bottom" />

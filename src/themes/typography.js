@@ -8,32 +8,32 @@ export default function themeTypography(theme) {
     fontFamily: theme?.customization?.fontFamily,
     h6: {
       fontWeight: 500,
-      color: theme.heading,
+      color: '#364152',
       fontSize: '0.75rem'
     },
     h5: {
       fontSize: '0.875rem',
-      color: theme.heading,
+      color: '#364152',
       fontWeight: 500
     },
     h4: {
       fontSize: '1rem',
-      color: theme.heading,
+      color: '#364152',
       fontWeight: 600
     },
     h3: {
       fontSize: '1.25rem',
-      color: theme.heading,
+      color: '#364152',
       fontWeight: 600
     },
     h2: {
       fontSize: '1.5rem',
-      color: theme.heading,
+      color: '#364152',
       fontWeight: 700
     },
     h1: {
       fontSize: '2.125rem',
-      color: theme.heading,
+      color: '#364152',
       fontWeight: 700
     },
     subtitle1: {
@@ -44,11 +44,11 @@ export default function themeTypography(theme) {
     subtitle2: {
       fontSize: '0.75rem',
       fontWeight: 400,
-      color: theme.darkTextSecondary
+      color: '#697586'
     },
     caption: {
       fontSize: '0.75rem',
-      color: theme.darkTextSecondary,
+      color: '#8492c4',
       fontWeight: 400
     },
     body1: {
@@ -60,7 +60,7 @@ export default function themeTypography(theme) {
       letterSpacing: '0em',
       fontWeight: 400,
       lineHeight: '1.5em',
-      color: theme.darkTextPrimary
+      color: '#414152'
     },
     button: {
       textTransform: 'capitalize'
@@ -71,7 +71,7 @@ export default function themeTypography(theme) {
       '& > label': {
         top: 23,
         left: 0,
-        color: theme.grey500,
+        color: '#697586',
         '&[data-shrink="false"]': {
           top: 5
         }
@@ -87,7 +87,7 @@ export default function themeTypography(theme) {
       }
     },
     mainContent: {
-      backgroundColor: theme.background,
+      backgroundColor: '#EEF2F6',
       width: '100%',
       minHeight: 'calc(100vh - 88px)',
       flexGrow: 1,
@@ -99,7 +99,7 @@ export default function themeTypography(theme) {
     menuCaption: {
       fontSize: '0.875rem',
       fontWeight: 500,
-      color: theme.heading,
+      color: '#364152',
       padding: '6px',
       textTransform: 'capitalize',
       marginTop: '10px'
@@ -107,7 +107,7 @@ export default function themeTypography(theme) {
     subMenuCaption: {
       fontSize: '0.6875rem',
       fontWeight: 500,
-      color: theme.darkTextSecondary,
+      color: 'red',
       textTransform: 'capitalize'
     },
     commonAvatar: {

@@ -16,7 +16,7 @@ const EmailPage = () => {
 
   return (
     <>
-      <Box className="email-div">
+      <Box className="emailDiv">
         <Box display="inline-flex">
           <Checkbox color="default" />
           <IconButton onClick={handleMenuOpen}>

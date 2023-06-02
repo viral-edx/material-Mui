@@ -43,18 +43,18 @@ const SelectPage = () => {
           Select components are used for collecting user provided information from a list of options.
         </Typography>
       </Box>
-      <Box className="demo-box">
-        <Grid container className="demo-grid">
+      <Box className="demoBox">
+        <Grid container className="demoGrid">
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Select */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Basic Select
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControl sx={{ m: 1, minWidth: 120 }}>
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
@@ -74,13 +74,13 @@ const SelectPage = () => {
             </Paper>
 
             {/* Filled and standard variants*/}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Filled and standard variants
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
                     <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
                     <Select
@@ -119,13 +119,13 @@ const SelectPage = () => {
             </Paper>
 
             {/* Labels and helper text */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Labels and helper text
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControl sx={{ m: 1, minWidth: 120 }}>
                     <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
                     <Select
@@ -163,13 +163,13 @@ const SelectPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Small Size */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Small Size
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
                     <InputLabel id="demo-select-small-label">Age</InputLabel>
                     <Select labelId="demo-select-small-label" id="demo-select-small" value={age4} label="Age" onChange={handleChangeFourth}>
@@ -186,13 +186,13 @@ const SelectPage = () => {
             </Paper>
 
             {/* Auto width */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Auto width
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControl sx={{ m: 1, minWidth: 80 }}>
                     <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
                     <Select
@@ -216,13 +216,13 @@ const SelectPage = () => {
             </Paper>
 
             {/* Other props */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Basic Select
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <FormControl sx={{ m: 1, minWidth: 120 }} disabled>
                     <InputLabel id="demo-simple-select-disabled-label">Age</InputLabel>
                     <Select

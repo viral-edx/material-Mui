@@ -69,6 +69,7 @@ const ProfileSection = () => {
   };
 
   const prevOpen = useRef(open);
+
   useEffect(() => {
     if (prevOpen.current === true && open === false) {
       anchorRef.current.focus();
@@ -135,7 +136,7 @@ const ProfileSection = () => {
                     </Stack>
                     <Divider />
                   </Box>
-                  <div className="scroll-nav">
+                  <Box className="scrollNav">
                     <Box sx={{ p: 2 }}>
                       <List
                         component="nav"
@@ -157,7 +158,7 @@ const ProfileSection = () => {
                           <ListItemText primary={<Typography variant="body2">Account Settings</Typography>} />
                         </ListItemButton>
                         <ListItemButton
-                          sx={{ borderRadius: `${customization.borderRadius}px` }}
+                          sx={{ borderRadius: `${customization.borderRadius}px`, marginTop: '5px' }}
                           selected={selectedIndex === 1}
                           onClick={(event) => handleListItemClick(event, 1, '#')}
                         >
@@ -171,14 +172,7 @@ const ProfileSection = () => {
                                   <Typography variant="body2">Social Profile</Typography>
                                 </Grid>
                                 <Grid item>
-                                  <Chip
-                                    label="02"
-                                    size="small"
-                                    sx={{
-                                      bgcolor: theme.palette.warning.dark,
-                                      color: theme.palette.background.default
-                                    }}
-                                  />
+                                  <Chip label="02" size="small" className="profileSectionChip" />
                                 </Grid>
                               </Grid>
                             }
@@ -196,7 +190,7 @@ const ProfileSection = () => {
                         </ListItemButton>
                       </List>
                     </Box>
-                  </div>
+                  </Box>
                 </MainCard>
               </ClickAwayListener>
             </Paper>

@@ -70,9 +70,9 @@ const MenuList = () => {
     <>
       {navigate.pathname === '/email' && (
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding className={text === 'Inbox' && 'selected_menu'}>
-              <ListItemButton className="option-selected">
+          {['Grid'].map((text, index) => (
+            <ListItem key={text} disablePadding className={text === 'Grid' && 'selectedMenu'}>
+              <ListItemButton className="options">
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -86,9 +86,9 @@ const MenuList = () => {
             <ListItem
               key={text}
               disablePadding
-              className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selected_menu'}
+              className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selectedMenu'}
             >
-              <ListItemButton className="option-selected">
+              <ListItemButton className="options">
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -103,9 +103,9 @@ const MenuList = () => {
               key={text}
               disablePadding
               onClick={() => redirect(text.url)}
-              className={navigate.pathname === text.url && 'selected_menu'}
+              className={navigate.pathname === text.url && 'selectedMenu'}
             >
-              <ListItemButton className="option-selected">
+              <ListItemButton className="options">
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text.title} />
               </ListItemButton>

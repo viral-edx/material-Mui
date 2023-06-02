@@ -59,7 +59,7 @@ const Dashboard = () => {
     //   </Grid>
     // </>
     <>
-      <Container className="dashboard-container">
+      <Container className="dashboardContainer">
         <Typography variant="h1">Coming Soon</Typography>
         <Typography variant="body1"> We are working on something awesome. Stay tuned!</Typography>
       </Container>

@@ -1,0 +1,33 @@
+.actions {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    flex-shrink: 0px;
+    margin-right: 0.5px;
+}
+
+.dateLabels {
+    margin-left: 50px;
+    margin-top: 18px;
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 130px;
+    color: rgba(0, 0, 0, 0.54);
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.MailListItem-checked {
+    color: rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.87);
+    }
+}

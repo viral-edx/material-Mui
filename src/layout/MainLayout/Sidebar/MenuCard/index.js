@@ -52,7 +52,7 @@ function LinearProgressWithLabel({ value, ...others }) {
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="h6" color="inherit">{`${Math.round(value)}%`}</Typography>
+            <Typography variant="h6">{`${Math.round(value)}%`}</Typography>
           </Grid>
         </Grid>
       </Grid>

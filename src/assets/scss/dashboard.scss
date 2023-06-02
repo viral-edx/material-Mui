@@ -1,0 +1,25 @@
+.mainLogo {
+    height: auto;
+    width: 75%;
+}
+
+.dashboardContainer {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: rgba(80, 63, 111, 0.805) 0px 2px 14px 0px;
+
+    h1 {
+        color: var(--black-color);
+        padding-top: 20%;
+    }
+
+    p {
+        color: var(--black-color);
+        padding-top: 20px;
+        font-size: 22px;
+    }
+}

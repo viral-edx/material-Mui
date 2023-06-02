@@ -45,18 +45,18 @@ const RatingPage = () => {
           Ratings provide insight regarding others opinions and experiences, and can allow the user to submit a rating of their own.
         </Typography>
       </Box>
-      <Box className="demo-box">
-        <Grid container className="demo-grid">
+      <Box className="demoBox">
+        <Grid container className="demoGrid">
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Rating */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Basic Rating
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Typography component="legend">Controlled</Typography>
                   <Rating
                     name="simple-controlled"
@@ -76,13 +76,13 @@ const RatingPage = () => {
             </Paper>
 
             {/* Rating precision */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Rating precision
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
                   <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
                 </Grid>
@@ -90,13 +90,13 @@ const RatingPage = () => {
             </Paper>
 
             {/* Hover feedback*/}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Hover feedback
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Rating
                     name="hover-feedback"
                     value={value}
@@ -119,13 +119,13 @@ const RatingPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Sizes */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Sizes
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Rating name="size-small" defaultValue={2} size="small" />
                   <Rating name="size-medium" defaultValue={2} />
                   <Rating name="size-large" defaultValue={2} size="large" />
@@ -134,13 +134,13 @@ const RatingPage = () => {
             </Paper>
 
             {/* Customization */}
-            <Paper root elevation rounded elevation0 className="demo-paper">
-              <Typography variant="body1" title className="demo-typography">
+            <Paper root elevation rounded elevation0 className="demoPaper">
+              <Typography variant="body1" title className="demoTypography">
                 Customization
               </Typography>
               <DividerPage />
-              <CardContent className="demo-output">
-                <Grid container spacing={2} className="grid-card">
+              <CardContent className="demoOutput">
+                <Grid container spacing={2} className="gridCard">
                   <Typography component="legend">Custom icon and color</Typography>
                   <StyledRating
                     name="customized-color"

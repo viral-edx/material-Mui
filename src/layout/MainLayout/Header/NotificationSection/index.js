@@ -113,7 +113,7 @@ const NotificationSection = () => {
         <ButtonBase sx={{ borderRadius: '12px' }}>
           <Avatar
             variant="rounded"
-            className="button-hamburger"
+            className="buttonHamburger"
             sx={{
               ...theme.typography.mediumAvatar
             }}

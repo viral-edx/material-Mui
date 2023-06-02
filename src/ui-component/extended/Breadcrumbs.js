@@ -19,7 +19,7 @@ import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
 const linkSX = {
   display: 'flex',
-  color: 'grey.900',
+  color: '#121926',
   textDecoration: 'none',
   alignContent: 'center',
   alignItems: 'center'
@@ -144,7 +144,7 @@ const Breadcrumbs = ({ card, divider, icon, icons, maxItems, navigation, rightAl
                   maxItems={maxItems || 8}
                   separator={separatorIcon}
                 >
-                  <Typography component={Link} to="/" color="inherit" variant="subtitle1" sx={linkSX}>
+                  <Typography component={Link} to="/" variant="subtitle1" sx={linkSX}>
                     {icons && <HomeTwoToneIcon sx={iconStyle} />}
                     {icon && <HomeIcon sx={{ ...iconStyle, mr: 0 }} />}
                     {!icon && 'Dashboard'}
