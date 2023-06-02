@@ -21,8 +21,6 @@ import {
   useMediaQuery
 } from '@mui/material';
 
-// third-party
-import PerfectScrollbar from 'react-perfect-scrollbar';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
@@ -175,7 +173,7 @@ const NotificationSection = () => {
                       </Grid>
                     </Grid>
                     <Grid item xs={12}>
-                      <PerfectScrollbar style={{ height: '100%', maxHeight: 'calc(100vh - 205px)', overflowX: 'hidden' }}>
+                      <div style={{ height: '100%', maxHeight: 'calc(100vh - 205px)', overflowX: 'hidden' }}>
                         <Grid container direction="column" spacing={2}>
                           <Grid item xs={12}>
                             <Box sx={{ px: 2, pt: 0.25 }}>
@@ -202,7 +200,7 @@ const NotificationSection = () => {
                           </Grid>
                         </Grid>
                         <NotificationList />
-                      </PerfectScrollbar>
+                      </div>
                     </Grid>
                   </Grid>
                   <Divider />
