@@ -42,7 +42,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   53%,
@@ -73,7 +72,6 @@
 }
 
 @keyframes slideY {
-
   0%,
   50%,
   100% {
@@ -90,7 +88,6 @@
 }
 
 @keyframes slideX {
-
   0%,
   50%,
   100% {
@@ -202,4 +199,13 @@
   width: auto;
   display: flex;
   padding: 8px;
+}
+
+
+// css for main background color 
+.css-1d53kat {
+  background-color: rgb(28 28 30 / 5%);
+}
+.css-12fhpbg {
+  background-color: rgb(28 28 30 / 5%);
 }
