@@ -1,5 +1,3 @@
-// assets
-
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
 const components = {

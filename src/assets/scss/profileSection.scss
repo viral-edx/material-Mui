@@ -4,13 +4,21 @@
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
     margin-top: 15px;
-    border-color: var(--secondary-color);
     background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid var(--secondary-color);
+
+    img {
+        width: 58px;
+        height: 30px;
+    }
 
     &[aria-controls='menu-list-grow'],
     &:hover {
         border-color: var(--primary-color);
-        background: var(--primary-color) !important;
+        cursor: pointer;
     }
 
     .MuiChip-label {
@@ -18,12 +26,12 @@
     }
 
     .profileAvatar {
-        margin: 8px 0 8px 8px !important;
+        margin: 8px 14px 8px 2px !important;
         cursor: pointer;
-        background-color: var(--text-color);
+        background-color: var(--primary-color);
 
         svg {
-            color: var(--primary-color);
+            color: var(--text-color);
         }
     }
 }

@@ -3,12 +3,13 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+import Logo from '../../../../assets/images/logo-icon-1.svg';
+
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import {
   Avatar,
   Box,
-  Chip,
   ClickAwayListener,
   Divider,
   Grid,
@@ -78,26 +79,28 @@ const ProfileSection = () => {
 
   return (
     <>
-      <Chip
+      {/* <Chip
         className="profileChipSection"
-        icon={
-          <Avatar
-            sx={{
-              ...theme.typography.mediumAvatar
-            }}
-            ref={anchorRef}
-            aria-controls={open ? 'menu-list-grow' : undefined}
-            aria-haspopup="true"
-            className="profileAvatar"
-            onClick={handleToggle}
-          />
-        }
+        avatar={<Avatar alt="Logo" src={Logo} />}
         variant="outlined"
         ref={anchorRef}
         aria-controls={open ? 'menu-list-grow' : undefined}
         aria-haspopup="true"
         color="primary"
-      />
+      /> */}
+      <div className="profileChipSection">
+        <img src={Logo} alt="Company Logo" />
+        <Avatar
+          sx={{
+            ...theme.typography.mediumAvatar
+          }}
+          ref={anchorRef}
+          aria-controls={open ? 'menu-list-grow' : undefined}
+          aria-haspopup="true"
+          className="profileAvatar"
+          onClick={handleToggle}
+        />
+      </div>
       <Popper
         placement="bottom-end"
         open={open}

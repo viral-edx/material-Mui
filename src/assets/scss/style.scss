@@ -8,11 +8,6 @@
 @import './profileSection.scss';
 @import './colorCode.scss';
 
-::selection {
-  background-color: var(--primary-color);
-  color: var(--black-color);
-}
-
 // ==============================|| LIGHT BOX ||============================== //
 .fullscreen .react-images__blanket {
   z-index: 1200;
@@ -47,6 +42,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   53%,
@@ -77,6 +73,7 @@
 }
 
 @keyframes slideY {
+
   0%,
   50%,
   100% {
@@ -93,6 +90,7 @@
 }
 
 @keyframes slideX {
+
   0%,
   50%,
   100% {
@@ -126,6 +124,7 @@
 
 .selectedMenu {
   margin-bottom: 5px;
+  margin-top: 5px;
   border-radius: 10px;
   background-color: var(--secondary-color);
 
@@ -133,7 +132,11 @@
     border-radius: 10px;
 
     &:hover {
-      background-color: var(--primary-color);
+      background-color: var(--hover-color);
+    }
+
+    span {
+      font-weight: bolder;
     }
   }
 }
@@ -142,9 +145,10 @@
   transition: all 0.2s ease-in-out;
   background: var(--secondary-color);
   color: var(--text-color);
+
   &[aria-controls='menu-list-grow'],
   &:hover {
-    background: rgb(23 24 22 / 21%);
+    background: var(--hover-color);
 
     color: var(--text-color);
   }
@@ -174,6 +178,7 @@
 .css-1dybbl5-MuiChip-label {
   padding-left: 0px !important;
 }
+
 .icon-fixed-sidebar-upper {
   border-radius: 22px;
   height: auto;
@@ -188,11 +193,12 @@
   display: flex;
   padding: 8px;
 }
+
 .icon-fixed-upper:hover {
   border-radius: 22px;
   height: auto;
   position: relative;
-  background-color: rgb(23 24 22 / 21%);
+  background-color: var(--hover-color);
   width: auto;
   display: flex;
   padding: 8px;

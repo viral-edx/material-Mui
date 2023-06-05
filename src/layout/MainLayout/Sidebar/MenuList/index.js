@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-// material-ui
 // project imports
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -67,7 +66,6 @@ const MenuList = () => {
 
   const navigate = useLocation();
   const redirect = useNavigate();
-  const [menu, setMenu] = useState('/components-button');
 
   return (
     <>
@@ -88,7 +86,6 @@ const MenuList = () => {
           {['Dashboard'].map((text, index) => (
             <ListItem key={text} disablePadding className={navigate.pathname === '/dashboard/default' && 'selectedMenu'}>
               <ListItemButton className="options">
-                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                 <ListItemIcon>{index % 2 === 0 ? <MailIcon /> : <InboxIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -97,7 +94,6 @@ const MenuList = () => {
         </List>
       )}
 
-      {console.log('navigate.pathname', navigate.pathname)}
       {(navigate.pathname.includes('/components') || navigate.pathname === '/') && (
         <List>
           {components.map((key) => {

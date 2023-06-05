@@ -20,7 +20,6 @@ export const theme = (customization) => {
     colors: color,
     heading: '#121926',
     paper: '#fff',
-    mainColor: '#b7eb00',
     backgroundDefault: '#fff',
     background: '#eef2f6',
     darkTextPrimary: '#364152',
