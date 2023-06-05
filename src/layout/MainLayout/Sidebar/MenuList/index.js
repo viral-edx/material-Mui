@@ -1,4 +1,3 @@
-// material-ui
 // project imports
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -89,7 +88,8 @@ const MenuList = () => {
               className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selectedMenu'}
             >
               <ListItemButton className="options">
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+                <ListItemIcon>{index % 2 === 0 ? <MailIcon /> : <InboxIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
@@ -98,19 +98,20 @@ const MenuList = () => {
       )}
       {navigate.pathname.includes('/components') && (
         <List>
-          {components.map((text, index) => (
-            <ListItem
-              key={text}
-              disablePadding
-              onClick={() => redirect(text.url)}
-              className={navigate.pathname === text.url && 'selectedMenu'}
-            >
-              <ListItemButton className="options">
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text.title} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          {components.map((key) => {
+            return (
+              <ListItem
+                key={key}
+                disablePadding
+                onClick={() => redirect(key.url)}
+                className={navigate.pathname === key.url && 'selectedMenu'}
+              >
+                <ListItemButton className="options">
+                  <ListItemText primary={key.title} />
+                </ListItemButton>
+              </ListItem>
+            );
+          })}
         </List>
       )}
     </>

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // material-ui
@@ -21,8 +21,6 @@ import {
   Stack,
   Typography
 } from '@mui/material';
-
-// third-party
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
@@ -91,14 +89,13 @@ const ProfileSection = () => {
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true"
             className="profileAvatar"
+            onClick={handleToggle}
           />
         }
-        label={<IconSettings stroke={1.5} size="1.5rem" color="var(--text-color)" />}
         variant="outlined"
         ref={anchorRef}
         aria-controls={open ? 'menu-list-grow' : undefined}
         aria-haspopup="true"
-        onClick={handleToggle}
         color="primary"
       />
       <Popper
@@ -124,24 +121,16 @@ const ProfileSection = () => {
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
                 <MainCard border={false} elevation={16} content={false} boxShadow shadow={theme.shadows[16]}>
-                  <Box sx={{ p: 2 }}>
-                    <Stack style={{ padding: 'inherit' }}>
-                      <Stack direction="row" spacing={0.5} alignItems="center">
-                        <Typography variant="h4">Good Morning,</Typography>
-                        <Typography component="span" variant="h4" sx={{ fontWeight: 400 }}>
-                          User
-                        </Typography>
-                      </Stack>
-                      <Typography variant="subtitle2">Project Admin</Typography>
-                    </Stack>
-                    <Divider />
-                  </Box>
-                  <Box className="scrollNav">
-                    <Box sx={{ p: 2 }}>
+                  <Box sx={{ p: 2, width: '400px', background: '#EEF2F6' }}>
+                    <Stack>
+                      <Typography variant="subtitle2" textAlign="center" marginBottom="10px">
+                        This account is managed by ioMarket.team
+                      </Typography>
+
                       <List
                         component="nav"
+                        className="inner-box-profile-section"
                         sx={{
-                          backgroundColor: theme.palette.background.paper,
                           [theme.breakpoints.down('md')]: {
                             minWidth: '100%'
                           }
@@ -149,6 +138,7 @@ const ProfileSection = () => {
                       >
                         <ListItemButton
                           sx={{ borderRadius: `${customization.borderRadius}px` }}
+                          className="item-profile-section"
                           selected={selectedIndex === 0}
                           onClick={(event) => handleListItemClick(event, 0, '#')}
                         >
@@ -160,6 +150,7 @@ const ProfileSection = () => {
                         <ListItemButton
                           sx={{ borderRadius: `${customization.borderRadius}px`, marginTop: '5px' }}
                           selected={selectedIndex === 1}
+                          className="item-profile-section"
                           onClick={(event) => handleListItemClick(event, 1, '#')}
                         >
                           <ListItemIcon>
@@ -171,25 +162,30 @@ const ProfileSection = () => {
                                 <Grid item>
                                   <Typography variant="body2">Social Profile</Typography>
                                 </Grid>
-                                <Grid item>
-                                  <Chip label="02" size="small" className="profileSectionChip" />
-                                </Grid>
                               </Grid>
                             }
                           />
                         </ListItemButton>
-                        <ListItemButton
-                          sx={{ borderRadius: `${customization.borderRadius}px` }}
-                          selected={selectedIndex === 4}
-                          onClick={handleLogout}
-                        >
-                          <ListItemIcon>
-                            <IconLogout stroke={1.5} size="1.3rem" />
-                          </ListItemIcon>
-                          <ListItemText primary={<Typography variant="body2">Logout</Typography>} />
-                        </ListItemButton>
                       </List>
-                    </Box>
+                    </Stack>
+                    <ListItemButton
+                      sx={{ borderRadius: `${customization.borderRadius}px` }}
+                      selected={selectedIndex === 4}
+                      onClick={handleLogout}
+                      className="item-profile-section"
+                    >
+                      <ListItemIcon>
+                        <IconLogout stroke={1.5} size="1.3rem" />
+                      </ListItemIcon>
+                      <ListItemText primary={<Typography variant="body2">Logout</Typography>} />
+                    </ListItemButton>
+                    <Divider style={{ marginTop: '10px' }} />
+                    <Typography variant="subtitle2" textAlign="center" marginTop="10px">
+                      <div className="privacy-terms-of-service-setting">
+                        <Link to="/">Privacy Policy</Link>
+                        <Link to="/">Terms of Service</Link>
+                      </div>
+                    </Typography>
                   </Box>
                 </MainCard>
               </ClickAwayListener>

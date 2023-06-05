@@ -20,13 +20,14 @@ export const theme = (customization) => {
     colors: color,
     heading: '#121926',
     paper: '#fff',
+    mainColor: '#b7eb00',
     backgroundDefault: '#fff',
     background: '#eef2f6',
     darkTextPrimary: '#364152',
     darkTextSecondary: '#697586',
     textDark: '#121926',
     menuSelected: '#364152',
-    menuSelectedBack: '#ede7f6',
+    menuSelectedBack: '#EDF9B8',
     divider: '#e3e8ef',
     customization
   };

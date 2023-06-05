@@ -15,7 +15,7 @@ const components = [
   },
   {
     id: 'components-radio',
-    title: 'Gmail',
+    title: 'Mail',
     type: 'item',
     icon: IconMail,
     url: '/email',

@@ -8,7 +8,10 @@
 @import './profileSection.scss';
 @import './colorCode.scss';
 
-// third-party
+::selection {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+}
 
 // ==============================|| LIGHT BOX ||============================== //
 .fullscreen .react-images__blanket {
@@ -167,9 +170,11 @@
   justify-content: space-between;
 }
 
-
-
 .descriptionTable {
   width: 745px;
   padding-left: 18px;
+}
+
+.css-1dybbl5-MuiChip-label {
+  padding-left: 0px !important;
 }
