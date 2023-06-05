@@ -47,7 +47,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   53%,
@@ -78,7 +77,6 @@
 }
 
 @keyframes slideY {
-
   0%,
   50%,
   100% {
@@ -95,7 +93,6 @@
 }
 
 @keyframes slideX {
-
   0%,
   50%,
   100% {
@@ -141,15 +138,14 @@
   }
 }
 
-
 .buttonHamburger {
   transition: all 0.2s ease-in-out;
   background: var(--secondary-color);
   color: var(--text-color);
-
   &[aria-controls='menu-list-grow'],
   &:hover {
-    background: var(--primary-color);
+    background: rgb(23 24 22 / 21%);
+
     color: var(--text-color);
   }
 }
@@ -177,4 +173,27 @@
 
 .css-1dybbl5-MuiChip-label {
   padding-left: 0px !important;
+}
+.icon-fixed-sidebar-upper {
+  border-radius: 22px;
+  height: auto;
+  position: relative;
+  background-color: #99ba09b0;
+  width: auto;
+  display: flex;
+  padding: 8px;
+}
+
+.icon-fixed-upper {
+  display: flex;
+  padding: 8px;
+}
+.icon-fixed-upper:hover {
+  border-radius: 22px;
+  height: auto;
+  position: relative;
+  background-color: rgb(23 24 22 / 21%);
+  width: auto;
+  display: flex;
+  padding: 8px;
 }

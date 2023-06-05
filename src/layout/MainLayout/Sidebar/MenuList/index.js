@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+// material-ui
 // project imports
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -7,6 +9,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { useLocation, useNavigate } from 'react-router';
+import { useState } from 'react';
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 
 const MenuList = () => {
@@ -15,7 +18,7 @@ const MenuList = () => {
       id: 'components-buttons',
       title: 'Button',
       type: 'item',
-      url: '/components-button',
+      url: '/',
       breadcrumbs: false
     },
     {
@@ -64,6 +67,7 @@ const MenuList = () => {
 
   const navigate = useLocation();
   const redirect = useNavigate();
+  const [menu, setMenu] = useState('/components-button');
 
   return (
     <>
@@ -79,14 +83,10 @@ const MenuList = () => {
           ))}
         </List>
       )}
-      {(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && (
+      {navigate.pathname === '/dashboard/default' && (
         <List>
           {['Dashboard'].map((text, index) => (
-            <ListItem
-              key={text}
-              disablePadding
-              className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selectedMenu'}
-            >
+            <ListItem key={text} disablePadding className={navigate.pathname === '/dashboard/default' && 'selectedMenu'}>
               <ListItemButton className="options">
                 {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                 <ListItemIcon>{index % 2 === 0 ? <MailIcon /> : <InboxIcon />}</ListItemIcon>
@@ -96,7 +96,9 @@ const MenuList = () => {
           ))}
         </List>
       )}
-      {navigate.pathname.includes('/components') && (
+
+      {console.log('navigate.pathname', navigate.pathname)}
+      {(navigate.pathname.includes('/components') || navigate.pathname === '/') && (
         <List>
           {components.map((key) => {
             return (

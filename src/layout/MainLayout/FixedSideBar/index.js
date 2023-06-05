@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { Box } from '@mui/material';
 import React from 'react';
-import { IconDashboard, IconMail, IconComponents, IconBrandZoom } from '@tabler/icons';
+import { IconDashboard, IconMail, IconComponents, IconBrandZoom, IconTable } from '@tabler/icons';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
 
@@ -15,9 +16,9 @@ const components = [
   },
   {
     id: 'components-radio',
-    title: 'Mail',
+    title: 'Matrix',
     type: 'item',
-    icon: IconMail,
+    icon: IconTable,
     url: '/email',
     breadcrumbs: false
   },
@@ -41,7 +42,7 @@ const components = [
 
 const FixedSideBar = () => {
   const navigate = useNavigate();
-  const [state, setState] = useState('/dashboard/default');
+  const [state, setState] = useState('/components-button');
   return (
     <Box component="nav" className="fixedSideBarNavbar">
       <Box sx={{ display: { xs: 'block' }, fontSize: '10px' }}>
@@ -50,7 +51,6 @@ const FixedSideBar = () => {
             const IconComponent = key.icon;
             return (
               <Box
-                className={key.url === state && 'selectedFixedMenu'}
                 onClick={() => {
                   navigate(key.url);
                   setState(key.url);
@@ -58,7 +58,9 @@ const FixedSideBar = () => {
                 key={key.id}
                 sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '10px', marginTop: '10px' }}
               >
-                <IconComponent size={24} />
+                <div className={key.url === state ? 'icon-fixed-sidebar-upper' : ' icon-fixed-upper'}>
+                  <IconComponent size={22} />
+                </div>
                 <span>{key.title}</span>
               </Box>
             );
