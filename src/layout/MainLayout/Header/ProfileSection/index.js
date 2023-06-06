@@ -180,7 +180,7 @@ const ProfileSection = () => {
                       <ListItemIcon>
                         <IconLogout stroke={1.5} size="1.3rem" />
                       </ListItemIcon>
-                      <ListItemText primary={<Typography variant="body2">Logout</Typography>} />
+                      <ListItemText primary={<Typography variant="body2">Sign Out</Typography>} />
                     </ListItemButton>
                     <Divider style={{ marginTop: '10px' }} />
                     <Typography variant="subtitle2" textAlign="center" marginTop="10px">

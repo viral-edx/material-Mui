@@ -1,60 +1,60 @@
 .profileChipSection {
-    height: 48px;
-    align-items: center;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    margin-top: 15px;
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid var(--secondary-color);
+  height: 48px;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  margin-top: 15px;
+  /* background-color: #F3F3F4; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #b7eb00;
+  img {
+    width: 58px;
+    height: 30px;
+  }
 
-    img {
-        width: 58px;
-        height: 30px;
+  &[aria-controls='menu-list-grow'],
+  &:hover {
+    border-color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .MuiChip-label {
+    line-height: 0;
+  }
+
+  .profileAvatar {
+    margin: 8px 14px 8px 2px !important;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+
+    svg {
+      color: var(--text-color);
     }
-
-    &[aria-controls='menu-list-grow'],
-    &:hover {
-        border-color: var(--primary-color);
-        cursor: pointer;
-    }
-
-    .MuiChip-label {
-        line-height: 0;
-    }
-
-    .profileAvatar {
-        margin: 8px 14px 8px 2px !important;
-        cursor: pointer;
-        background-color: var(--primary-color);
-
-        svg {
-            color: var(--text-color);
-        }
-    }
+  }
 }
 
 .inner-box-profile-section {
-    background-color: var(--white-color);
-    border-radius: 12px;
+  background-color: var(--white-color);
+  border-radius: 12px;
 }
 
 .profileSectionChip {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .privacy-terms-of-service-setting {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .item-profile-section {
-    &:hover {
-        background-color: transparent;
-    }
+  &:hover {
+    background-color: transparent;
+  }
 }

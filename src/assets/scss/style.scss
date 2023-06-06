@@ -123,13 +123,13 @@
   margin-bottom: 5px;
   margin-top: 5px;
   border-radius: 10px;
-  background-color: var(--secondary-color);
+  background-color: rgba(153, 186, 9, 0.6901960784);
 
   .options {
     border-radius: 10px;
 
     &:hover {
-      background-color: var(--hover-color);
+      background-color: transparent;
     }
 
     span {
@@ -201,11 +201,18 @@
   padding: 8px;
 }
 
-
-// css for main background color 
+// css for main background color
 .css-1d53kat {
   background-color: rgb(28 28 30 / 5%);
 }
 .css-12fhpbg {
   background-color: rgb(28 28 30 / 5%);
+}
+
+.bell_icon {
+  transition: all 0.2s ease-in-out;
+  /* background: var(--secondary-color); */
+  color: var(--text-color);
+  background: white;
+  border: 1px solid #b7eb00;
 }

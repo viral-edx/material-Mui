@@ -21,7 +21,6 @@ import {
   useMediaQuery
 } from '@mui/material';
 
-
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
@@ -102,7 +101,7 @@ const NotificationSection = () => {
             marginLeft: '590px'
           },
           [theme.breakpoints.up('xl')]: {
-            marginLeft: '890px' // Adjusted margin-left for my screen
+            marginLeft: '870px' // Adjusted margin-left for my screen
           },
           [theme.breakpoints.down('xxl')]: {
             marginLeft: '890px'
@@ -122,7 +121,7 @@ const NotificationSection = () => {
             aria-haspopup="true"
             onClick={handleToggle}
           >
-            <IconBell stroke={1.5} size="1.4rem" />
+            <IconBell stroke={1.5} size="1.4rem" className="bell_icon" />
           </Avatar>
         </ButtonBase>
       </Box>

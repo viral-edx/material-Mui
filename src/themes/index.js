@@ -26,7 +26,7 @@ export const theme = (customization) => {
     darkTextSecondary: '#697586',
     textDark: '#121926',
     menuSelected: '#364152',
-    menuSelectedBack: '#EDF9B8',
+    menuSelectedBack: 'rgba(153, 186, 9, 0.6901960784)',
     divider: '#e3e8ef',
     customization
   };
