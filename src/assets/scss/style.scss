@@ -42,6 +42,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   53%,
@@ -72,6 +73,7 @@
 }
 
 @keyframes slideY {
+
   0%,
   50%,
   100% {
@@ -88,6 +90,7 @@
 }
 
 @keyframes slideX {
+
   0%,
   50%,
   100% {
@@ -140,13 +143,11 @@
 
 .buttonHamburger {
   transition: all 0.2s ease-in-out;
-  background: var(--secondary-color);
+  background: transparent;
   color: var(--text-color);
 
-  &[aria-controls='menu-list-grow'],
-  &:hover {
-    background: var(--hover-color);
-
+  &[aria-controls='menu-list-grow'] {
+    background: transparent;
     color: var(--text-color);
   }
 }
@@ -205,14 +206,13 @@
 .css-1d53kat {
   background-color: rgb(28 28 30 / 5%);
 }
+
 .css-12fhpbg {
   background-color: rgb(28 28 30 / 5%);
 }
 
 .bell_icon {
   transition: all 0.2s ease-in-out;
-  /* background: var(--secondary-color); */
   color: var(--text-color);
   background: white;
-  border: 1px solid #b7eb00;
 }

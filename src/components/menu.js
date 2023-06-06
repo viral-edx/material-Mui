@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Typography,
   Box,
@@ -20,9 +20,10 @@ import ContentPaste from '@mui/icons-material/ContentPaste';
 import Cloud from '@mui/icons-material/Cloud';
 import DividerPage from 'utils/divider';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import { Fragment } from 'react';
 
 const MenuPage = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -140,7 +141,7 @@ const MenuPage = () => {
                 <Grid container spacing={2} className="gridCard" style={{ marginLeft: '200px' }}>
                   <PopupState variant="popover" popupId="demo-popup-menu">
                     {(popupState) => (
-                      <React.Fragment>
+                      <Fragment>
                         <Button variant="contained" {...bindTrigger(popupState)}>
                           Dashboard
                         </Button>
@@ -149,7 +150,7 @@ const MenuPage = () => {
                           <MenuItem onClick={popupState.close}>My account</MenuItem>
                           <MenuItem onClick={popupState.close}>Logout</MenuItem>
                         </Menu>
-                      </React.Fragment>
+                      </Fragment>
                     )}
                   </PopupState>
                 </Grid>

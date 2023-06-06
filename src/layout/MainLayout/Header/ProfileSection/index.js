@@ -77,18 +77,15 @@ const ProfileSection = () => {
     prevOpen.current = open;
   }, [open]);
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === '') {
+      handleToggle();
+    }
+  };
+
   return (
     <>
-      {/* <Chip
-        className="profileChipSection"
-        avatar={<Avatar alt="Logo" src={Logo} />}
-        variant="outlined"
-        ref={anchorRef}
-        aria-controls={open ? 'menu-list-grow' : undefined}
-        aria-haspopup="true"
-        color="primary"
-      /> */}
-      <div className="profileChipSection">
+      <div className="profile-chip-section" role="button" tabIndex={0} onClick={handleToggle} onKeyDown={handleKeyDown}>
         <img src={Logo} alt="Company Logo" />
         <Avatar
           sx={{
@@ -98,7 +95,6 @@ const ProfileSection = () => {
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           className="profileAvatar"
-          onClick={handleToggle}
         />
       </div>
       <Popper

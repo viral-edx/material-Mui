@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, Divider, CardContent, Checkbox, FormControlLabel } from '@mui/material';
 
 import DividerPage from 'utils/divider';
@@ -14,7 +14,7 @@ const CheckboxPage = () => {
   const sizeLabel = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   const colorLabel = { inputProps: { 'aria-label': 'Checkbox demo' } };
-  const [checked, setChecked] = React.useState([true, false]);
+  const [checked, setChecked] = useState([true, false]);
 
   const handleChange1 = (event) => {
     setChecked([event.target.checked, event.target.checked]);

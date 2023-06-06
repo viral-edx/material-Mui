@@ -5,7 +5,6 @@ import colors from 'assets/scss/_themes-vars.module.scss';
 
 // project imports
 import componentStyleOverrides from './compStyleOverride';
-import themePalette from './palette';
 import themeTypography from './typography';
 
 /**
@@ -33,7 +32,6 @@ export const theme = (customization) => {
 
   const themeOptions = {
     direction: 'ltr',
-    palette: themePalette(themeOption),
     mixins: {
       toolbar: {
         minHeight: '48px',

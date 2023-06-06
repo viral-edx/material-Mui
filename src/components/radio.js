@@ -1,12 +1,12 @@
+import React, { useState } from 'react';
 import { CardContent, FormControlLabel, Grid, Paper, Radio, RadioGroup, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 import DividerPage from 'utils/divider';
 import { orange, pink, red } from '@mui/material/colors';
 
 const RadioPage = () => {
-  const [selectedValue, setSelectedValue] = React.useState('a');
-  const [selectedColor, setSelectedColor] = React.useState('a');
+  const [selectedValue, setSelectedValue] = useState('a');
+  const [selectedColor, setSelectedColor] = useState('a');
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -52,10 +52,10 @@ const RadioPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <RadioGroup aria-label="gender" defaultValue="female" name="radio-buttons-group" row>
-                    <FormControlLabel value="female" control={<Radio />} label="Female" />
-                    <FormControlLabel value="male" control={<Radio />} label="Male" />
-                    <FormControlLabel value="other" control={<Radio />} label="Other" />
+                  <RadioGroup aria-label="gender" defaultValue="male" name="radio-buttons-group" row>
+                    <FormControlLabel value="male" control={<Radio color="success" />} label="Male" />
+                    <FormControlLabel value="female" control={<Radio color="success" />} label="Female" />
+                    <FormControlLabel value="other" control={<Radio color="success" />} label="Other" />
                   </RadioGroup>
                 </Grid>
               </CardContent>
@@ -71,11 +71,6 @@ const RadioPage = () => {
                 <Grid container spacing={2} className="gridCard">
                   <RadioGroup aria-label="gender" defaultValue="Primary" name="radio-buttons-group" row>
                     <FormControlLabel value="Primary" control={<Radio {...controlColorProps('a')} />} label="Primary" />
-                    <FormControlLabel
-                      value="Secondary"
-                      control={<Radio {...controlColorProps('b')} color="secondary" />}
-                      label="Secondary"
-                    />
                     <FormControlLabel value="Success" control={<Radio {...controlColorProps('c')} color="success" />} label="Success" />
                     <FormControlLabel
                       value="warning"
@@ -138,14 +133,19 @@ const RadioPage = () => {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <RadioGroup aria-label="gender" defaultValue="Default" name="radio-buttons-group" row>
-                    <FormControlLabel value="Default" control={<Radio {...controlProps('a')} size="small" />} label="Default" />
-                    <FormControlLabel value="Medium" control={<Radio {...controlProps('b')} />} label="Medium" />
+                    <FormControlLabel
+                      value="Default"
+                      control={<Radio {...controlProps('a')} size="small" color="success" />}
+                      label="Default"
+                    />
+                    <FormControlLabel value="Medium" control={<Radio {...controlProps('b')} color="success" />} label="Medium" />
                     <FormControlLabel
                       value="Large "
                       control={
                         <Radio
                           label="large"
                           {...controlProps('c')}
+                          color="success"
                           sx={{
                             '& .MuiSvgIcon-root': {
                               fontSize: 28
@@ -169,10 +169,10 @@ const RadioPage = () => {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <RadioGroup row aria-labelledby="demo-form-control-label-placement" name="position" defaultValue="top">
-                    <FormControlLabel value="top" control={<Radio />} label="Top" labelPlacement="top" />
-                    <FormControlLabel value="start" control={<Radio />} label="Start" labelPlacement="start" />
-                    <FormControlLabel value="bottom" control={<Radio />} label="Bottom" labelPlacement="bottom" />
-                    <FormControlLabel value="end" control={<Radio />} label="End" />
+                    <FormControlLabel value="top" control={<Radio color="success" />} label="Top" labelPlacement="top" />
+                    <FormControlLabel value="start" control={<Radio color="success" />} label="Start" labelPlacement="start" />
+                    <FormControlLabel value="bottom" control={<Radio color="success" />} label="Bottom" labelPlacement="bottom" />
+                    <FormControlLabel value="end" control={<Radio color="success" />} label="End" />
                   </RadioGroup>
                 </Grid>
               </CardContent>

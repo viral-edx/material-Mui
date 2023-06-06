@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, Rating } from '@mui/material';
 import DividerPage from 'utils/divider';
 import StarIcon from '@mui/icons-material/Star';
@@ -33,8 +33,8 @@ const StyledRating = styled(Rating)({
 });
 
 const RatingPage = () => {
-  const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);
+  const [value, setValue] = useState(2);
+  const [hover, setHover] = useState(-1);
   return (
     <>
       <Box>

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, FormControl, InputLabel, Select, MenuItem, FormHelperText } from '@mui/material';
 import DividerPage from 'utils/divider';
 
 const SelectPage = () => {
-  const [age1, setAge1] = React.useState('');
-  const [age2, setAge2] = React.useState('');
-  const [age3, setAge3] = React.useState('');
-  const [age4, setAge4] = React.useState('');
-  const [age5, setAge5] = React.useState('');
-  const [age6, setAge6] = React.useState('');
+  const [age1, setAge1] = useState('');
+  const [age2, setAge2] = useState('');
+  const [age3, setAge3] = useState('');
+  const [age4, setAge4] = useState('');
+  const [age5, setAge5] = useState('');
+  const [age6, setAge6] = useState('');
 
   const handleChangeFirst = (event) => {
     setAge1(event.target.value);

@@ -29,12 +29,6 @@ function ButtonPage() {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <Button variant="contained">Default</Button>
-                  <Button variant="contained" color="secondary">
-                    Secondary
-                  </Button>
-                  <Button variant="contained" color="info">
-                    Info
-                  </Button>
                   <Button variant="contained" color="success">
                     Success
                   </Button>
@@ -57,8 +51,6 @@ function ButtonPage() {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <Button>Default</Button>
-                  <Button color="secondary">Secondary</Button>
-                  <Button color="info">Info</Button>
                   <Button color="success">Success</Button>
                   <Button color="warning">Warning</Button>
                   <Button color="error">Error</Button>
@@ -74,13 +66,13 @@ function ButtonPage() {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Button variant="outlined" size="small">
+                  <Button variant="outlined" color="success" size="small">
                     Small
                   </Button>
-                  <Button variant="outlined" size="medium">
+                  <Button variant="outlined" color="success" size="medium">
                     Medium
                   </Button>
-                  <Button variant="outlined" size="large">
+                  <Button variant="outlined" color="success" size="large">
                     Large
                   </Button>
                 </Grid>
@@ -99,12 +91,6 @@ function ButtonPage() {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <Button variant="outlined">Default</Button>
-                  <Button variant="outlined" color="secondary">
-                    Secondary
-                  </Button>
-                  <Button variant="outlined" color="info">
-                    Info
-                  </Button>
                   <Button variant="outlined" color="success">
                     Success
                   </Button>
@@ -154,11 +140,13 @@ function ButtonPage() {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Button startIcon={<HomeIcon />}>Home</Button>
-                  <Button variant="contained" endIcon={<SendIcon />}>
+                  <Button color="success" startIcon={<HomeIcon />}>
+                    Home
+                  </Button>
+                  <Button variant="contained" color="success" endIcon={<SendIcon />}>
                     Send
                   </Button>
-                  <Button variant="outlined" startIcon={<DeleteIcon />}>
+                  <Button variant="outlined" color="success" startIcon={<DeleteIcon />}>
                     Delete
                   </Button>
                 </Grid>
