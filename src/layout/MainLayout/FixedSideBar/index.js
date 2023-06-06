@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Box } from '@mui/material';
 import React from 'react';
-import { IconDashboard, IconMail, IconComponents, IconBrandZoom, IconTable } from '@tabler/icons';
+import { IconDashboard, IconComponents, IconBrandZoom, IconTable } from '@tabler/icons';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
 

@@ -218,7 +218,7 @@ const SelectPage = () => {
             {/* Other props */}
             <Paper root elevation rounded elevation0 className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
-                Basic Select
+                Other props
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">

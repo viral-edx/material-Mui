@@ -41,10 +41,10 @@ const SwitchPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Switch {...label} defaultChecked />
-                  <Switch {...label} />
-                  <Switch {...label} disabled defaultChecked />
-                  <Switch {...label} disabled />
+                  <Switch {...label} defaultChecked color="success" />
+                  <Switch {...label} color="success" />
+                  <Switch {...label} disabled defaultChecked color="success" />
+                  <Switch {...label} disabled color="success" />
                 </Grid>
               </CardContent>
             </Paper>
@@ -57,9 +57,9 @@ const SwitchPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <FormControlLabel control={<Switch defaultChecked />} label="Label" />
-                  <FormControlLabel required control={<Switch />} label="Required" />
-                  <FormControlLabel disabled control={<Switch />} label="Disabled" />
+                  <FormControlLabel control={<Switch defaultChecked color="success" />} label="Label" />
+                  <FormControlLabel required control={<Switch color="success" />} label="Required" />
+                  <FormControlLabel disabled control={<Switch color="success" />} label="Disabled" />
                 </Grid>
               </CardContent>
             </Paper>
@@ -71,8 +71,8 @@ const SwitchPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Switch {...label} defaultChecked size="small" />
-                  <Switch {...label} defaultChecked />
+                  <Switch {...label} defaultChecked size="small" color="success" />
+                  <Switch {...label} defaultChecked color="success" />
                 </Grid>
               </CardContent>
             </Paper>
@@ -89,7 +89,7 @@ const SwitchPage = () => {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <Switch {...colorLabel} defaultChecked />
-                  <Switch {...colorLabel} defaultChecked color="secondary" />
+                  <Switch {...colorLabel} defaultChecked color="success" />
                   <Switch {...colorLabel} defaultChecked color="warning" />
                   <Switch {...colorLabel} defaultChecked color="default" />
                   <PinkSwitch {...colorLabel} defaultChecked />
@@ -105,10 +105,10 @@ const SwitchPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <FormControlLabel value="top" control={<Switch color="primary" />} label="Top" labelPlacement="top" />
-                  <FormControlLabel value="start" control={<Switch color="primary" />} label="Start" labelPlacement="start" />
-                  <FormControlLabel value="bottom" control={<Switch color="primary" />} label="Bottom" labelPlacement="bottom" />
-                  <FormControlLabel value="end" control={<Switch color="primary" />} label="End" labelPlacement="end" />
+                  <FormControlLabel value="top" control={<Switch color="success" />} label="Top" labelPlacement="top" />
+                  <FormControlLabel value="start" control={<Switch color="success" />} label="Start" labelPlacement="start" />
+                  <FormControlLabel value="bottom" control={<Switch color="success" />} label="Bottom" labelPlacement="bottom" />
+                  <FormControlLabel value="end" control={<Switch color="success" />} label="End" labelPlacement="end" />
                 </Grid>
               </CardContent>
             </Paper>

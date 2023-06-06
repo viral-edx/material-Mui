@@ -10,7 +10,7 @@ function ButtonPage() {
     <>
       <Box>
         <Typography variant="h2" className="title">
-          Buttons
+          Button
         </Typography>
         <Typography variant="h6" className="description">
           Buttons allow users to take actions, and make choices, with a single tap.

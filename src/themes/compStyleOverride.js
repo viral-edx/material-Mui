@@ -68,7 +68,7 @@ export default function componentStyleOverrides(theme) {
             }
           },
           '&:hover': {
-            backgroundColor: 'rgba(153, 186, 9, 0.6901960784)',
+            backgroundColor: '#99ba09b0',
             color: theme.menuSelected,
             borderRadius: '10px',
             '& .MuiListItemIcon-root': {

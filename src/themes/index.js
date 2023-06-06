@@ -1,10 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
-// assets
-import colors from 'assets/scss/_themes-vars.module.scss';
-
 // project imports
 import componentStyleOverrides from './compStyleOverride';
+// import themePalette from './palette';
 import themeTypography from './typography';
 
 /**
@@ -13,10 +11,7 @@ import themeTypography from './typography';
  */
 
 export const theme = (customization) => {
-  const color = colors;
-
   const themeOption = {
-    colors: color,
     heading: '#121926',
     paper: '#fff',
     backgroundDefault: '#fff',
@@ -25,13 +20,14 @@ export const theme = (customization) => {
     darkTextSecondary: '#697586',
     textDark: '#121926',
     menuSelected: '#364152',
-    menuSelectedBack: 'rgba(153, 186, 9, 0.6901960784)',
+    menuSelectedBack: '#99ba09b0',
     divider: '#e3e8ef',
     customization
   };
 
   const themeOptions = {
     direction: 'ltr',
+    // palette: themePalette(themeOption), // Use only when we want to changed the css of color variant of success
     mixins: {
       toolbar: {
         minHeight: '48px',
