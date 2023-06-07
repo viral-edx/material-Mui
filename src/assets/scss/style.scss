@@ -6,6 +6,7 @@
 @import './dashboard.scss';
 @import './profileSection.scss';
 @import './colorCode.scss';
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 // ==============================|| LIGHT BOX ||============================== //
 .fullscreen .react-images__blanket {
@@ -216,6 +217,47 @@
   background: white;
 }
 
-.css-uc0022:hover{
-  background-color:transparent;
+.css-uc0022:hover {
+  background-color: transparent;
+}
+
+.percentage-chip {
+  max-width: 100%;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  white-space: nowrap;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor: default;
+  outline: 0px;
+  text-decoration: none;
+  padding: 0px 0px 0px 8px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #69b1ff;
+  margin-left: 10px;
+  // background-color: #E6F5FE;
+  // color: #047dff;
+}
+
+.title-typography {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.57;
+  font-family: 'Public Sans', sans-serif;
+  color: #8c8c8c;
+}
+
+.count-typography {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-family: "Public Sans", sans-serif;
+  color: inherit;
 }
