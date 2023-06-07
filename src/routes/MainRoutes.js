@@ -19,7 +19,7 @@ const AlertPage = Loadable(lazy(() => import('components/alert')));
 const SliderPage = Loadable(lazy(() => import('components/slider')));
 const BadgePage = Loadable(lazy(() => import('components/badge')));
 const CardPage = Loadable(lazy(() => import('components/card')));
-const DividerPage = Loadable(lazy(() => import('components/divider')));
+const DividerPageComp = Loadable(lazy(() => import('components/dividerComp')));
 const PaginationPage = Loadable(lazy(() => import('components/pagination')));
 const ProgressPage = Loadable(lazy(() => import('components/progress')));
 const TextFieldPage = Loadable(lazy(() => import('components/textField')));
@@ -97,7 +97,7 @@ const MainRoutes = {
     },
     {
       path: '/components-divider',
-      element: <DividerPage />
+      element: <DividerPageComp />
     },
     {
       path: '/components-tooltip',
