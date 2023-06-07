@@ -3,21 +3,29 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
-import ButtonPage from 'components/button';
-import RadioPage from 'components/radio';
-import MenuPage from 'components/menu';
-import CheckboxPage from 'components/checkbox';
-import SelectPage from 'components/select';
-import SwitchPage from 'components/switch';
-import RatingPage from 'components/rating';
-import EmailPage from 'components/email';
-import MeetPage from 'components/meetPage';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
+const ButtonPage = Loadable(lazy(() => import('components/button')));
+const RadioPage = Loadable(lazy(() => import('components/radio')));
+const MenuPage = Loadable(lazy(() => import('components/menu')));
+const CheckboxPage = Loadable(lazy(() => import('components/checkbox')));
+const SelectPage = Loadable(lazy(() => import('components/select')));
+const SwitchPage = Loadable(lazy(() => import('components/switch')));
+const RatingPage = Loadable(lazy(() => import('components/rating')));
+const EmailPage = Loadable(lazy(() => import('components/email')));
+const MeetPage = Loadable(lazy(() => import('components/meetPage')));
+const AlertPage = Loadable(lazy(() => import('components/alert')));
+const SliderPage = Loadable(lazy(() => import('components/slider')));
+const BadgePage = Loadable(lazy(() => import('components/badge')));
+const CardPage = Loadable(lazy(() => import('components/card')));
+const DividerPage = Loadable(lazy(() => import('components/divider')));
+const PaginationPage = Loadable(lazy(() => import('components/pagination')));
+const ProgressPage = Loadable(lazy(() => import('components/progress')));
+const TextFieldPage = Loadable(lazy(() => import('components/textField')));
+const TooltipPage = Loadable(lazy(() => import('components/tooltip')));
 
 // ==============================|| MAIN ROUTING ||============================== //
-
 const MainRoutes = {
   path: '/',
   element: <MainLayout />,
@@ -35,7 +43,6 @@ const MainRoutes = {
         }
       ]
     },
-
     {
       path: '/components-button',
       element: <ButtonPage />
@@ -71,6 +78,46 @@ const MainRoutes = {
     {
       path: '/meet',
       element: <MeetPage />
+    },
+    {
+      path: '/components-switch',
+      element: <SwitchPage />
+    },
+    {
+      path: '/components-slider',
+      element: <SliderPage />
+    },
+    {
+      path: '/components-text-field',
+      element: <TextFieldPage />
+    },
+    {
+      path: '/components-badge',
+      element: <BadgePage />
+    },
+    {
+      path: '/components-divider',
+      element: <DividerPage />
+    },
+    {
+      path: '/components-tooltip',
+      element: <TooltipPage />
+    },
+    {
+      path: '/components-alert',
+      element: <AlertPage />
+    },
+    {
+      path: '/components-progress',
+      element: <ProgressPage />
+    },
+    {
+      path: '/components-card',
+      element: <CardPage />
+    },
+    {
+      path: '/components-pagination',
+      element: <PaginationPage />
     }
   ]
 };

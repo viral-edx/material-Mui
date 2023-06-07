@@ -8,7 +8,6 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { useLocation, useNavigate } from 'react-router';
-import { useState } from 'react';
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 
 const MenuList = () => {
@@ -56,10 +55,66 @@ const MenuList = () => {
       breadcrumbs: false
     },
     {
-      id: 'components-rating',
-      title: 'Rating',
+      id: 'components-slider',
+      title: 'Slider',
       type: 'item',
-      url: '/components-rating',
+      url: '/components-slider',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-text-field',
+      title: 'Text Field',
+      type: 'item',
+      url: '/components-text-field',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-badge',
+      title: 'Badge',
+      type: 'item',
+      url: '/components-badge',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-divider',
+      title: 'Divider',
+      type: 'item',
+      url: '/components-divider',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-tooltip',
+      title: 'Tooltip',
+      type: 'item',
+      url: '/components-tooltip',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-alert',
+      title: 'Alert',
+      type: 'item',
+      url: '/components-alert',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-progress',
+      title: 'Progress',
+      type: 'item',
+      url: '/components-progress',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-card',
+      title: 'Card',
+      type: 'item',
+      url: '/components-card',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-pagination',
+      title: 'Pagination',
+      type: 'item',
+      url: '/components-pagination',
       breadcrumbs: false
     }
   ];

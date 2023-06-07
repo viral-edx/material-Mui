@@ -142,7 +142,7 @@ const ProfileSection = () => {
                           onClick={(event) => handleListItemClick(event, 0, '#')}
                         >
                           <ListItemIcon>
-                            <IconSettings stroke={1.5} size="1.3rem" />
+                            <IconSettings stroke={2.5} size="1.3rem" />
                           </ListItemIcon>
                           <ListItemText primary={<Typography variant="body2">Account Settings</Typography>} />
                         </ListItemButton>
@@ -153,7 +153,7 @@ const ProfileSection = () => {
                           onClick={(event) => handleListItemClick(event, 1, '#')}
                         >
                           <ListItemIcon>
-                            <IconUser stroke={1.5} size="1.3rem" />
+                            <IconUser stroke={2.5} size="1.3rem" />
                           </ListItemIcon>
                           <ListItemText
                             primary={
@@ -174,7 +174,7 @@ const ProfileSection = () => {
                       className="item-profile-section"
                     >
                       <ListItemIcon>
-                        <IconLogout stroke={1.5} size="1.3rem" />
+                        <IconLogout stroke={2.5} size="1.3rem" />
                       </ListItemIcon>
                       <ListItemText primary={<Typography variant="body2">Sign Out</Typography>} />
                     </ListItemButton>

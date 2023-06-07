@@ -7,13 +7,11 @@ import { Avatar, Box, ButtonBase } from '@mui/material';
 // project imports
 import LogoSection from '../LogoSection';
 import SearchSection from './SearchSection';
-// import ProfileSection from './ProfileSection';
-// import NotificationSection from './NotificationSection';
+import NotificationSection from './NotificationSection';
+import ProfileSection from './ProfileSection';
 
 // assets
 import { IconMenu2 } from '@tabler/icons';
-import NotificationSection from './NotificationSection';
-import ProfileSection from './ProfileSection';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
@@ -49,7 +47,6 @@ const Header = ({ handleLeftDrawerToggle }) => {
         <LogoSection />
       </Box>
       {/* header search */}
-
       <SearchSection />
 
       {/* notification and profile section */}

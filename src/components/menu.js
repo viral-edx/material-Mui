@@ -52,13 +52,14 @@ const MenuPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard" style={{ marginLeft: '200px' }}>
+                <Grid container spacing={2} className="gridCard">
                   <Button
                     id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleClick}
+                    color="success"
                   >
                     Dashboard
                   </Button>
@@ -86,7 +87,7 @@ const MenuPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard" style={{ marginLeft: '150px' }}>
+                <Grid container spacing={2} className="gridCard">
                   <MenuList>
                     <MenuItem>
                       <ListItemIcon>
@@ -138,11 +139,11 @@ const MenuPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard" style={{ marginLeft: '200px' }}>
+                <Grid container spacing={2} className="gridCard">
                   <PopupState variant="popover" popupId="demo-popup-menu">
                     {(popupState) => (
                       <Fragment>
-                        <Button variant="contained" {...bindTrigger(popupState)}>
+                        <Button variant="contained" color="success" {...bindTrigger(popupState)}>
                           Dashboard
                         </Button>
                         <Menu {...bindMenu(popupState)}>
