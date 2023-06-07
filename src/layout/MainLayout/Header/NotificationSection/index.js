@@ -158,8 +158,8 @@ const NotificationSection = () => {
                               size="small"
                               label="01"
                               sx={{
-                                color: theme.palette.background.default,
-                                bgcolor: theme.palette.warning.dark
+                                color: 'black',
+                                bgcolor: '#B8CF65'
                               }}
                             />
                           </Stack>
