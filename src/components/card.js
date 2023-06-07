@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Button,
@@ -14,7 +15,6 @@ import {
   CardMedia,
   CardActionArea
 } from '@mui/material';
-import React from 'react';
 import DividerPage from 'utils/divider';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';

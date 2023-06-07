@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Typography,
   Box,
@@ -19,7 +19,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { styled } from '@mui/material/styles';
 
 const TooltipPage = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleTooltipClose = () => {
     setOpen(false);
@@ -88,44 +88,44 @@ const TooltipPage = () => {
                 <Grid container spacing={2} className="gridCard">
                   <Grid container justifyContent="center">
                     <Grid item>
-                      <Tooltip title="Add" placement="top-start">
+                      <Tooltip title="Add" placement="top-start" color="success">
                         <Button>top-start</Button>
                       </Tooltip>
-                      <Tooltip title="Add" placement="top">
+                      <Tooltip title="Add" placement="top" color="success">
                         <Button>top</Button>
                       </Tooltip>
-                      <Tooltip title="Add" placement="top-end">
+                      <Tooltip title="Add" placement="top-end" color="success">
                         <Button>top-end</Button>
                       </Tooltip>
                     </Grid>
                   </Grid>
                   <Grid container justifyContent="center">
                     <Grid item xs={6}>
-                      <Tooltip title="Add" placement="left-start">
+                      <Tooltip title="Add" placement="left-start" color="success">
                         <Button>left-start</Button>
                       </Tooltip>
                       <br />
-                      <Tooltip title="Add" placement="left">
+                      <Tooltip title="Add" placement="left" color="success">
                         <Button>left</Button>
                       </Tooltip>
                       <br />
-                      <Tooltip title="Add" placement="left-end">
+                      <Tooltip title="Add" placement="left-end" color="success">
                         <Button>left-end</Button>
                       </Tooltip>
                     </Grid>
                     <Grid item container xs={6} alignItems="flex-end" direction="column">
                       <Grid item>
-                        <Tooltip title="Add" placement="right-start">
+                        <Tooltip title="Add" placement="right-start" color="success">
                           <Button>right-start</Button>
                         </Tooltip>
                       </Grid>
                       <Grid item>
-                        <Tooltip title="Add" placement="right">
+                        <Tooltip title="Add" placement="right" color="success">
                           <Button>right</Button>
                         </Tooltip>
                       </Grid>
                       <Grid item>
-                        <Tooltip title="Add" placement="right-end">
+                        <Tooltip title="Add" placement="right-end" color="success">
                           <Button>right-end</Button>
                         </Tooltip>
                       </Grid>
@@ -133,13 +133,13 @@ const TooltipPage = () => {
                   </Grid>
                   <Grid container justifyContent="center">
                     <Grid item>
-                      <Tooltip title="Add" placement="bottom-start">
+                      <Tooltip title="Add" placement="bottom-start" color="success">
                         <Button>bottom-start</Button>
                       </Tooltip>
-                      <Tooltip title="Add" placement="bottom">
+                      <Tooltip title="Add" placement="bottom" color="success">
                         <Button>bottom</Button>
                       </Tooltip>
-                      <Tooltip title="Add" placement="bottom-end">
+                      <Tooltip title="Add" placement="bottom-end" color="success">
                         <Button>bottom-end</Button>
                       </Tooltip>
                     </Grid>
@@ -158,17 +158,17 @@ const TooltipPage = () => {
                 <Grid container spacing={2} className="gridCard">
                   <Grid container justifyContent="center">
                     <Grid item>
-                      <Tooltip disableFocusListener title="Add">
+                      <Tooltip disableFocusListener title="Add" color="success">
                         <Button>Hover or touch</Button>
                       </Tooltip>
                     </Grid>
                     <Grid item>
-                      <Tooltip disableHoverListener title="Add">
+                      <Tooltip disableHoverListener title="Add" color="success">
                         <Button>Focus or touch</Button>
                       </Tooltip>
                     </Grid>
                     <Grid item>
-                      <Tooltip disableFocusListener disableTouchListener title="Add">
+                      <Tooltip disableFocusListener disableTouchListener title="Add" color="success">
                         <Button>Hover</Button>
                       </Tooltip>
                     </Grid>
@@ -185,6 +185,7 @@ const TooltipPage = () => {
                             disableHoverListener
                             disableTouchListener
                             title="Add"
+                            color="success"
                           >
                             <Button onClick={handleTooltipOpen}>Click</Button>
                           </Tooltip>
@@ -207,13 +208,13 @@ const TooltipPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Tooltip title={longText}>
+                  <Tooltip title={longText} color="success">
                     <Button sx={{ m: 1 }}>Default Width [300px]</Button>
                   </Tooltip>
-                  <CustomWidthTooltip title={longText}>
+                  <CustomWidthTooltip title={longText} color="success">
                     <Button sx={{ m: 1 }}>Custom Width [500px]</Button>
                   </CustomWidthTooltip>
-                  <NoMaxWidthTooltip title={longText}>
+                  <NoMaxWidthTooltip title={longText} color="success">
                     <Button sx={{ m: 1 }}>No wrapping</Button>
                   </NoMaxWidthTooltip>
                 </Grid>
@@ -228,7 +229,7 @@ const TooltipPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Tooltip title="Add" disableInteractive>
+                  <Tooltip title="Add" disableInteractive color="success">
                     <Button>Not interactive</Button>
                   </Tooltip>
                 </Grid>
@@ -243,13 +244,13 @@ const TooltipPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Tooltip title="Add">
+                  <Tooltip title="Add" color="success">
                     <Button>Grow</Button>
                   </Tooltip>
-                  <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title="Add">
+                  <Tooltip TransitionComponent={Fade} color="success" TransitionProps={{ timeout: 600 }} title="Add">
                     <Button>Fade</Button>
                   </Tooltip>
-                  <Tooltip TransitionComponent={Zoom} title="Add">
+                  <Tooltip TransitionComponent={Zoom} color="success" title="Add">
                     <Button>Zoom</Button>
                   </Tooltip>
                 </Grid>

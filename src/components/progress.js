@@ -86,7 +86,7 @@ const Progress = () => {
                 <CardContent className="demoOutput">
                   <Grid container spacing={2} className="gridCard">
                     <Box sx={{ width: '100%' }}>
-                      <LinearProgress />
+                      <LinearProgress color="success" />
                     </Box>
                   </Grid>
                 </CardContent>
@@ -104,7 +104,7 @@ const Progress = () => {
                 <CardContent className="demoOutput">
                   <Grid container spacing={2} className="gridCard">
                     <Box sx={{ width: '100%' }}>
-                      <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
+                      <LinearProgress variant="buffer" value={progress} color="success" valueBuffer={buffer} />
                     </Box>
                   </Grid>
                 </CardContent>
