@@ -33,9 +33,9 @@ const bull = (
   </Box>
 );
 
-
 const CardPage = () => {
   const theme = useTheme();
+
   return (
     <>
       <Box>
@@ -121,7 +121,7 @@ const CardPage = () => {
                       <IconButton aria-label="share">
                         <ShareIcon />
                       </IconButton>
-
+                    </CardActions>
                   </Card>
                 </Grid>
               </CardContent>
