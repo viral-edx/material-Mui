@@ -34,7 +34,7 @@ const SliderPage = () => {
     setValue(newValue);
   };
 
-  const [value1, setValue1] = React.useState([20, 37]);
+  const [value1, setValue1] = useState([20, 37]);
 
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
@@ -62,10 +62,10 @@ const SliderPage = () => {
               <CardContent className="demoOutput">
                 <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
                   <VolumeDown />
-                  <Slider aria-label="Volume" value={value} onChange={handleChange} />
+                  <Slider aria-label="Volume" value={value} color="success" onChange={handleChange} />
                   <VolumeUp />
                 </Stack>
-                <Slider disabled defaultValue={30} aria-label="Disabled slider" />
+                <Slider disabled defaultValue={30} color="success" aria-label="Disabled slider" />
               </CardContent>
             </Paper>
 
@@ -76,9 +76,11 @@ const SliderPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Box width={300}>
-                  <Slider size="small" defaultValue={70} aria-label="Small" valueLabelDisplay="auto" />
-                  <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+                <Box>
+                  <Grid container spacing={2} className="gridCard">
+                    <Slider size="small" defaultValue={70} aria-label="Small" color="success" valueLabelDisplay="auto" />
+                    <Slider defaultValue={50} aria-label="Default" color="success" valueLabelDisplay="auto" />
+                  </Grid>
                 </Box>
               </CardContent>
             </Paper>
@@ -90,18 +92,21 @@ const SliderPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Box width={300}>
-                  <Slider
-                    aria-label="Temperature"
-                    defaultValue={30}
-                    getAriaValueText={valuetext}
-                    valueLabelDisplay="auto"
-                    step={10}
-                    marks
-                    min={10}
-                    max={110}
-                  />
-                  <Slider defaultValue={30} step={10} marks min={10} max={110} disabled />
+                <Box>
+                  <Grid container spacing={2} className="gridCard">
+                    <Slider
+                      aria-label="Temperature"
+                      defaultValue={30}
+                      getAriaValueText={valuetext}
+                      valueLabelDisplay="auto"
+                      step={10}
+                      marks
+                      min={10}
+                      max={110}
+                      color="success"
+                    />
+                    <Slider defaultValue={30} step={10} marks min={10} max={110} color="success" disabled />
+                  </Grid>
                 </Box>
               </CardContent>
             </Paper>
@@ -114,10 +119,12 @@ const SliderPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-                  <Slider aria-label="Temperature" defaultValue={30} getAriaValueText={valuetext} />
-                  <Slider aria-label="Temperature" defaultValue={30} getAriaValueText={valuetext} color="success" />
-                  <Slider aria-label="Temperature" defaultValue={30} getAriaValueText={valuetext} color="warning" />
-                  <Slider aria-label="Temperature" defaultValue={30} getAriaValueText={valuetext} color="error" />
+                  <Grid container spacing={2} className="gridCard">
+                    <Slider aria-label="Temperature" defaultValue={15} getAriaValueText={valuetext} />
+                    <Slider aria-label="Temperature" defaultValue={30} getAriaValueText={valuetext} color="success" />
+                    <Slider aria-label="Temperature" defaultValue={50} getAriaValueText={valuetext} color="warning" />
+                    <Slider aria-label="Temperature" defaultValue={80} getAriaValueText={valuetext} color="error" />
+                  </Grid>
                 </Stack>
               </CardContent>
             </Paper>
@@ -132,14 +139,17 @@ const SliderPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Box width={300}>
-                  <Slider
-                    getAriaLabel={() => 'Temperature range'}
-                    value={value1}
-                    onChange={handleChange1}
-                    valueLabelDisplay="auto"
-                    getAriaValueText={valuetext}
-                  />
+                <Box>
+                  <Grid container spacing={2} className="gridCard">
+                    <Slider
+                      getAriaLabel={() => 'Temperature range'}
+                      value={value1}
+                      onChange={handleChange1}
+                      valueLabelDisplay="auto"
+                      getAriaValueText={valuetext}
+                      color="success"
+                    />
+                  </Grid>
                 </Box>
               </CardContent>
             </Paper>
@@ -151,23 +161,34 @@ const SliderPage = () => {
               </Typography>
               <DividerPage />
               <CardContent className="demoOutput">
-                <Box width={300} height={500}>
-                  <Slider
-                    aria-label="Temperature"
-                    orientation="vertical"
-                    getAriaValueText={valuetext}
-                    valueLabelDisplay="auto"
-                    defaultValue={30}
-                  />
-                  <Slider aria-label="Temperature" orientation="vertical" defaultValue={30} valueLabelDisplay="auto" disabled />
-                  <Slider
-                    getAriaLabel={() => 'Temperature'}
-                    orientation="vertical"
-                    getAriaValueText={valuetext}
-                    defaultValue={[20, 37]}
-                    valueLabelDisplay="auto"
-                    marks={marks}
-                  />
+                <Box>
+                  <Grid container spacing={2} className="gridCard" height={500}>
+                    <Slider
+                      aria-label="Temperature"
+                      orientation="vertical"
+                      getAriaValueText={valuetext}
+                      valueLabelDisplay="auto"
+                      defaultValue={30}
+                      color="success"
+                    />
+                    <Slider
+                      aria-label="Temperature"
+                      color="success"
+                      orientation="vertical"
+                      defaultValue={30}
+                      valueLabelDisplay="auto"
+                      disabled
+                    />
+                    <Slider
+                      getAriaLabel={() => 'Temperature'}
+                      orientation="vertical"
+                      getAriaValueText={valuetext}
+                      defaultValue={[20, 37]}
+                      valueLabelDisplay="auto"
+                      marks={marks}
+                      color="success"
+                    />
+                  </Grid>
                 </Box>
               </CardContent>
             </Paper>

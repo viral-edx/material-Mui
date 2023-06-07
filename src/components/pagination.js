@@ -1,11 +1,12 @@
+import React, { useState } from 'react';
 import { CardContent, Grid, Pagination, PaginationItem, Paper, Typography } from '@mui/material';
 import { Box, Stack } from '@mui/system';
-import React from 'react';
 import DividerPage from 'utils/divider';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 const PaginationPage = () => {
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
   };
@@ -32,13 +33,14 @@ const PaginationPage = () => {
                 </Typography>
                 <DividerPage />
                 <CardContent className="demoOutput">
-                  <Stack spacing={2}>
-                    <Pagination count={10} />
-                    <Pagination count={10} color="primary" />
-                    <Pagination count={10} color="secondary" />
-                    <Pagination count={10} disabled />
-                  </Stack>
-                  <Grid container spacing={2} className="gridCard"></Grid>
+                  <Grid container spacing={2} className="gridCard">
+                    <Stack spacing={2}>
+                      <Pagination count={10} />
+                      <Pagination count={10} color="primary" />
+                      <Pagination count={10} color="secondary" />
+                      <Pagination count={10} disabled />
+                    </Stack>
+                  </Grid>
                 </CardContent>
               </Paper>
 

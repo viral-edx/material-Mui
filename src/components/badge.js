@@ -61,16 +61,16 @@ const BadgePage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Badge color="secondary" badgeContent=" ">
+                  <Badge color="success" badgeContent=" ">
                     <MailOutlined />
                   </Badge>
-                  <Badge color="secondary" badgeContent=" " variant="dot">
+                  <Badge color="success" badgeContent=" " variant="dot">
                     <MailOutlined />
                   </Badge>
-                  <Badge color="secondary" overlap="circular" badgeContent=" ">
+                  <Badge color="success" overlap="circular" badgeContent=" ">
                     <MailOutlined />
                   </Badge>
-                  <Badge color="secondary" overlap="circular" badgeContent=" " variant="dot">
+                  <Badge color="success" overlap="circular" badgeContent=" " variant="dot">
                     <MailOutlined />
                   </Badge>
                 </Grid>
@@ -85,15 +85,15 @@ const BadgePage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Badge badgeContent={9} color="primary">
+                  <Badge badgeContent={9} color="success">
                     <MailOutlined />
                   </Badge>
-                  <Badge color="primary" variant="dot">
+                  <Badge color="success" variant="dot">
                     <MailOutlined />
                   </Badge>
                   <Badge
                     badgeContent={9}
-                    color="primary"
+                    color="success"
                     anchorOrigin={{
                       vertical: 'bottom',
                       horizontal: 'right'
@@ -103,7 +103,7 @@ const BadgePage = () => {
                   </Badge>
                   <Badge
                     badgeContent={9}
-                    color="primary"
+                    color="success"
                     anchorOrigin={{
                       vertical: 'top',
                       horizontal: 'left'
@@ -113,7 +113,7 @@ const BadgePage = () => {
                   </Badge>
                   <Badge
                     badgeContent={99}
-                    color="primary"
+                    color="success"
                     anchorOrigin={{
                       vertical: 'bottom',
                       horizontal: 'left'
@@ -136,7 +136,7 @@ const BadgePage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Badge color="primary" badgeContent={count}>
+                  <Badge color="success" badgeContent={count}>
                     <MailOutlined />
                   </Badge>
                   <ButtonGroup>
@@ -145,6 +145,7 @@ const BadgePage = () => {
                       onClick={() => {
                         setCount(Math.max(count - 1, 0));
                       }}
+                      color="success"
                     >
                       <Remove />
                     </Button>
@@ -153,16 +154,16 @@ const BadgePage = () => {
                       onClick={() => {
                         setCount(count + 1);
                       }}
+                      color="success"
                     >
                       <Add />
                     </Button>
                   </ButtonGroup>
-                  <Badge color="primary" variant="dot" invisible={invisible}>
+                  <Badge color="success" variant="dot" invisible={invisible}>
                     <MailOutlined />
                   </Badge>
                   <FormControlLabel
-                    sx={{ color: 'text.primary' }}
-                    control={<Switch checked={!invisible} onChange={handleBadgeVisibility} />}
+                    control={<Switch checked={!invisible} onChange={handleBadgeVisibility} color="success" />}
                     label="Show Badge"
                     labelPlacement="start"
                   />
@@ -178,41 +179,13 @@ const BadgePage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Badge color="secondary" badgeContent={99}>
+                  <Badge color="success" badgeContent={99}>
                     <MailOutlined />
                   </Badge>
-                  <Badge color="secondary" badgeContent={100}>
+                  <Badge color="success" badgeContent={100}>
                     <MailOutlined />
                   </Badge>
-                  <Badge color="secondary" badgeContent={1000} max={999}>
-                    <MailOutlined />
-                  </Badge>
-                </Grid>
-              </CardContent>
-            </Paper>
-            {/* Light Bagde */}
-
-            <Paper root elevation rounded elevation0 className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
-                Light
-              </Typography>
-              <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
-                  <Badge badgeContent={4} color="primary" variant="light">
-                    <MailOutlined />
-                  </Badge>
-
-                  <Badge badgeContent={4} color="success" variant="light">
-                    <MailOutlined />
-                  </Badge>
-                  <Badge badgeContent={4} color="warning" variant="light">
-                    <MailOutlined />
-                  </Badge>
-                  <Badge badgeContent={4} color="info" variant="light">
-                    <MailOutlined />
-                  </Badge>
-                  <Badge badgeContent={4} color="error" variant="light">
+                  <Badge color="success" badgeContent={1000} max={999}>
                     <MailOutlined />
                   </Badge>
                 </Grid>

@@ -27,7 +27,7 @@ const DividerPageComp = () => {
   const style = {
     width: '100%',
     maxWidth: 360,
-    bgcolor: 'background.paper'
+    bgcolor: 'rgb(243,243,244)'
   };
 
   return (
@@ -84,7 +84,7 @@ const DividerPageComp = () => {
                     sx={{
                       width: '100%',
                       maxWidth: 360,
-                      bgcolor: 'background.paper'
+                      bgcolor: 'rgb(243,243,244)'
                     }}
                   >
                     <ListItem>
@@ -132,7 +132,7 @@ const DividerPageComp = () => {
                     sx={{
                       width: '100%',
                       maxWidth: 360,
-                      bgcolor: 'background.paper'
+                      bgcolor: 'rgb(243,243,244)'
                     }}
                   >
                     <ListItem>
