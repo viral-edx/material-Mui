@@ -28,8 +28,8 @@ const NotificationList = () => {
   };
   const chipErrorSX = {
     ...chipSX,
-    color: theme.palette.orange.dark,
-    backgroundColor: theme.palette.orange.light,
+    color: 'black',
+    backgroundColor: '#B8CF65',
     marginRight: '5px'
   };
 
