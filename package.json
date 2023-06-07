@@ -1,6 +1,6 @@
 {
   "name": "material-react-mui",
-  "version": "3.3.2",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emotion/cache": "^11.9.3",
