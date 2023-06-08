@@ -19,7 +19,7 @@ const components = [
     title: 'Matrix',
     type: 'item',
     icon: IconTable,
-    url: '/email',
+    url: '/matrix-grid',
     breadcrumbs: false
   },
   {

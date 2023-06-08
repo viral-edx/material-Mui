@@ -60,7 +60,7 @@ const Progress = () => {
             {/* First Stack (Left Side) */}
             <Stack className="stack" spacing={2}>
               {/*   Circular Indeterminate Progress */}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Circular Indeterminate
                 </Typography>
@@ -78,7 +78,7 @@ const Progress = () => {
               </Paper>
 
               {/* Linear Indeterminate*/}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Linear Indeterminate
                 </Typography>
@@ -96,7 +96,7 @@ const Progress = () => {
             {/* Right Stack (Right Side) */}
             <Stack className="stack" spacing={2}>
               {/* Linear buffer progress*/}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Linear buffer
                 </Typography>
@@ -111,7 +111,7 @@ const Progress = () => {
               </Paper>
 
               {/* Linear  progress*/}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Linear color
                 </Typography>

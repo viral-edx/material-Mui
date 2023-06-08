@@ -48,7 +48,7 @@ const SelectPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Select */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic Select
               </Typography>
@@ -74,7 +74,7 @@ const SelectPage = () => {
             </Paper>
 
             {/* Filled and standard variants*/}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Filled and standard variants
               </Typography>
@@ -119,7 +119,7 @@ const SelectPage = () => {
             </Paper>
 
             {/* Labels and helper text */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Labels and helper text
               </Typography>
@@ -163,7 +163,7 @@ const SelectPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Small Size */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Small Size
               </Typography>
@@ -186,7 +186,7 @@ const SelectPage = () => {
             </Paper>
 
             {/* Auto width */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Auto width
               </Typography>
@@ -216,7 +216,7 @@ const SelectPage = () => {
             </Paper>
 
             {/* Other props */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Other props
               </Typography>

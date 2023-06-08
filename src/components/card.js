@@ -52,7 +52,7 @@ const CardPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic card */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic card
               </Typography>
@@ -85,7 +85,7 @@ const CardPage = () => {
             </Paper>
 
             {/* Complex Interaction */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Complex Interaction
               </Typography>
@@ -131,7 +131,7 @@ const CardPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Primary action */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Primary action
               </Typography>
@@ -162,7 +162,7 @@ const CardPage = () => {
             </Paper>
 
             {/* UI Controls */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 UI Controls
               </Typography>

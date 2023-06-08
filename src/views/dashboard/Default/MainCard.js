@@ -18,20 +18,7 @@ const headerSX = {
 
 const MainCard = forwardRef(
   (
-    {
-      border = true,
-      boxShadow,
-      children,
-      content = true,
-      contentSX = {},
-      darkTitle,
-      elevation,
-      secondary,
-      shadow,
-      sx = {},
-      title,
-      ...others
-    },
+    { border = true, boxShadow, children, content = true, contentSX = {}, darkTitle, secondary, shadow, sx = {}, title, ...others },
     ref
   ) => {
     const theme = useTheme();
@@ -40,7 +27,6 @@ const MainCard = forwardRef(
 
     return (
       <Card
-        elevation={elevation || 0}
         ref={ref}
         {...others}
         sx={{

@@ -47,7 +47,7 @@ const DividerPageComp = () => {
           <Stack className="stack" spacing={2}>
             {/* Inset dividers */}
 
-            <Paper root rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 List dividers
               </Typography>
@@ -73,7 +73,7 @@ const DividerPageComp = () => {
                 </Grid>
               </CardContent>
             </Paper>
-            <Paper root rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Inset dividers
               </Typography>
@@ -121,7 +121,7 @@ const DividerPageComp = () => {
 
           <Stack className="stack" spacing={2}>
             {/* Subheader dividers */}
-            <Paper root rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Subheader dividers
               </Typography>
@@ -166,7 +166,7 @@ const DividerPageComp = () => {
               </CardContent>
             </Paper>
 
-            <Paper root rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Vertical dividers
               </Typography>

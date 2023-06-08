@@ -28,7 +28,7 @@ const BadgePage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Badge */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
@@ -54,7 +54,7 @@ const BadgePage = () => {
             </Paper>
 
             {/* Overlap Badge */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Overlap
               </Typography>
@@ -78,7 +78,7 @@ const BadgePage = () => {
             </Paper>
 
             {/* Alignment Badge */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Alignment
               </Typography>
@@ -129,7 +129,7 @@ const BadgePage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Visibility Badge*/}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Visibility
               </Typography>
@@ -172,7 +172,7 @@ const BadgePage = () => {
             </Paper>
 
             {/*  Maximum value Bagde */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Maximum value
               </Typography>

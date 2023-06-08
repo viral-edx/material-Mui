@@ -45,7 +45,7 @@ const RadioPage = () => {
       <Box className="demoBox">
         <Grid container className="demoGrid">
           <Stack className="stack" spacing={2}>
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
@@ -62,7 +62,7 @@ const RadioPage = () => {
             </Paper>
 
             {/* colored radio button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>
@@ -125,7 +125,7 @@ const RadioPage = () => {
 
           <Stack className="stack" spacing={2}>
             {/* size radio button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Size
               </Typography>
@@ -161,7 +161,7 @@ const RadioPage = () => {
             </Paper>
 
             {/* label placement radio */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Label placement
               </Typography>

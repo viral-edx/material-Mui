@@ -54,7 +54,7 @@ const SliderPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Continuous sliders */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Continuous sliders
               </Typography>
@@ -70,7 +70,7 @@ const SliderPage = () => {
             </Paper>
 
             {/* Sizes */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Sizes
               </Typography>
@@ -86,7 +86,7 @@ const SliderPage = () => {
             </Paper>
 
             {/* Discrete sliders */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Discrete sliders
               </Typography>
@@ -112,7 +112,7 @@ const SliderPage = () => {
             </Paper>
 
             {/* Colors */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Colors
               </Typography>
@@ -133,7 +133,7 @@ const SliderPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Range slider */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Range slider
               </Typography>
@@ -155,7 +155,7 @@ const SliderPage = () => {
             </Paper>
 
             {/* Vertical Slider */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Range slider
               </Typography>

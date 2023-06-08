@@ -21,7 +21,7 @@ function ButtonPage() {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic Button
               </Typography>
@@ -43,7 +43,7 @@ function ButtonPage() {
             </Paper>
 
             {/* Text Button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Text Button
               </Typography>
@@ -59,7 +59,7 @@ function ButtonPage() {
             </Paper>
 
             {/* Sizes Button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Sizes
               </Typography>
@@ -83,7 +83,7 @@ function ButtonPage() {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Outlined Button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Outlined Button
               </Typography>
@@ -105,7 +105,7 @@ function ButtonPage() {
             </Paper>
 
             {/* Disabled Button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Disabled Button
               </Typography>
@@ -125,15 +125,12 @@ function ButtonPage() {
                   <Button variant="contained" endIcon={<SendIcon />} disabled>
                     Send
                   </Button>
-                  <Button variant="outlined" startIcon={<DeleteIcon />} disabled>
-                    Delete
-                  </Button>
                 </Grid>
               </CardContent>
             </Paper>
 
             {/* With Icon */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 With Icon
               </Typography>

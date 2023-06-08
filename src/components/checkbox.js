@@ -50,7 +50,7 @@ const CheckboxPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Checkbox */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic Checkbox
               </Typography>
@@ -66,7 +66,7 @@ const CheckboxPage = () => {
             </Paper>
 
             {/* Labeled Checkbox */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Labeled Checkbox
               </Typography>
@@ -80,7 +80,7 @@ const CheckboxPage = () => {
               </CardContent>
             </Paper>
             {/* With Indeterminate */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Indeterminate
               </Typography>
@@ -109,7 +109,7 @@ const CheckboxPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Color Checkbox */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>
@@ -134,7 +134,7 @@ const CheckboxPage = () => {
             </Paper>
 
             {/* Icon Checkbox */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Icon
               </Typography>
@@ -148,7 +148,7 @@ const CheckboxPage = () => {
             </Paper>
 
             {/* Sizes Button */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Size
               </Typography>

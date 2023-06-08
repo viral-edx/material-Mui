@@ -21,7 +21,7 @@ const AlertPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic alerts */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic alerts
               </Typography>
@@ -37,7 +37,7 @@ const AlertPage = () => {
             </Paper>
 
             {/* Description */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Description
               </Typography>
@@ -65,7 +65,7 @@ const AlertPage = () => {
             </Paper>
 
             {/* Icons */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Icons
               </Typography>
@@ -93,7 +93,7 @@ const AlertPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Variants with outlined */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Variants with outlined
               </Typography>
@@ -117,7 +117,7 @@ const AlertPage = () => {
             </Paper>
 
             {/* Variants with filled */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Variants with filled
               </Typography>
@@ -141,7 +141,7 @@ const AlertPage = () => {
             </Paper>
 
             {/* Color */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>

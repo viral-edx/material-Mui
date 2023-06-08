@@ -34,7 +34,7 @@ const SwitchPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Switch */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
@@ -50,7 +50,7 @@ const SwitchPage = () => {
             </Paper>
 
             {/* Labeled Switch */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Labeled Switch
               </Typography>
@@ -64,7 +64,7 @@ const SwitchPage = () => {
               </CardContent>
             </Paper>
             {/* With Size */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Size
               </Typography>
@@ -81,7 +81,7 @@ const SwitchPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Color Switch */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>
@@ -98,7 +98,7 @@ const SwitchPage = () => {
             </Paper>
 
             {/* Label placement Switch */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Label placement
               </Typography>

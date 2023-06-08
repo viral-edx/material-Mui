@@ -118,24 +118,29 @@ const MenuList = () => {
       breadcrumbs: false
     }
   ];
+  const Matrix = [
+    {
+      id: 'matrix-grid',
+      title: 'Grid',
+      type: 'item',
+      url: '/matrix-grid',
+      breadcrumbs: false
+    },
+    {
+      id: 'matrix-invoice',
+      title: 'Invoice',
+      type: 'item',
+      url: '/matrix-invoice',
+      breadcrumbs: false
+    }
+  ];
 
   const navigate = useLocation();
   const redirect = useNavigate();
 
   return (
     <>
-      {navigate.pathname === '/email' && (
-        <List>
-          {['Grid'].map((text, index) => (
-            <ListItem key={text} disablePadding className={text === 'Grid' && 'selectedMenu'}>
-              <ListItemButton className="options">
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      )}
+      {/* dashboard pages */}
       {navigate.pathname === '/dashboard/default' && (
         <List>
           {['Dashboard'].map((text, index) => (
@@ -149,6 +154,27 @@ const MenuList = () => {
         </List>
       )}
 
+      {/* matrix pages */}
+      {navigate.pathname.includes('/matrix') && (
+        <List>
+          {Matrix.map((key) => {
+            return (
+              <ListItem
+                key={key}
+                disablePadding
+                onClick={() => redirect(key.url)}
+                className={navigate.pathname === key.url && 'selectedMenu'}
+              >
+                <ListItemButton className="options">
+                  <ListItemText primary={key.title} />
+                </ListItemButton>
+              </ListItem>
+            );
+          })}
+        </List>
+      )}
+
+      {/* components pages */}
       {(navigate.pathname.includes('/components') || navigate.pathname === '/') && (
         <List>
           {components.map((key) => {

@@ -50,7 +50,7 @@ const RatingPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Rating */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic Rating
               </Typography>
@@ -84,7 +84,7 @@ const RatingPage = () => {
             </Paper>
 
             {/* Rating precision */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Rating precision
               </Typography>
@@ -98,7 +98,7 @@ const RatingPage = () => {
             </Paper>
 
             {/* Hover feedback*/}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Hover feedback
               </Typography>
@@ -127,7 +127,7 @@ const RatingPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Sizes */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Sizes
               </Typography>
@@ -142,7 +142,7 @@ const RatingPage = () => {
             </Paper>
 
             {/* Customization */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Customization
               </Typography>

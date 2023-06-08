@@ -62,7 +62,7 @@ const TooltipPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Simple Tooltips */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Simple Tooltips
               </Typography>
@@ -79,7 +79,7 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Positioned Tooltips */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Positioned Tooltips
               </Typography>
@@ -149,7 +149,7 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Triggers */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Triggers
               </Typography>
@@ -201,7 +201,7 @@ const TooltipPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Variable width */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Variable width
               </Typography>
@@ -222,7 +222,7 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Interactive  */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Interactive
               </Typography>
@@ -237,7 +237,7 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Transitions  */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Transitions
               </Typography>

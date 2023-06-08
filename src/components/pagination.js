@@ -27,7 +27,7 @@ const PaginationPage = () => {
             {/* First Stack (Left Side) */}
             <Stack className="stack" spacing={2}>
               {/*  Basic pagination */}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Basic pagination
                 </Typography>
@@ -45,7 +45,7 @@ const PaginationPage = () => {
               </Paper>
 
               {/*   Rounded pagination */}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Rounded pagination
                 </Typography>
@@ -61,7 +61,7 @@ const PaginationPage = () => {
               </Paper>
 
               {/* Pagination  size*/}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Pagination size
                 </Typography>
@@ -82,7 +82,7 @@ const PaginationPage = () => {
             <Stack className="stack" spacing={2}>
               {/* Buttons pagination */}
 
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Buttons
                 </Typography>
@@ -98,7 +98,7 @@ const PaginationPage = () => {
               </Paper>
 
               {/* Custom pagination */}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Custom
                 </Typography>
@@ -116,7 +116,7 @@ const PaginationPage = () => {
               </Paper>
 
               {/*   Controlled pagination */}
-              <Paper root elevation rounded elevation0 className="demoPaper">
+              <Paper root rounded className="demoPaper">
                 <Typography variant="body1" title className="demoTypography">
                   Controlled pagination
                 </Typography>

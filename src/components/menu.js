@@ -46,7 +46,7 @@ const MenuPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Menu */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic Menu
               </Typography>
@@ -81,7 +81,7 @@ const MenuPage = () => {
             </Paper>
 
             {/* Icon menu */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Icon menu
               </Typography>
@@ -133,7 +133,7 @@ const MenuPage = () => {
 
           <Stack className="stack" spacing={2}>
             {/* Popup-state */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Popup-state
               </Typography>

@@ -51,7 +51,7 @@ const TextFieldPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic TextField */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic TextField
               </Typography>
@@ -66,7 +66,7 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Validation */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Validation
               </Typography>
@@ -80,7 +80,7 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Form Props */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Form Props
               </Typography>
@@ -124,7 +124,7 @@ const TextFieldPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Select */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Select
               </Typography>
@@ -167,7 +167,7 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Input Adornments */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Input Adornments
               </Typography>
@@ -212,7 +212,7 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Sizes */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Sizes
               </Typography>
