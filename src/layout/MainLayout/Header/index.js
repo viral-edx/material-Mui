@@ -42,7 +42,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
             <IconMenu2 stroke={1.5} size="1.5rem" />
           </Avatar>
         </ButtonBase>
-        <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px' }}>
+        <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px', marginLeft: '25px' }}>
           <LogoSection />
         </Box>
       </Box>

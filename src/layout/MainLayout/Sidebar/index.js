@@ -23,7 +23,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
       <BrowserView>
         <Box
           component="div"
-          className="scrollBarDrawer"
+          className="scroll-bar-drawer"
           style={{
             height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)'
           }}
@@ -53,7 +53,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
         sx={{
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            background: theme.palette.background.default,
+            background: 'transparent',
             color: theme.palette.text.primary,
             borderRight: 'none',
             [theme.breakpoints.up('md')]: {
