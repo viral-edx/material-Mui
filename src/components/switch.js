@@ -3,6 +3,7 @@ import React from 'react';
 import DividerPage from 'utils/divider';
 import { pink } from '@mui/material/colors';
 import { alpha, styled } from '@mui/material/styles';
+
 const SwitchPage = () => {
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
 

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import DividerPage from 'utils/divider';
 
-const Progress = () => {
+const ProgressPage = () => {
   const [progress, setProgress] = useState(0);
   const [buffer, setBuffer] = useState(10);
 
@@ -134,4 +134,4 @@ const Progress = () => {
   );
 };
 
-export default Progress;
+export default ProgressPage;

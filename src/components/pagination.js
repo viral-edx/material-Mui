@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { CardContent, Grid, Pagination, PaginationItem, Paper, Typography } from '@mui/material';
-import { Box, Stack } from '@mui/system';
+import { CardContent, Grid, Pagination, PaginationItem, Paper, Typography, Box, Stack } from '@mui/material';
 import DividerPage from 'utils/divider';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';

@@ -1,10 +1,8 @@
 import { MailOutlined, Add, Remove } from '@mui/icons-material';
 import { Badge, Box, Button, ButtonGroup, CardContent, FormControlLabel, Grid, Paper, Stack, Switch, Typography } from '@mui/material';
-// import { Stack } from 'immutable';
 import React from 'react';
 import { useState } from 'react';
 import DividerPage from 'utils/divider';
-// import DividerPage from 'utils/divider';
 
 const BadgePage = () => {
   const [count, setCount] = useState(1);
