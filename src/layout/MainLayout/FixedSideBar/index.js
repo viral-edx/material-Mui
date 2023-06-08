@@ -44,29 +44,25 @@ const FixedSideBar = () => {
   const navigate = useNavigate();
   const [state, setState] = useState('/components-button');
   return (
-    <Box component="nav" className="fixedSideBarNavbar">
-      <Box sx={{ display: { xs: 'block' }, fontSize: '10px' }}>
-        <Box className="fixedSideBar">
-          {components.map((key) => {
-            const IconComponent = key.icon;
-            return (
-              <Box
-                onClick={() => {
-                  navigate(key.url);
-                  setState(key.url);
-                }}
-                key={key.id}
-                sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '10px', marginTop: '10px' }}
-              >
-                <div className={key.url === state ? 'icon-fixed-sidebar-upper' : ' icon-fixed-upper'}>
-                  <IconComponent size={22} />
-                </div>
-                <span>{key.title}</span>
-              </Box>
-            );
-          })}
-        </Box>
-      </Box>
+    <Box className="fixedSideBar">
+      {components.map((key) => {
+        const IconComponent = key.icon;
+        return (
+          <Box
+            onClick={() => {
+              navigate(key.url);
+              setState(key.url);
+            }}
+            key={key.id}
+            sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '10px', marginTop: '10px' }}
+          >
+            <div className={key.url === state ? 'icon-fixed-sidebar-upper' : ' icon-fixed-upper'}>
+              <IconComponent size={22} />
+            </div>
+            <span>{key.title}</span>
+          </Box>
+        );
+      })}
     </Box>
   );
 };
