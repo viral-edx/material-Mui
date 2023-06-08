@@ -93,21 +93,21 @@ const NotificationSection = () => {
           [theme.breakpoints.down('md')]: {
             mr: 2,
             marginLeft: '590px'
-          },
-          [theme.breakpoints.down('lg')]: {
-            marginLeft: '590px'
-          },
-          [theme.breakpoints.down('xl')]: {
-            marginLeft: '590px'
-          },
-          [theme.breakpoints.up('xl')]: {
-            marginLeft: '870px' // Adjusted margin-left for my screen
-          },
-          [theme.breakpoints.down('xxl')]: {
-            marginLeft: '890px'
           }
+          // [theme.breakpoints.down('lg')]: {
+          //   marginLeft: '590px'
+          // },
+          // [theme.breakpoints.down('xl')]: {
+          //   marginLeft: '590px'
+          // },
+          // [theme.breakpoints.up('xl')]: {
+          //   // marginLeft: '870px' // Adjusted margin-left for my screen
+          // },
+          // [theme.breakpoints.down('xxl')]: {
+          //   marginLeft: '890px'
+          // }
         }}
-        marginTop="15px"
+        marginTop="22px"
       >
         <ButtonBase sx={{ borderRadius: '12px' }}>
           <Avatar

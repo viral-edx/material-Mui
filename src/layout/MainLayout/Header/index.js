@@ -12,6 +12,7 @@ import ProfileSection from './ProfileSection';
 
 // assets
 import { IconMenu2 } from '@tabler/icons';
+import React from 'react';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
@@ -23,11 +24,11 @@ const Header = ({ handleLeftDrawerToggle }) => {
       {/* logo & toggler button */}
       <Box
         sx={{
-          width: 100,
           [theme.breakpoints.down('md')]: {
             width: 'auto'
           }
         }}
+        className="logo-toggler-button-css"
       >
         <ButtonBase sx={{ borderRadius: '12px', overflow: 'hidden' }} className="btn_base">
           <Avatar
@@ -41,17 +42,20 @@ const Header = ({ handleLeftDrawerToggle }) => {
             <IconMenu2 stroke={1.5} size="1.5rem" />
           </Avatar>
         </ButtonBase>
+        <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px' }}>
+          <LogoSection />
+        </Box>
       </Box>
 
-      <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px' }}>
-        <LogoSection />
-      </Box>
       {/* header search */}
       <SearchSection />
 
       {/* notification and profile section */}
-      <NotificationSection />
-      <ProfileSection />
+
+      <Box component="div" sx={{ display: 'flex', flexDirection: 'row' }}>
+        <NotificationSection />
+        <ProfileSection />
+      </Box>
     </>
   );
 };

@@ -107,7 +107,7 @@ const SearchSection = () => {
 
   return (
     <>
-      <Box sx={{ display: { xs: 'none', md: 'block' }, paddingTop: '14px', paddingLeft: '2px' }}>
+      <Box sx={{ display: { xs: 'none', md: 'block' }, paddingTop: '14px', width: '100%' }}>
         <OutlineInputStyle
           id="input-search-header"
           value={value}
