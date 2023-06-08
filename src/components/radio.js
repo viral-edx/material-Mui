@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { CardContent, FormControlLabel, Grid, Paper, Radio, RadioGroup, Stack, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { CardContent, FormControlLabel, Grid, Box, Paper, Radio, RadioGroup, Stack, Typography } from '@mui/material';
 import DividerPage from 'utils/divider';
 import { orange, pink, red } from '@mui/material/colors';
 

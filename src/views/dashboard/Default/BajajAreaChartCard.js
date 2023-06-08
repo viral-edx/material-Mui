@@ -15,31 +15,30 @@ import chartData from './bajaj-area-chart';
 // ===========================|| DASHBOARD DEFAULT - BAJAJ AREA CHART CARD ||=========================== //
 
 const BajajAreaChartCard = () => {
-  console.log('chartData', chartData);
   const theme = useTheme();
   const customization = useSelector((state) => state.customization);
   const { navType } = customization;
 
-  const orangeDark = 'lightGreen';
+  const borderColorOfGraph = '#718125';
 
   useEffect(() => {
     const newSupportChart = {
       ...chartData.options,
-      colors: [orangeDark],
+      colors: [borderColorOfGraph],
       tooltip: {
         theme: 'light'
       }
     };
     ApexCharts.exec(`support-chart`, 'updateOptions', newSupportChart);
-  }, [navType, orangeDark]);
+  }, [navType, borderColorOfGraph]);
 
   return (
-    <Card sx={{ bgcolor: 'secondary.light' }}>
+    <Card sx={{ bgcolor: '#EBF9B8' }}>
       <Grid container sx={{ p: 2, pb: 0, color: '#fff' }}>
         <Grid item xs={12}>
           <Grid container alignItems="center" justifyContent="space-between">
             <Grid item>
-              <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.dark }}>
+              <Typography variant="subtitle1" sx={{ color: theme.palette.grey[800] }}>
                 Bajaj Finery
               </Typography>
             </Grid>

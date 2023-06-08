@@ -2,7 +2,7 @@
 
 const chartData = {
   type: 'area',
-  height: 95,
+  height: 100,
   options: {
     chart: {
       id: 'support-chart',
@@ -25,7 +25,7 @@ const chartData = {
         show: false
       },
       y: {
-        title: 'Ticket '
+        title: 'Ticket'
       },
       marker: {
         show: false
@@ -34,7 +34,7 @@ const chartData = {
   },
   series: [
     {
-      data: [0, 15, 10, 50, 30, 40, 25]
+      data: [0, 15, 10, 45, 30, 40, 25]
     }
   ]
 };

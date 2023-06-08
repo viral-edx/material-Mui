@@ -1,37 +1,19 @@
-// import { useEffect, useState } from 'react';
-import { Grid, MenuItem, Stack, TextField, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import AnalyticEcommerce from '../AnalyticEcommerce';
 import MainCard from './MainCard';
 import SalesColumnChart from './SalesColumnChart';
-// import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-// import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import { useState, useEffect } from 'react';
-import PopularCards from './PopularCardS';
-// import BajajAreaChartCard from './BajajAreaChartCard.client';
+import PopularCard from './PopularCardS';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
 const Dashboard = () => {
-  // const theme = useTheme();
-  const status = [
-    {
-      value: 'today',
-      label: 'Today'
-    },
-    {
-      value: 'month',
-      label: 'This Month'
-    },
-    {
-      value: 'year',
-      label: 'This Year'
-    }
-  ];
-  const [value, setValue] = useState('today');
   const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
     setLoading(false);
   }, []);
+
   return (
     <>
       <Grid container rowSpacing={4.5} columnSpacing={2.75}>
@@ -50,39 +32,16 @@ const Dashboard = () => {
         </Grid>
 
         <Grid item xs={12} md={7} lg={8}>
-          <Grid container alignItems="center" justifyContent="space-between">
-            <Grid item>
-              <Typography variant="h5">Sales Report</Typography>
-            </Grid>
-            <Grid item>
-              <TextField
-                id="standard-select-currency"
-                size="small"
-                select
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                sx={{ '& .MuiInputBase-input': { py: 0.5, fontSize: '0.875rem' } }}
-              >
-                {status.map((option) => (
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-          </Grid>
-          <MainCard sx={{ mt: 1.75 }}>
+          <MainCard>
             <Stack spacing={1.5} sx={{ mb: -12 }}>
-              <Typography variant="h6" color="secondary">
-                Net Profit
-              </Typography>
+              <Typography variant="h6">Net Profit</Typography>
               <Typography variant="h4">$1560</Typography>
             </Stack>
             <SalesColumnChart />
           </MainCard>
         </Grid>
         <Grid item xs={12} md={4}>
-          <PopularCards isLoading={isLoading} />
+          <PopularCard isLoading={isLoading} />
         </Grid>
       </Grid>
     </>
