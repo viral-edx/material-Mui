@@ -46,6 +46,8 @@ const NavCollapse = ({ menu, level }) => {
   useEffect(() => {
     setOpen(false);
     setSelected(null);
+
+    console.log('menu.children', menu.children);
     if (menu.children) {
       menu.children.forEach((item) => {
         if (item.children?.length) {

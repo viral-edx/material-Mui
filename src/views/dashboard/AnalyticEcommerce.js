@@ -5,15 +5,15 @@ import { TrendingDown, TrendingUp } from '@mui/icons-material';
 
 // ==============================|| STATISTICS - ECOMMERCE CARD  ||============================== //
 
-const AnalyticEcommerce = ({ color, title, count, percentage, extra, isLoss }) => (
+const AnalyticEcommerce = ({ title, count, percentage, extra, isLoss }) => (
   <MainCard contentSX={{ p: 3 }}>
     <Stack spacing={0.5}>
-      <Typography variant="h6" color="textSecondary" className="title-typography">
+      <Typography variant="h6" className="title-typography">
         {title}
       </Typography>
       <Grid container alignItems="center">
         <Grid item>
-          <Typography variant="h4" color="inherit" className="count-typography">
+          <Typography variant="h4" className="count-typography">
             {count}
           </Typography>
         </Grid>
@@ -21,15 +21,14 @@ const AnalyticEcommerce = ({ color, title, count, percentage, extra, isLoss }) =
           <Grid item>
             <Chip
               variant="combined"
-              color={color}
               icon={
                 <>
-                  {!isLoss && <TrendingUp style={{ fontSize: '0.75rem', color: 'inherit' }} />}
-                  {isLoss && <TrendingDown style={{ fontSize: '0.75rem', color: 'inherit' }} />}
+                  {!isLoss && <TrendingUp style={{ fontSize: '0.75rem' }} />}
+                  {isLoss && <TrendingDown style={{ fontSize: '0.75rem' }} />}
                 </>
               }
               label={`${percentage}%`}
-              sx={{ ml: 1.25, pl: 1, borderRadius: '3px', borderColor: `${color || 'primary'}.main` }}
+              sx={{ ml: 1.25, pl: 1, borderRadius: '3px' }}
               size="small"
             />
           </Grid>
@@ -38,27 +37,18 @@ const AnalyticEcommerce = ({ color, title, count, percentage, extra, isLoss }) =
     </Stack>
     <Box sx={{ pt: 3 }}>
       <Typography variant="caption" color="#8c8c8c">
-        You made an extra{' '}
-        <Typography component="span" variant="caption" sx={{ color: `${color || 'primary'}.main` }}>
-          {extra}
-        </Typography>{' '}
-        this year
+        You made an extra {extra} this year
       </Typography>
     </Box>
   </MainCard>
 );
 
 AnalyticEcommerce.propTypes = {
-  color: PropTypes.string,
   title: PropTypes.string,
   count: PropTypes.string,
   percentage: PropTypes.number,
   isLoss: PropTypes.bool,
   extra: PropTypes.oneOfType([PropTypes.node, PropTypes.string])
-};
-
-AnalyticEcommerce.defaultProps = {
-  color: 'primary'
 };
 
 export default AnalyticEcommerce;

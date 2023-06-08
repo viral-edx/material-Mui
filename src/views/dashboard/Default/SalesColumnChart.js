@@ -87,8 +87,8 @@ const SalesColumnChart = () => {
   const { primary, secondary } = theme.palette.text;
   const line = theme.palette.divider;
 
-  const warning = theme.palette.warning.main;
-  const primaryMain = theme.palette.primary.main;
+  const warning = theme.palette.success.dark;
+  const primaryMain = theme.palette.success.light;
   const successDark = theme.palette.success.dark;
 
   const [series] = useState([

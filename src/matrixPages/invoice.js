@@ -1,7 +1,11 @@
 import React from 'react';
 
 const InvoicePage = () => {
-  return <div>Invoice page</div>;
+  return (
+    <>
+      <h1>Invoice Page</h1>
+    </>
+  );
 };
 
 export default InvoicePage;

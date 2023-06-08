@@ -8,7 +8,6 @@ import { Avatar, CardContent, Divider, Grid, Menu, MenuItem, Typography } from '
 // project imports
 import MainCard from './MainCard';
 import SkeletonPopularCard from 'ui-component/cards/Skeleton/PopularCard';
-import { gridSpacing } from 'store/constant';
 
 // assets
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
@@ -38,7 +37,7 @@ const PopularCards = ({ isLoading }) => {
       ) : (
         <MainCard content={false}>
           <CardContent>
-            <Grid container spacing={gridSpacing}>
+            <Grid container spacing="1.3em">
               <Grid item xs={12}>
                 <Grid container alignContent="center" justifyContent="space-between">
                   <Grid item>
