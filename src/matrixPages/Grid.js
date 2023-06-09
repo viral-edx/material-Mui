@@ -11,6 +11,7 @@ import { MdDelete, MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-ico
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import UiContextStructure from '../context/ui-context';
 import { IoClose } from 'react-icons/io5';
+// import '../assets/scss/table.scss';
 
 const Grid = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
