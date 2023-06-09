@@ -11,7 +11,7 @@ import SelectPage from 'components/select';
 import SwitchPage from 'components/switch';
 import RatingPage from 'components/rating';
 import EmailPage from 'matrixPages/email';
-import InvoicePage from 'matrixPages/invoice';
+import InvoicePage from 'matrixPages/Invoice';
 import MeetPage from 'components/meetPage';
 import SliderPage from 'components/slider';
 import TextFieldPage from 'components/textField';
