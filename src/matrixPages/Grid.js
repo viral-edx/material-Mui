@@ -11,7 +11,6 @@ import { MdDelete, MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-ico
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import UiContextStructure from '../context/ui-context';
 import { IoClose } from 'react-icons/io5';
-// import '../assets/scss/table.scss';
 
 const Grid = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -75,11 +74,7 @@ const Grid = ({ data, itemsPerPage, header = '' }) => {
                 </div>
               )}
 
-              {/* ---pagination for total pages--- */}
-
-              {/* ---searchable dropdown component started--- */}
               <SearchableDropdown dropdownData={filters} searchKey={searchKey} setSearchKey={setSearchKey} />
-              {/* ---searchable dropdown component ended--- */}
 
               <div className="toggle-pane">
                 {/* ---split menu for toggle between vertical and horizontal--- */}
@@ -406,8 +401,6 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
 };
 
 const SplitData = ({ setToggle = () => {}, toggle, ...props }) => {
-  const [invoiceType, setInvoiceType] = useState('Without order reference');
-  const { splitData, setSplitData } = useContext(UiContextStructure);
   return (
     <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
       <h4>No conversations selected</h4>
