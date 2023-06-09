@@ -371,12 +371,6 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
   );
 };
 
-const bull = (
-  <Box component="span" sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
-    •
-  </Box>
-);
-
 const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
   console.log('splitData', splitData);
   return (
