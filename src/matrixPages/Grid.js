@@ -377,18 +377,54 @@ const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
     <>
       {splitData !== null ? (
         <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
-          <h1>Invoice Details</h1>
-          <Card sx={{ minWidth: 250, boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px' }}>
+          <Card
+            style={{
+              width: 300,
+              marginLeft: '120px',
+              borderRadius: '5px',
+              boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px'
+            }}
+          >
             <CardContent>
-              <Typography component="div">InvoiceId: {splitData.invoiceId}</Typography>
-              <Typography component="div">receiver: {splitData.receiver}</Typography>
-              <Typography component="div">sender: {splitData.sender}</Typography>
-              <Typography component="div">status: {splitData.status}</Typography>
-              <Typography component="div">Date: {splitData.date}</Typography>
+              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
+                InvoiceId:
+                <Typography variant="body1" style={{ fontWeight: 'light' }}>
+                  {splitData.invoiceId}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
+                Receiver:{' '}
+                <Typography variant="body1" style={{ fontWeight: 'light' }}>
+                  {splitData.receiver}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
+                Sender:
+                <Typography variant="body1" style={{ fontWeight: 'light' }}>
+                  {splitData.sender}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
+                Status:
+                <Typography variant="body1" style={{ fontWeight: 'light' }}>
+                  {splitData.status}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
+                Date:
+                <Typography variant="body1" style={{ fontWeight: 'light' }}>
+                  {splitData.date}
+                </Typography>
+              </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Click for more details</Button>
-            </CardActions>
+            <Button
+              size="large"
+              style={{ marginLeft: '10px', marginTop: '10px', marginBottom: '10px' }}
+              variant="contained"
+              color="primary"
+            >
+              Click for more details
+            </Button>
           </Card>
         </div>
       ) : (

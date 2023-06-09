@@ -60,7 +60,6 @@
 }
 
 .link_text {
-    font-family: Roboto;
     font-style: normal;
     font-size: var(--body-size);
     line-height: var(--h4-size);
@@ -111,7 +110,6 @@
     top: 0;
     z-index: 1;
     background-color: #fff;
-    font-family: var(--body-font);
     font-style: normal;
     font-weight: 500;
     font-size: var(--md-body-size);
@@ -253,25 +251,6 @@
     gap: var(--h5-size);
 }
 
-.theme--switcher {
-    color: var(--icon-color);
-    display: flex;
-    width: var(--sm-box-size);
-    height: var(--sm-box-size);
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--secondaryColor);
-}
-
-.theme--switcher svg {
-    color: var(--icon-color);
-}
-
-.theme--switcher:hover {
-    background-color: rgba(0, 0, 0, 0.04);
-}
-
 .avatar {
     background-color: var(--primary-color);
     color: #21005d;
@@ -284,24 +263,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-}
-
-.gear--icon {
-    cursor: pointer;
-    height: var(--sm-box-size);
-    width: var(--sm-box-size);
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    display: flex;
-}
-
-.gear--icon svg {
-    color: var(--icon-color);
-}
-
-.gear--icon:hover {
-    background-color: rgba(0, 0, 0, 0.04);
 }
 
 .topbar--wrap {
@@ -466,7 +427,6 @@ span.next-span {
 }
 
 .grid-header span {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.6;
@@ -727,24 +687,20 @@ body .table-container tr:hover {
     padding-top: 20px;
 }
 
-
 .icon-position {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-
 .text-area:focus {
     outline: 1px solid #6750a4;
     padding: 4px;
-
 }
 
 textarea {
     width: 100%;
     resize: none;
-
 }
 
 textarea.text-area {
@@ -1103,7 +1059,6 @@ box-header-right {
     border-right: 1px solid var(--grey-border);
 }
 
-
 .capture-tab {
     padding: 16px;
     border-right: 1px solid var(--grey-border);
@@ -1193,7 +1148,6 @@ box-header-right {
     color: #333;
 }
 
-
 .container {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1245,16 +1199,13 @@ md-outlined-text-field {
     width: 100%;
 }
 
-
 .invoice-header {
     padding: 16px 24px;
     background-color: #6750a4;
 }
 
-
 .progress-box .invoice-header {
     margin-top: 24px;
-
 }
 
 .invoice-header h5 {
