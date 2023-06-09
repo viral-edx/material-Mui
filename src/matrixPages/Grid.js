@@ -11,15 +11,17 @@ import { MdDelete, MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-ico
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import UiContextStructure from '../context/ui-context';
 import { IoClose } from 'react-icons/io5';
+import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
 // import '../assets/scss/table.scss';
 
 const Grid = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [searchKey, setSearchKey] = useState('');
   const [toggle, setToggle] = useState(null);
+  const [splitData, setSplitData] = useState(null);
+
   const [filteredData, setFilteredData] = useState(data || []);
   const [selected, setSelected] = useState([]);
-  const [component, setComponent] = useState(false);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filteredData.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(filteredData.length / itemsPerPage);
@@ -63,136 +65,130 @@ const Grid = ({ data, itemsPerPage, header = '' }) => {
 
   return (
     <>
-      <div className={`detail-data ${component ? 'clicked' : 'click'}`}>{/* invoice id nested  */}</div>
-      <div className={`${component ? 'data-hidden' : 'data-show'}`}>
-        <div className={`${toggle === 'vertical' ? 'grid-wrapper-col' : 'grid-wrapper'}`}>
-          <div className="grid-header">
-            {selected.length > 0 ? <h5>{selected.length} Selected</h5> : <h4>{header}</h4>}
-            <div className="grid-header-right">
-              {selected.length > 0 && (
-                <div className="delete-icon">
-                  <MdDelete size={24} />
-                </div>
-              )}
-
-              {/* ---pagination for total pages--- */}
-
-              {/* ---searchable dropdown component started--- */}
-              <SearchableDropdown dropdownData={filters} searchKey={searchKey} setSearchKey={setSearchKey} />
-              {/* ---searchable dropdown component ended--- */}
-
-              <div className="toggle-pane">
-                {/* ---split menu for toggle between vertical and horizontal--- */}
-                {toggle ? (
-                  <MdOutlineVerticalSplit
-                    size="25px"
-                    onClick={() => {
-                      setToggle(null);
-                      setDropdown(false);
-                    }}
-                  />
-                ) : (
-                  <GiHamburgerMenu
-                    size="20px"
-                    onClick={() => {
-                      setToggle('vertical'); //by default split preview will be vertical
-                      setDropdown(false);
-                    }}
-                  />
-                )}
-
-                <div className="arrow-icon">
-                  <MdKeyboardArrowDown size={20} onClick={() => setDropdown((prev) => !prev)} />
-                </div>
-
-                {dropdown && (
-                  <div className="dropdown-arrow-wrapper" ref={ref}>
-                    <div
-                      onClick={() => {
-                        setDropdown(false);
-                        setToggle(null);
-                      }}
-                    >
-                      No Split
-                    </div>
-                    <div
-                      onClick={() => {
-                        setToggle('vertical');
-                        setDropdown(false);
-                      }}
-                    >
-                      Vertical Split
-                    </div>
-                    <div
-                      onClick={() => {
-                        setToggle('horizontal');
-                        setDropdown(false);
-                      }}
-                    >
-                      Horizontal Split
-                    </div>
-                  </div>
-                )}
-                {/* ---split menu ended--- */}
-              </div>
-            </div>
-          </div>
-          <div className="display-view">
-            {/* ---items after filteration and pagination--- */}
-            {currentItems.length > 0 ? (
-              <Items
-                currentItems={currentItems}
-                selected={selected}
-                setSelected={setSelected}
-                toggle={toggle}
-                setComponent={setComponent}
-              />
-            ) : (
-              <div className="no-result">
-                <h4>No results to show!</h4>
+      {/* <div className={`detail-data ${component ? 'clicked' : 'click'}`}>Invoice IDinvoice id nested </div> */}
+      {/* <div className={`${component ? 'data-hidden' : 'data-show'}`}> */}
+      <div className={`${toggle === 'vertical' ? 'grid-wrapper-col' : 'grid-wrapper'}`}>
+        <div className="grid-header">
+          {selected.length > 0 ? <h5>{selected.length} Selected</h5> : <h4>{header}</h4>}
+          <div className="grid-header-right">
+            {selected.length > 0 && (
+              <div className="delete-icon">
+                <MdDelete size={24} />
               </div>
             )}
 
             {/* ---pagination for total pages--- */}
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel={<IoChevronForward size={16} />}
-              onPageChange={handlePageClick}
-              pageRangeDisplayed={5}
-              pageCount={pageCount}
-              previousLabel={<IoChevronBack size={16} />}
-              renderOnZeroPageCount={null}
-              className="pagination"
-              pageLinkClassName="pagination-link"
-              activeLinkClassName="pagination-activelink"
-              previousLinkClassName="pagination-previouslink"
-              nextLinkClassName="pagination-nextlink"
-            />
+
+            {/* ---searchable dropdown component started--- */}
+            <SearchableDropdown dropdownData={filters} searchKey={searchKey} setSearchKey={setSearchKey} />
+            {/* ---searchable dropdown component ended--- */}
+
+            <div className="toggle-pane">
+              {/* ---split menu for toggle between vertical and horizontal--- */}
+              {toggle ? (
+                <MdOutlineVerticalSplit
+                  size="25px"
+                  onClick={() => {
+                    setToggle(null);
+                    setDropdown(false);
+                  }}
+                />
+              ) : (
+                <GiHamburgerMenu
+                  size="20px"
+                  onClick={() => {
+                    setToggle('vertical'); //by default split preview will be vertical
+                    setDropdown(false);
+                  }}
+                />
+              )}
+
+              <div className="arrow-icon">
+                <MdKeyboardArrowDown size={20} onClick={() => setDropdown((prev) => !prev)} />
+              </div>
+
+              {dropdown && (
+                <div className="dropdown-arrow-wrapper" ref={ref}>
+                  <div
+                    onClick={() => {
+                      setDropdown(false);
+                      setToggle(null);
+                    }}
+                  >
+                    No Split
+                  </div>
+                  <div
+                    onClick={() => {
+                      setToggle('vertical');
+                      setDropdown(false);
+                    }}
+                  >
+                    Vertical Split
+                  </div>
+                  <div
+                    onClick={() => {
+                      setToggle('horizontal');
+                      setDropdown(false);
+                    }}
+                  >
+                    Horizontal Split
+                  </div>
+                </div>
+              )}
+              {/* ---split menu ended--- */}
+            </div>
           </div>
-          {/* ---vertical split preview started--- */}
-          {toggle === 'vertical' && (
-            <div className={`side-view ${toggle === 'vertical' ? 'active' : 'non-active'}`}>
-              <SplitData setToggle={setToggle} toggle={toggle} />
+        </div>
+        <div className="display-view">
+          {/* ---items after filteration and pagination--- */}
+          {currentItems.length > 0 ? (
+            <Items currentItems={currentItems} selected={selected} setSelected={setSelected} toggle={toggle} setSplitData={setSplitData} />
+          ) : (
+            <div className="no-result">
+              <h4>No results to show!</h4>
             </div>
           )}
-          {/* ---vertical split preview ended--- */}
-        </div>
 
+          {/* ---pagination for total pages--- */}
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel={<IoChevronForward size={16} />}
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel={<IoChevronBack size={16} />}
+            renderOnZeroPageCount={null}
+            className="pagination"
+            pageLinkClassName="pagination-link"
+            activeLinkClassName="pagination-activelink"
+            previousLinkClassName="pagination-previouslink"
+            nextLinkClassName="pagination-nextlink"
+          />
+        </div>
         {/* ---vertical split preview started--- */}
-        {toggle === 'horizontal' && (
-          <div className="full-view">
-            <SplitData setToggle={setToggle} toggle={toggle} />
+        {toggle === 'vertical' && (
+          <div className={`side-view ${toggle === 'vertical' ? 'active' : 'non-active'}`}>
+            <SplitData setToggle={setToggle} toggle={toggle} splitData={splitData} />
           </div>
         )}
         {/* ---vertical split preview ended--- */}
       </div>
+
+      {/* ---vertical split preview started--- */}
+      {toggle === 'horizontal' && (
+        <div className="full-view">
+          <SplitData setToggle={setToggle} toggle={toggle} splitData={splitData} />
+        </div>
+      )}
+      {/* ---vertical split preview ended--- */}
+      {/* </div> */}
     </>
   );
 };
 
-function Items({ currentItems, selected, toggle, setSelected = () => {}, setComponent = () => {} }) {
-  const { setSplitData } = useContext(UiContextStructure);
-  // const [splitData, setSplitData] = useState(null)
+function Items({ currentItems, selected, toggle, setSelected = () => {}, setSplitData }) {
+  // const { setSplitData } = useContext(UiContextStructure);
+  // const { splitData, setSplitData } = useContext(UiContextStructure);
 
   //multiple row selection and de-selection function
   function handleAllSelection() {
@@ -251,11 +247,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setComp
               <td
                 className="table-row"
                 onClick={() => {
-                  if (!toggle) {
-                    //navigate if split preview is not open
-                    // navigate(`/invoice/${item.invoiceId}`)
-                    setComponent(true);
-                  }
                   setSplitData(item);
                 }}
               >
@@ -264,11 +255,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setComp
               <td
                 className="table-row truncate"
                 onClick={() => {
-                  if (!toggle) {
-                    //navigate if split preview is not open
-                    // navigate(`/invoice/${item.invoiceId}`)
-                    setComponent(true);
-                  }
                   setSplitData(item);
                 }}
               >
@@ -277,11 +263,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setComp
               <td
                 className="table-row truncate"
                 onClick={() => {
-                  if (!toggle) {
-                    //navigate if split preview is not open
-                    // navigate(`/invoice/${item.invoiceId}`)
-                    setComponent(true);
-                  }
                   setSplitData(item);
                 }}
               >
@@ -290,11 +271,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setComp
               <td
                 className="table-row last-col"
                 onClick={() => {
-                  if (!toggle) {
-                    //navigate if split preview is not open
-                    // navigate(`/invoice/${item.invoiceId}`)
-                    setComponent(true);
-                  }
                   setSplitData(item);
                 }}
               >
@@ -303,11 +279,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setComp
               <td
                 className="table-row last-col"
                 onClick={() => {
-                  if (!toggle) {
-                    //navigate if split preview is not open
-                    // navigate(`/invoice/${item.invoiceId}`)
-                    setComponent(true);
-                  }
                   setSplitData(item);
                 }}
               >
@@ -316,11 +287,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setComp
               <td
                 className="table-row last-col"
                 onClick={() => {
-                  if (!toggle) {
-                    //navigate if split preview is not open
-                    // navigate(`/invoice/${item.invoiceId}`)
-                    setComponent(true);
-                  }
                   setSplitData(item);
                 }}
               >
@@ -405,14 +371,39 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
   );
 };
 
-const SplitData = ({ setToggle = () => {}, toggle, ...props }) => {
-  const [invoiceType, setInvoiceType] = useState('Without order reference');
-  const { splitData, setSplitData } = useContext(UiContextStructure);
+const bull = (
+  <Box component="span" sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
+    •
+  </Box>
+);
+
+const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
+  console.log('splitData', splitData);
   return (
-    <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
-      <h4>No conversations selected</h4>
-      <p>Please select any conversations.</p>
-    </div>
+    <>
+      {splitData !== null ? (
+        <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
+          <h1>Invoice Details</h1>
+          <Card sx={{ minWidth: 250, boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px' }}>
+            <CardContent>
+              <Typography component="div">InvoiceId: {splitData.invoiceId}</Typography>
+              <Typography component="div">receiver: {splitData.receiver}</Typography>
+              <Typography component="div">sender: {splitData.sender}</Typography>
+              <Typography component="div">status: {splitData.status}</Typography>
+              <Typography component="div">Date: {splitData.date}</Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Click for more details</Button>
+            </CardActions>
+          </Card>
+        </div>
+      ) : (
+        <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
+          <h4>No conversations selected</h4>
+          <p>Please select any conversations.</p>
+        </div>
+      )}
+    </>
   );
 };
 
