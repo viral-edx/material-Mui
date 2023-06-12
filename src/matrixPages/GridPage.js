@@ -4,12 +4,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdDelete, MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-icons/md';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
-import UiContextStructure from '../context/ui-context';
 import { IoClose } from 'react-icons/io5';
 import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
@@ -66,19 +65,15 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
 
   return (
     <>
-      {/* <div className={`detail-data ${component ? 'clicked' : 'click'}`}>Invoice IDinvoice id nested </div> */}
-      {/* <div className={`${component ? 'data-hidden' : 'data-show'}`}> */}
       <div className={`${toggle === 'vertical' ? 'grid-wrapper-col' : 'grid-wrapper'}`}>
         <div className="grid-header">
-          {selected.length > 0 ? <h5>{selected.length} Selected</h5> : <h4>{header}</h4>}
+          {selected.length > 0 ? <h2>{selected.length} Selected</h2> : <h2>{header}</h2>}
           <div className="grid-header-right">
             {selected.length > 0 && (
               <div className="delete-icon">
                 <MdDelete size={24} />
               </div>
             )}
-
-            {/* ---pagination for total pages--- */}
 
             {/* ---searchable dropdown component started--- */}
             <SearchableDropdown dropdownData={filters} searchKey={searchKey} setSearchKey={setSearchKey} />
@@ -184,12 +179,11 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
 
       {/* ---vertical split preview started--- */}
       {toggle === 'horizontal' && (
-        <div className="full-view">
+        <div className={`full-view ${toggle === 'horizontal' ? 'active' : 'non-active'}`}>
           <SplitData setToggle={setToggle} toggle={toggle} splitData={splitData} />
         </div>
       )}
       {/* ---vertical split preview ended--- */}
-      {/* </div> */}
     </>
   );
 };
@@ -356,52 +350,38 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
 
 const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
   console.log('splitData', splitData);
+
   return (
     <>
       {splitData !== null ? (
-        <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
-          <h1>Invoice Details</h1>
-          <Card
-            sx={{ width: 300, marginLeft: '37.5%', borderRadius: '5px', boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px' }}
-          >
-            <CardContent>
-              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
-                Date:{' '}
-                <Typography component="span" fontWeight="light">
-                  {splitData.date}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
-                InvoiceId:{' '}
-                <Typography component="span" fontWeight="light">
-                  {splitData.invoiceId}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
-                Sender:{' '}
-                <Typography component="span" fontWeight="light">
-                  {splitData.sender}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
-                Status:{' '}
-                <Typography component="span" fontWeight="light">
-                  {splitData.status}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
-                Receiver:{' '}
-                <Typography component="span" fontWeight="100">
-                  {splitData.receiver}
-                </Typography>
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="large" sx={{ marginLeft: '45px' }}>
+        <div>
+          <div className="table-data">
+            <div style={{ width: '100%' }}>
+              <div className="table-split-data">
+                <h4>Invoice ID:</h4>
+                <p>{splitData.invoiceId}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Sender:</h4>
+                <p>{splitData.sender}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Receiver:</h4>
+                <p>{splitData.receiver}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Status:</h4>
+                <p>{splitData.status}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Date:</h4>
+                <p>{splitData.date}</p>
+              </div>
+              <Button variant="contained" color="success" style={{ marginRight: '20px', width: '100%' }}>
                 Click for more details
               </Button>
-            </CardActions>
-          </Card>
+            </div>
+          </div>
         </div>
       ) : (
         <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
