@@ -1,13 +1,12 @@
 // color variants
+@import './colorCode.scss';
 @import './fixedSideBar.scss';
+@import './profileSection.scss';
 @import './buttonPage.scss';
 @import './email.scss';
 @import './commonLayout.scss';
 @import './dashboard.scss';
-@import './profileSection.scss';
-@import './colorCode.scss';
 @import './table.scss';
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 .scroll-bar-drawer {
   padding-left: 16px;
@@ -123,7 +122,6 @@
 
 .percentage-chip {
   max-width: 100%;
-  font-family: 'Public Sans', sans-serif;
   font-size: 0.8125rem;
   display: inline-flex;
   align-items: center;
@@ -147,7 +145,6 @@
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.57;
-  font-family: 'Public Sans', sans-serif;
   color: #8c8c8c;
 }
 
@@ -156,11 +153,15 @@
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.4;
-  font-family: 'Public Sans', sans-serif;
-  color: inherit;
+  color: #383838;
 }
 
 .logo-toggler-button-css {
   display: flex;
   flex-direction: row;
+}
+
+
+.bajajAreaChartCard{
+  background-color: var(--secondary-color);
 }

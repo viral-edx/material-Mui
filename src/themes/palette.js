@@ -18,7 +18,7 @@ export default function themePalette(theme) {
     },
     secondary: {
       //   light: '#b7eb00',
-      //   main: '#673ab7', // change this color for changing the success color of MUI
+      //   main: '#673ab7',
       //   dark: '#5e35b1',
       //   200: '#b39ddb',
       //   800: '#4527a0'

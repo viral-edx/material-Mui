@@ -33,7 +33,7 @@ const BajajAreaChartCard = () => {
   }, [navType, borderColorOfGraph]);
 
   return (
-    <Card sx={{ bgcolor: '#EBF9B8' }}>
+    <Card className="bajajAreaChartCard">
       <Grid container sx={{ p: 2, pb: 0, color: '#fff' }}>
         <Grid item xs={12}>
           <Grid container alignItems="center" justifyContent="space-between">

@@ -4,15 +4,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdDelete, MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-icons/md';
-import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
-import UiContextStructure from '../context/ui-context';
-import { IoClose } from 'react-icons/io5';
-import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
-// import '../assets/scss/table.scss';
+import { IoChevronBack, IoChevronForward, IoClose } from 'react-icons/io5';
+import { Button, Card, CardActions, CardContent, Typography, Box, Stack, Paper } from '@mui/material';
+import DividerPage from 'utils/divider';
 
 const Grid = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -65,19 +63,15 @@ const Grid = ({ data, itemsPerPage, header = '' }) => {
 
   return (
     <>
-      {/* <div className={`detail-data ${component ? 'clicked' : 'click'}`}>Invoice IDinvoice id nested </div> */}
-      {/* <div className={`${component ? 'data-hidden' : 'data-show'}`}> */}
       <div className={`${toggle === 'vertical' ? 'grid-wrapper-col' : 'grid-wrapper'}`}>
         <div className="grid-header">
-          {selected.length > 0 ? <h5>{selected.length} Selected</h5> : <h4>{header}</h4>}
+          {selected.length > 0 ? <h2>{selected.length} Selected</h2> : <h2>{header}</h2>}
           <div className="grid-header-right">
             {selected.length > 0 && (
               <div className="delete-icon">
                 <MdDelete size={24} />
               </div>
             )}
-
-            {/* ---pagination for total pages--- */}
 
             {/* ---searchable dropdown component started--- */}
             <SearchableDropdown dropdownData={filters} searchKey={searchKey} setSearchKey={setSearchKey} />
@@ -176,20 +170,16 @@ const Grid = ({ data, itemsPerPage, header = '' }) => {
 
       {/* ---vertical split preview started--- */}
       {toggle === 'horizontal' && (
-        <div className="full-view">
+        <div className={`full-view ${toggle === 'horizontal' ? 'active' : 'non-active'}`}>
           <SplitData setToggle={setToggle} toggle={toggle} splitData={splitData} />
         </div>
       )}
       {/* ---vertical split preview ended--- */}
-      {/* </div> */}
     </>
   );
 };
 
-function Items({ currentItems, selected, toggle, setSelected = () => {}, setSplitData }) {
-  // const { setSplitData } = useContext(UiContextStructure);
-  // const { splitData, setSplitData } = useContext(UiContextStructure);
-
+function Items({ currentItems, selected, setSelected = () => {}, setSplitData }) {
   //multiple row selection and de-selection function
   function handleAllSelection() {
     if (selected.length < currentItems.length) {
@@ -373,59 +363,38 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
 
 const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
   console.log('splitData', splitData);
+
   return (
     <>
       {splitData !== null ? (
-        <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
-          <Card
-            style={{
-              width: 300,
-              marginLeft: '120px',
-              borderRadius: '5px',
-              boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px'
-            }}
-          >
-            <CardContent>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                InvoiceId:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.invoiceId}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Receiver:{' '}
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.receiver}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Sender:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.sender}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Status:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.status}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Date:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.date}
-                </Typography>
-              </Typography>
-            </CardContent>
-            <Button
-              size="large"
-              style={{ marginLeft: '10px', marginTop: '10px', marginBottom: '10px' }}
-              variant="contained"
-              color="primary"
-            >
-              Click for more details
-            </Button>
-          </Card>
+        <div>
+          <div className="table-data">
+            <div style={{ width: '100%' }}>
+              <div className="table-split-data">
+                <h4>Invoice ID:</h4>
+                <p>{splitData.invoiceId}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Sender:</h4>
+                <p>{splitData.sender}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Receiver:</h4>
+                <p>{splitData.receiver}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Status:</h4>
+                <p>{splitData.status}</p>
+              </div>
+              <div className="table-split-data">
+                <h4>Date:</h4>
+                <p>{splitData.date}</p>
+              </div>
+              <Button variant="contained" color="success" style={{ marginRight: '20px', width: '100%' }}>
+                Click for more details
+              </Button>
+            </div>
+          </div>
         </div>
       ) : (
         <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>

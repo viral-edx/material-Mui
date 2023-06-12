@@ -44,7 +44,7 @@ const FixedSideBar = () => {
   const navigate = useNavigate();
   const [state, setState] = useState('/components-button');
   return (
-    <Box className="fixedSideBar">
+    <Box className="fixed-side-bar">
       {components.map((key) => {
         const IconComponent = key.icon;
         return (

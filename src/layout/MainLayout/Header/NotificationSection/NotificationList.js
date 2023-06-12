@@ -2,9 +2,6 @@
 import { useTheme, styled } from '@mui/material/styles';
 import { Avatar, Chip, Grid, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, Typography } from '@mui/material';
 
-// assets
-// import User1 from 'assets/images/users/user-round.svg';
-
 // styles
 const ListItemWrapper = styled('div')(({ theme }) => ({
   cursor: 'pointer',
@@ -30,7 +27,7 @@ const NotificationList = () => {
     ...chipSX,
     color: 'black',
     backgroundColor: '#B8CF65',
-    marginRight: '5px'
+    marginRight: '15px'
   };
 
   const chipWarningSX = {
@@ -38,13 +35,6 @@ const NotificationList = () => {
     color: 'black',
     backgroundColor: '#B8CF65'
   };
-
-  // const chipSuccessSX = {
-  //   ...chipSX,
-  //   color: theme.palette.success.dark,
-  //   backgroundColor: theme.palette.success.light,
-  //   height: 28
-  // };
 
   return (
     <List
