@@ -88,7 +88,7 @@ const MenuPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <MenuList>
+                  <MenuList sx={{ backgroundColor: '#f3f3f4' }}>
                     <MenuItem>
                       <ListItemIcon>
                         <ContentCut fontSize="small" />

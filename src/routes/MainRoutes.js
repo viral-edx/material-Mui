@@ -21,7 +21,9 @@ import TooltipPage from 'components/tooltip';
 import AlertPage from 'components/alert';
 import CardPage from 'components/card';
 import PaginationPage from 'components/pagination';
+import InvoiceDetailed from 'matrixPages/invoiceDetailed';
 import Progress from '../components/progress';
+import { Outlet } from 'react-router';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -78,7 +80,15 @@ const MainRoutes = {
     },
     {
       path: '/matrix-invoice',
-      element: <InvoicePage />
+      element: <Outlet />,
+      // element: <InvoicePage />,
+      children: [
+        { index: true, element: <InvoicePage /> },
+        {
+          path: `/matrix-invoice/:id`,
+          element: <InvoiceDetailed />
+        }
+      ]
     },
     {
       path: '/meet',

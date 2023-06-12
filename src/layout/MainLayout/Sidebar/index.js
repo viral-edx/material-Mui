@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { Box, Drawer, useMediaQuery } from '@mui/material';
 
-// third-party
-import { BrowserView, MobileView } from 'react-device-detect';
-
 // project imports
 import MenuList from './MenuList';
 import MenuCard from './MenuCard';
@@ -20,23 +17,16 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
 
   const drawer = (
     <>
-      <BrowserView>
-        <Box
-          component="div"
-          className="scroll-bar-drawer"
-          style={{
-            height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)'
-          }}
-        >
-          <MenuList />
-          <MenuCard />
-        </Box>
-      </BrowserView>
-      <MobileView>
-        <Box sx={{ px: 2 }}>
-          <MenuList />
-        </Box>
-      </MobileView>
+      <Box
+        component="div"
+        className="scroll-bar-drawer"
+        style={{
+          height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)'
+        }}
+      >
+        <MenuList />
+        <MenuCard />
+      </Box>
     </>
   );
 

@@ -1,4 +1,4 @@
-  .fixedSideBar {
+  .fixed-side-bar {
     flex-shrink: 0;
     width: 70px;
     top: 45px;
@@ -16,16 +16,4 @@
     padding-right: 5px;
     padding-top: 25px;
     font-size: 0.8em;
-
-    .selectedFixedMenu {
-      background-color: var(--primary-color);
-      color: var(--black-color);
-      border-radius: 10px;
-
-      &:hover {
-        border-radius: 10px;
-        background-color: var(--primary-color);
-        color: var(--black-color);
-      }
-    }
   }
