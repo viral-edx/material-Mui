@@ -1,11 +1,11 @@
 import React from 'react';
-import Grid from './Grid';
+import GridPage from './GridPage';
 
 const InvoicePage = () => {
   return (
     <div>
       {/* --- added custom grid component with props data, itemsPerPage, header --- */}
-      <Grid data={dummyData} itemsPerPage={10} header="Invoices" />
+      <GridPage data={dummyData} itemsPerPage={10} header="Invoices" />
     </div>
   );
 };

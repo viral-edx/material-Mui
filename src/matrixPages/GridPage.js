@@ -12,9 +12,10 @@ import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import UiContextStructure from '../context/ui-context';
 import { IoClose } from 'react-icons/io5';
 import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
 // import '../assets/scss/table.scss';
 
-const Grid = ({ data, itemsPerPage, header = '' }) => {
+const GridPage = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [searchKey, setSearchKey] = useState('');
   const [toggle, setToggle] = useState(null);
@@ -142,7 +143,14 @@ const Grid = ({ data, itemsPerPage, header = '' }) => {
         <div className="display-view">
           {/* ---items after filteration and pagination--- */}
           {currentItems.length > 0 ? (
-            <Items currentItems={currentItems} selected={selected} setSelected={setSelected} toggle={toggle} setSplitData={setSplitData} />
+            <Items
+              currentItems={currentItems}
+              selected={selected}
+              setSelected={setSelected}
+              toggle={toggle}
+              setSplitData={setSplitData}
+              setToggle={setToggle}
+            />
           ) : (
             <div className="no-result">
               <h4>No results to show!</h4>
@@ -186,7 +194,9 @@ const Grid = ({ data, itemsPerPage, header = '' }) => {
   );
 };
 
-function Items({ currentItems, selected, toggle, setSelected = () => {}, setSplitData }) {
+function Items({ currentItems, selected, toggle, setSelected = () => {}, setSplitData, setToggle }) {
+  const navigate = useNavigate();
+
   // const { setSplitData } = useContext(UiContextStructure);
   // const { splitData, setSplitData } = useContext(UiContextStructure);
 
@@ -234,7 +244,18 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setSpli
         {/* ---paginated data is mapped here--- */}
         {currentItems.length > 0 &&
           currentItems.map((item, i) => (
-            <tr key={i}>
+            <tr
+              key={item.invoiceId}
+              onDoubleClick={() => {
+                navigate(`/matrix-invoice/${item.invoiceId}`);
+                setSplitData(item);
+              }}
+              onClick={() => {
+                setToggle('vertical');
+                setSplitData(item);
+              }}
+            >
+              {console.log('i', item)}
               <td className="table-row">
                 <input
                   id={item.invoiceId}
@@ -244,54 +265,16 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setSpli
                 />
                 <label className="checkbox" htmlFor={item.invoiceId}></label>
               </td>
-              <td
-                className="table-row"
-                onClick={() => {
-                  setSplitData(item);
-                }}
-              >
-                {item.invoiceId}
-              </td>
-              <td
-                className="table-row truncate"
-                onClick={() => {
-                  setSplitData(item);
-                }}
-              >
+              <td className="table-row">{item.invoiceId}</td>
+              <td className="table-row truncate">
                 <div className="truncate">{item.sender}</div>
               </td>
-              <td
-                className="table-row truncate"
-                onClick={() => {
-                  setSplitData(item);
-                }}
-              >
+              <td className="table-row truncate">
                 <div className="truncate">{item.receiver}</div>
               </td>
-              <td
-                className="table-row last-col"
-                onClick={() => {
-                  setSplitData(item);
-                }}
-              >
-                {item.date}
-              </td>
-              <td
-                className="table-row last-col"
-                onClick={() => {
-                  setSplitData(item);
-                }}
-              >
-                {item.totalAmount}
-              </td>
-              <td
-                className="table-row last-col"
-                onClick={() => {
-                  setSplitData(item);
-                }}
-              >
-                {item.status}
-              </td>
+              <td className="table-row last-col">{item.date}</td>
+              <td className="table-row last-col">{item.totalAmount}</td>
+              <td className="table-row last-col">{item.status}</td>
             </tr>
           ))}
         {/* ---paginated data ended here--- */}
@@ -377,54 +360,47 @@ const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
     <>
       {splitData !== null ? (
         <div className={`splitempty ${props.splitRight && 'splitempty-right'}`}>
+          <h1>Invoice Details</h1>
           <Card
-            style={{
-              width: 300,
-              marginLeft: '120px',
-              borderRadius: '5px',
-              boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px'
-            }}
+            sx={{ width: 300, marginLeft: '37.5%', borderRadius: '5px', boxShadow: 'rgba(80, 63, 111, 0.8039215686) 0px 2px 14px 0px' }}
           >
             <CardContent>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                InvoiceId:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.invoiceId}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Receiver:{' '}
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.receiver}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Sender:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.sender}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Status:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
-                  {splitData.status}
-                </Typography>
-              </Typography>
-              <Typography variant="h5" style={{ fontWeight: 'bold', textAlign: 'initial' }}>
-                Date:
-                <Typography variant="body1" style={{ fontWeight: 'light' }}>
+              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
+                Date:{' '}
+                <Typography component="span" fontWeight="light">
                   {splitData.date}
                 </Typography>
               </Typography>
+              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
+                InvoiceId:{' '}
+                <Typography component="span" fontWeight="light">
+                  {splitData.invoiceId}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
+                Sender:{' '}
+                <Typography component="span" fontWeight="light">
+                  {splitData.sender}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
+                Status:{' '}
+                <Typography component="span" fontWeight="light">
+                  {splitData.status}
+                </Typography>
+              </Typography>
+              <Typography variant="h5" fontWeight="bolder" textAlign="initial">
+                Receiver:{' '}
+                <Typography component="span" fontWeight="100">
+                  {splitData.receiver}
+                </Typography>
+              </Typography>
             </CardContent>
-            <Button
-              size="large"
-              style={{ marginLeft: '10px', marginTop: '10px', marginBottom: '10px' }}
-              variant="contained"
-              color="primary"
-            >
-              Click for more details
-            </Button>
+            <CardActions>
+              <Button size="large" sx={{ marginLeft: '45px' }}>
+                Click for more details
+              </Button>
+            </CardActions>
           </Card>
         </div>
       ) : (
@@ -437,4 +413,4 @@ const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
   );
 };
 
-export default Grid;
+export default GridPage;
