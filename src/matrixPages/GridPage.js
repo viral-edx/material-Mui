@@ -6,11 +6,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdDelete, MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-icons/md';
+import { IconMenu2, IconTrash } from '@tabler/icons';
+import { MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-icons/md';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
-import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import { useNavigate } from 'react-router';
 // import '../assets/scss/table.scss';
 
@@ -71,7 +71,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           <div className="grid-header-right">
             {selected.length > 0 && (
               <div className="delete-icon">
-                <MdDelete size={24} />
+                <IconTrash size={24} />
               </div>
             )}
 
@@ -90,7 +90,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
                   }}
                 />
               ) : (
-                <GiHamburgerMenu
+                <IconMenu2
                   size="20px"
                   onClick={() => {
                     setToggle('vertical'); //by default split preview will be vertical
