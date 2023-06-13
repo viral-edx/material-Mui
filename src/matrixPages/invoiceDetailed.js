@@ -80,24 +80,26 @@ const InvoiceHeader = () => {
         <div className="full-width">
           <label className="input-title">Select Invoice Type</label>
           <FormControl sx={{ m: 1 }} fullWidth size="small">
-            <TextField id="outlined-select-currency" select defaultValue="EUR">
+            <TextField id="outlined-select-currency" select defaultValue="EUR" className="textfield_select">
               {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
+                <>
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                </>
               ))}
             </TextField>
           </FormControl>
         </div>
 
         {/* <div style={{ display: 'flex' }}> */}
-        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" />
-        <TextField id="outlined-basic" label="Select Receiver:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Purchaser:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Select Sender:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Invoice Date:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Bank/IBAN:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Reference No:" variant="outlined" size="small" />
+        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" className="textfield_select" />
+        <TextField id="outlined-basic" label="Select Receiver:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Purchaser:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Select Sender:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Invoice Date:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Bank/IBAN:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Reference No:" variant="outlined" size="small" className="textfield_select" />
         {/* </div> */}
 
         {/* write form code of header here  */}
@@ -108,26 +110,24 @@ const InvoiceHeader = () => {
       <Box component="form" noValidate autoComplete="off" className="my-form">
         <div className="full-width">
           <label className="input-title">Currency</label>
-          <FormControl sx={{ m: 1 }} fullWidth size="small">
-            <TextField id="outlined-select-currency" select defaultValue="EUR">
-              {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-          </FormControl>
+          <TextField id="outlined-select-currency" select defaultValue="EUR" className="textfield_select">
+            {currencies.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </div>
-        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" />
+        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" className="textfield_select" />
 
         {/* <div style={{ display: 'flex' }}> */}
-        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" />
-        <TextField id="outlined-basic" label="Select Receiver:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Purchaser:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Select Sender:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Invoice Date:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Bank/IBAN:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Reference No:" variant="outlined" size="small" />
+        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" className="textfield_select" />
+        <TextField id="outlined-basic" label="Select Receiver:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Purchaser:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Select Sender:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Invoice Date:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Bank/IBAN:" variant="outlined" size="small" className="textfield_select" />
+        <TextField id="outlined-basic" label="Reference No:" variant="outlined" size="small" className="textfield_select" />
         {/* </div> */}
 
         {/* write form code of header here  */}
