@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef, useState } from 'react';
-import { IconArrowNarrowLeft, IconDotsVertical, IconTrash } from '@tabler/icons';
+import { IconArrowNarrowLeft, IconDotsVertical, IconTrash, IconSearch } from '@tabler/icons';
 import { useNavigate } from 'react-router';
-import { Box, Button, FormControl, MenuItem, Step, StepLabel, Stepper, TextField, Typography } from '@mui/material';
-import { PlusOneOutlined, SearchOffOutlined } from '@mui/icons-material';
+import { Box, Button, FormControl, MenuItem, Select, Step, StepLabel, Stepper, TextField, Typography } from '@mui/material';
+import { IconMenu2, IconSquare, IconCalculator } from '@tabler/icons';
 
 const InvoiceDetailed = () => {
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const InvoiceDetailed = () => {
           </div>
         </div>
         <h1 className="invoice-title">Title</h1>
-        <HorizontalLinearStepper />
+        <ProgressBar />
 
         <div className="detail--wrap">
           <div className="detail--form">
@@ -79,8 +79,8 @@ const InvoiceHeader = () => {
       <Box component="form" noValidate autoComplete="off" className="my-form">
         <div className="full-width">
           <label className="input-title">Select Invoice Type</label>
-          <FormControl sx={{ m: 1 }} fullWidth size="small">
-            <TextField id="outlined-select-currency" select defaultValue="EUR">
+          <FormControl fullWidth size="small">
+            <TextField select defaultValue="USD">
               {currencies.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
                   {option.label}
@@ -91,13 +91,13 @@ const InvoiceHeader = () => {
         </div>
 
         {/* <div style={{ display: 'flex' }}> */}
-        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" />
-        <TextField id="outlined-basic" label="Select Receiver:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Purchaser:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Select Sender:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Invoice Date:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Bank/IBAN:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Reference No:" variant="outlined" size="small" />
+        <TextField label="Invoice No:" variant="outlined" size="small" type="number" />
+        <TextField label="Select Receiver:" variant="outlined" size="small" />
+        <TextField label="Purchaser:" variant="outlined" size="small" />
+        <TextField label="Select Sender:" variant="outlined" size="small" />
+        <TextField label="Invoice Date:" variant="outlined" size="small" />
+        <TextField label="Bank/IBAN:" variant="outlined" size="small" />
+        <TextField label="Reference No:" variant="outlined" size="small" />
         {/* </div> */}
 
         {/* write form code of header here  */}
@@ -106,36 +106,59 @@ const InvoiceHeader = () => {
         <h5>Invoice Header Data</h5>
       </div>
       <Box component="form" noValidate autoComplete="off" className="my-form">
-        <div className="full-width">
-          <label className="input-title">Currency</label>
-          <FormControl sx={{ m: 1 }} fullWidth size="small">
-            <TextField id="outlined-select-currency" select defaultValue="EUR">
-              {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-          </FormControl>
-        </div>
-        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" />
+        <FormControl fullWidth size="small">
+          <label>
+            <b>Currency</b>
+          </label>
+          <TextField select defaultValue="USD">
+            {currencies.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </FormControl>
+        <FormControl fullWidth size="small">
+          <label>
+            <b>Total from line items</b>
+          </label>
+          <TextField select defaultValue="USD">
+            {currencies.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </FormControl>
+        <TextField label="0.00" variant="outlined" size="small" type="number" />
+        <TextField label="Charges" variant="outlined" size="small" type="number" />
+        <TextField label="Allows" variant="outlined" size="small" />
 
-        {/* <div style={{ display: 'flex' }}> */}
-        <TextField id="outlined-basic" label="Invoice No:" variant="outlined" size="small" type="number" />
-        <TextField id="outlined-basic" label="Select Receiver:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Purchaser:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Select Sender:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Invoice Date:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Bank/IBAN:" variant="outlined" size="small" />
-        <TextField id="outlined-basic" label="Reference No:" variant="outlined" size="small" />
-        {/* </div> */}
+        <label>
+          <b>VAT:</b>
+        </label>
+        <TextField label="Tax Base:" variant="outlined" size="small" />
+        <TextField label="VAT" variant="outlined" size="small" />
+        <TextField label="Percentage" variant="outlined" size="small" />
+        <TextField label="Total Amount incl. VAT:" variant="outlined" size="small" />
 
+        <label>
+          <b>VAT:</b>
+        </label>
+        <TextField label="0" variant="outlined" size="small" />
+        <TextField label="0.00" variant="outlined" size="small" />
+        <TextField label="0.00" variant="outlined" size="small" />
+        <TextField label="Total Cash:" variant="outlined" size="small" />
         {/* write form code of header here  */}
       </Box>
       <div className="notes-footer">
         <div className="button-box">
-          <md-filled-button label="Save" />
-          <md-outlined-button label="Clear" />
+          <Button variant="contained" color="success">
+            Save
+          </Button>
+          <Button variant="outlined" color="success">
+            Clear
+          </Button>
         </div>
       </div>
     </div>
@@ -145,12 +168,70 @@ const InvoiceHeader = () => {
 const InvoiceItems = () => {
   return (
     <div>
-      <form className="my-form">{/* write code of items here  */}</form>
+      <form className="my-form">
+        <div className="">
+          <TextField label="Position" className="text-field" />
+        </div>
+        <div>
+          <TextField label="Order Position Reference" className="text-field" />
+        </div>
+        <div className="input-row">
+          <TextField label="Article Number" className="text-field" type="number" />
+          <div className="form-icon default-icon">
+            <IconMenu2 />
+          </div>
+        </div>
+        <div>
+          <TextField label="Article Text" className="text-field" />
+        </div>
+        <div className="full-width">
+          <label className="input-title">Description</label>
+          <textarea rows={6} type="text" className="text-area" />
+        </div>
+        <div>
+          <TextField label="Quantity" className="text-field" />
+        </div>
+        <div>
+          <TextField label="Unit" className="text-field" type="number" />
+        </div>
+        <div>
+          <TextField label="Price/Unit:" className="text-field" type="number" />
+        </div>
+        <div className="input-row">
+          <TextField label="Price Quantity" className="text-field" type="number" />
+          <div className="default-icon menu-icon">
+            <IconSquare />
+          </div>
+          <span className="vat-width">incl. VAT</span>
+        </div>
+        <div>
+          <TextField label="VAT" className="text-field" type="number" />
+        </div>
+        <div className="input-row">
+          <TextField label="Percentage:" className="text-field" type="number" />
+          <div className=" form-icon default-icon ">
+            <IconCalculator />
+          </div>
+        </div>
+        <div>
+          <TextField label="Price Position excl. VAT" className="text-field" type="number" />
+        </div>
+        <div className="input-row">
+          <TextField label="Price Position incl. VAT" className="text-field" type="number" />
+          <div className=" form-icon default-icon">
+            <IconCalculator />
+          </div>
+        </div>
+      </form>
       <div className="notes-footer">
-        {/* <div className="button-box">
-          <md-filled-button label="Add into item list" />
-          <md-outlined-button label="Clear Values" />
-        </div> */}
+        <div className="button-box">
+          <Button variant="contained" color="success">
+            Add into item list
+          </Button>
+          <Button variant="outlined" color="success">
+            Clear Values
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -249,7 +330,7 @@ const Search = () => {
   return (
     <form className="search-form">
       <span className="">
-        <SearchOffOutlined />
+        <IconSearch size="20" />
       </span>
       <input type="search" className="search-input" placeholder="Search here" />
     </form>
@@ -313,22 +394,26 @@ const Workflow = () => {
           <div>
             <label className="input-title">Select Standard Task</label>
           </div>
-          <select className="sortby">
+          <Select fullWidth>
             {firstSteps.map((index, i) => (
-              <option key={i} value={index}>
+              <MenuItem key={i} value={index}>
                 {index}
-              </option>
+              </MenuItem>
             ))}
-          </select>
+          </Select>
         </div>
         <div>
           <label className="input-title">Comment</label>
-          <textarea rows={6} label="Comment" type="text" className="text-area" />
+          <TextField fullWidth placeholder="Comment…" />
         </div>
       </form>
       <div className="button-box">
-        <md-filled-button label="Submit" />
-        <md-outlined-button label="Clear Values" />
+        <Button variant="contained" color="success">
+          Submit
+        </Button>
+        <Button variant="outlined" color="success">
+          Clear Values
+        </Button>
       </div>
       <div className="search-container">
         <Search />
@@ -349,8 +434,12 @@ const Workflow = () => {
         <div className="notes-footer">
           <div className="entries-width">Showing 1 to 1 of 1 entries</div>
           <div className="button-box">
-            <md-filled-button label="Previous" />
-            <md-outlined-button label="Next" />
+            <Button variant="contained" color="success">
+              Previous
+            </Button>
+            <Button variant="contained" color="success">
+              Next
+            </Button>
           </div>
         </div>
       </div>
@@ -363,15 +452,15 @@ const Notes = () => {
     <div className="notes-container">
       <div className="search-container">
         <Search />
-        <md-outlined-button>
-          <PlusOneOutlined /> Add
-        </md-outlined-button>
-        <select className="notes-select">
-          <option value="10">10</option>
-          <option value="25">25</option>
-          <option value="50">50</option>
-          <option value="100">100</option>
-        </select>
+        <Button sx={{ borderRadius: '20px', width: '100px', height: '40px' }} variant="contained" color="success">
+          Add
+        </Button>
+        <Select defaultValue={10}>
+          <MenuItem value="10">10</MenuItem>
+          <MenuItem value="25">25</MenuItem>
+          <MenuItem value="50">50</MenuItem>
+          <MenuItem value="100">100</MenuItem>
+        </Select>
       </div>
 
       <div className="notes-box">
@@ -385,8 +474,12 @@ const Notes = () => {
       <div className="notes-footer">
         <div className="entries-width">Showing 0 to 0 of 0 entries</div>
         <div className="button-box">
-          <md-filled-button label="Previous" />
-          <md-outlined-button label="Next" />
+          <Button variant="contained" color="success">
+            Previous
+          </Button>
+          <Button variant="contained" color="success">
+            Next
+          </Button>
         </div>
       </div>
     </div>
@@ -452,7 +545,7 @@ const Journal = () => {
 
 const steps = ['Steps 1', 'Steps 2', 'Steps 3', 'Steps 4', 'Steps 5'];
 
-function HorizontalLinearStepper() {
+function ProgressBar() {
   const [activeStep, setActiveStep] = useState(0);
 
   // const handleNext = () => {
@@ -514,13 +607,13 @@ function HorizontalLinearStepper() {
       ) : (
         <>
           {/* <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography> */}
-          {/* <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            {/* <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
               Back
-            </Button>
-            <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleNext}>{activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button>
-          </Box> */}
+            </Button> */}
+            {/* <Box sx={{ flex: '1 1 auto' }} />
+            <Button onClick={handleNext}>{activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button> */}
+          </Box>
         </>
       )}
     </Box>

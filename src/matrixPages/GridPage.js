@@ -74,7 +74,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           {selected.length > 0 ? <h2>{selected.length} Selected</h2> : <h2>{header}</h2>}
           <div className="grid-header-right">
             {selected.length > 0 && (
-              <div className="delete-icon">
+              <div className="delete-icon-grid-page">
                 <IconTrash size={24} />
               </div>
             )}
