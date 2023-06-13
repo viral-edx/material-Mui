@@ -1,0 +1,31 @@
+.stepper-root {
+    width: 100%;
+    background-color: #ededed;
+    border-radius: 50px;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 12px 24px;
+}
+
+.stepLabelRoot {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.stepLabel {
+    border-radius: 50px;
+
+    span {
+        svg {
+            color: #5f6368 !important;
+            margin-bottom: 6px;
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}

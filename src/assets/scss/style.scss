@@ -7,6 +7,7 @@
 @import './commonLayout.scss';
 @import './dashboard.scss';
 @import './table.scss';
+@import './stepperRoot.scss';
 
 .scroll-bar-drawer {
   padding-left: 16px;
@@ -160,6 +161,7 @@
   display: flex;
   flex-direction: row;
 }
+
 
 .bajajAreaChartCard {
   background-color: var(--secondary-color);

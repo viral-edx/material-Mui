@@ -6,13 +6,17 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import { IconMenu2, IconTrash } from '@tabler/icons';
-import { MdKeyboardArrowDown, MdOutlineVerticalSplit } from 'react-icons/md';
-import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
-import { IoClose } from 'react-icons/io5';
+import {
+  IconMenu2,
+  IconTrash,
+  IconChevronLeft,
+  IconChevronRight,
+  IconChevronDown,
+  IconX,
+  IconLayoutSidebarLeftCollapse
+} from '@tabler/icons';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router';
-// import '../assets/scss/table.scss';
 
 const GridPage = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -82,7 +86,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
             <div className="toggle-pane">
               {/* ---split menu for toggle between vertical and horizontal--- */}
               {toggle ? (
-                <MdOutlineVerticalSplit
+                <IconLayoutSidebarLeftCollapse
                   size="25px"
                   onClick={() => {
                     setToggle(null);
@@ -100,7 +104,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
               )}
 
               <div className="arrow-icon">
-                <MdKeyboardArrowDown size={20} onClick={() => setDropdown((prev) => !prev)} />
+                <IconChevronDown size={20} onClick={() => setDropdown((prev) => !prev)} />
               </div>
 
               {dropdown && (
@@ -155,11 +159,11 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           {/* ---pagination for total pages--- */}
           <ReactPaginate
             breakLabel="..."
-            nextLabel={<IoChevronForward size={16} />}
+            nextLabel={<IconChevronRight size={16} />}
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}
             pageCount={pageCount}
-            previousLabel={<IoChevronBack size={16} />}
+            previousLabel={<IconChevronLeft size={16} />}
             renderOnZeroPageCount={null}
             className="pagination"
             pageLinkClassName="pagination-link"
@@ -320,11 +324,11 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
       />
       {searchKey.length > 0 && (
         <div onClick={() => setSearchKey('')}>
-          <IoClose />
+          <IconX />
         </div>
       )}
       <div className="dropdown--arrow" onClick={() => setDropdown((prev) => !prev)}>
-        <MdKeyboardArrowDown />
+        <IconChevronDown />
       </div>
 
       {/* ---searchable dropdown--- */}
