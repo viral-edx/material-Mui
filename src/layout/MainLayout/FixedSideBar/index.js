@@ -11,7 +11,7 @@ const components = [
     title: 'Dashboard',
     type: 'item',
     icon: IconDashboard,
-    url: '/dashboard/default' || '/',
+    url: '/dashboard/default',
     breadcrumbs: false
   },
   {
@@ -35,12 +35,11 @@ const components = [
 const FixedSideBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [state, setState] = useState('/');
+  const [state, setState] = useState('/dashboard/default');
   return (
     <Box className="fixed-side-bar">
       {components.map((key) => {
         const IconComponent = key.icon;
-
         return (
           <Box
             onClick={() => {
