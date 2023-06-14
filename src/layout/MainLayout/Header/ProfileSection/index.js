@@ -36,13 +36,11 @@ const ProfileSection = () => {
   const theme = useTheme();
   const customization = useSelector((state) => state.customization);
   const navigate = useNavigate();
-
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [open, setOpen] = useState(false);
 
   const anchorRef = useRef(null);
   const handleLogout = async () => {
-    console.log('Logout');
   };
 
   const handleClose = (event) => {

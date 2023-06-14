@@ -2,20 +2,20 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import { IconDashboard, IconComponents, IconBrandZoom, IconTable } from '@tabler/icons';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { useState } from 'react';
 
 const components = [
   {
-    id: 'components-buttons',
+    id: 'components-dashboard',
     title: 'Dashboard',
     type: 'item',
     icon: IconDashboard,
-    url: '/dashboard/default',
+    url: '/dashboard/default' || '/',
     breadcrumbs: false
   },
   {
-    id: 'components-radio',
+    id: 'components-matrix',
     title: 'Matrix',
     type: 'item',
     icon: IconTable,
@@ -23,7 +23,7 @@ const components = [
     breadcrumbs: false
   },
   {
-    id: 'components-checkbox',
+    id: 'components-comp',
     title: 'Components',
     type: 'item',
     icon: IconComponents,
@@ -33,12 +33,14 @@ const components = [
 ];
 
 const FixedSideBar = () => {
+  const location = useLocation();
   const navigate = useNavigate();
-  const [state, setState] = useState('/components-button');
+  const [state, setState] = useState('/');
   return (
     <Box className="fixed-side-bar">
       {components.map((key) => {
         const IconComponent = key.icon;
+
         return (
           <Box
             onClick={() => {

@@ -16,7 +16,6 @@ const ListItemWrapper = styled('div')(() => ({
 
 const NotificationList = () => {
   const theme = useTheme();
-
   const chipSX = {
     height: 24,
     padding: '0 6px'

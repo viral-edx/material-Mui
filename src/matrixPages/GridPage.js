@@ -250,7 +250,6 @@ function Items({ currentItems, selected, toggle, setSelected = () => {}, setSpli
                 setSplitData(item);
               }}
             >
-              {console.log('i', item)}
               <td className="table-row">
                 <input
                   id={item.invoiceId}
@@ -350,8 +349,6 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
 };
 
 const SplitData = ({ setToggle = () => {}, splitData, toggle, ...props }) => {
-  console.log('splitData', splitData);
-
   return (
     <>
       {splitData !== null ? (
