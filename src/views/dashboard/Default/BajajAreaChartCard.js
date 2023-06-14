@@ -19,7 +19,7 @@ const BajajAreaChartCard = () => {
   const customization = useSelector((state) => state.customization);
   const { navType } = customization;
 
-  const borderColorOfGraph = '#718125';
+  const borderColorOfGraph = theme.palette.success.dark;
 
   useEffect(() => {
     const newSupportChart = {
@@ -33,8 +33,8 @@ const BajajAreaChartCard = () => {
   }, [navType, borderColorOfGraph]);
 
   return (
-    <Card className="bajajAreaChartCard">
-      <Grid container sx={{ p: 2, pb: 0, color: '#fff' }}>
+    <Card sx={{ bgcolor: theme.palette.green[800] }}>
+      <Grid container sx={{ p: 2, pb: 0, color: theme.palette.background.default }}>
         <Grid item xs={12}>
           <Grid container alignItems="center" justifyContent="space-between">
             <Grid item>

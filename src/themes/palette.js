@@ -7,67 +7,58 @@ export default function themePalette(theme) {
   return {
     mode: theme?.customization?.navType,
     common: {
-      //   black: ' #111936'
+      black: '#535353'
     },
+
+    // This is the demo of the color code combination of light, main, dark, 200 and 800 and we can also add more color
     primary: {
       //   light: '#eef2f6',
-      //   main: '#2196f3',
+      main: '#2196f3'
       //   dark: '#1e88e5',
       //   200: '#90caf9',
       //   800: '#1565c0'
     },
     secondary: {
-      //   light: '#b7eb00',
-      //   main: '#673ab7',
-      //   dark: '#5e35b1',
-      //   200: '#b39ddb',
-      //   800: '#4527a0'
+      light: '#EBF9B8',
+      main: '#673ab7',
+      dark: '#1c1c1e0d'
     },
-    error: {
-      //   light: '#ef9a9a',
-      //   main: '#f44336',
-      //   dark: '#c62828'
+    tertiary: {
+      main: '#6c7365'
     },
-    orange: {
-      //   light: '#fbe9e7',
-      //   main: '#ffab91',
-      //   dark: '#d84315'
-    },
-    warning: {
-      //   light: '#fff8e1',
-      //   main: '#ffe57f',
-      //   dark: '#ffc107'
+    info: {
+      main: '#0288d1'
     },
     success: {
-      //   light: '#b9f6ca',
-      //   200: '#69f0ae',
-      //   main: '#00e676',
-      //   dark: '#00c853'
+      main: '#2e7d32',
+      dark: '#718125'
     },
-    grey: {
-      //   50: '#f8fafc',
-      //   100: '#eef2f6',
-      //   500: '#8492c4',
-      //   600: theme.heading,
-      //   700: theme.darkTextPrimary,
-      //   900: theme.textDark
+    error: {
+      main: '#d32f2f'
+    },
+    warning: {
+      main: '#ed6c02'
+    },
+    green: {
+      light: '#EBF9B8',
+      main: '#b7eb00',
+      dark: '#B9CF55',
+      800: '#b7eb0047'
     },
     dark: {
-      //   light: '#bdc8f0',
-      //   main: '#29314f',
-      //   dark: '#212946',
-      //   800: '#1a223f',
-      //   900: '#111936'
+      main: '#29314f'
     },
     text: {
-      //   primary: theme.darkTextPrimary,
-      //   secondary: theme.darkTextSecondary,
-      //   dark: theme.textDark,
-      //   hint: '#eef2f6'
+      light: '#8c8c8c',
+      primary: '#364152',
+      dark: '#17181636'
+    },
+    borderColor: {
+      main: '#E6EBF1'
     },
     background: {
-      //   paper: '#fff',
-      //   default: '#fff'
+      paper: '#fffefe',
+      default: '#fffefe'
     }
   };
 }
