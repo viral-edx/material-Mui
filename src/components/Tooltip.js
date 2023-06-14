@@ -14,7 +14,7 @@ import {
   Fade,
   Zoom
 } from '@mui/material';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { styled } from '@mui/material/styles';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 
 const ProgressPage = () => {
   const [progress, setProgress] = useState(0);

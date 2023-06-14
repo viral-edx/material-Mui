@@ -13,7 +13,7 @@ import {
   Typography
 } from '@mui/material';
 import React from 'react';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, Rating } from '@mui/material';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';

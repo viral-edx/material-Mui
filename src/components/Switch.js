@@ -1,6 +1,6 @@
 import { Box, CardContent, FormControlLabel, Grid, Paper, Stack, Switch, Typography } from '@mui/material';
 import React from 'react';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import { pink } from '@mui/material/colors';
 import { alpha, styled } from '@mui/material/styles';
 

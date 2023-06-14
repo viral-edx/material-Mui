@@ -18,7 +18,7 @@ import ContentCut from '@mui/icons-material/ContentCut';
 import ContentCopy from '@mui/icons-material/ContentCopy';
 import ContentPaste from '@mui/icons-material/ContentPaste';
 import Cloud from '@mui/icons-material/Cloud';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import { Fragment } from 'react';
 

@@ -8,7 +8,7 @@ import { Card, Grid, Typography } from '@mui/material';
 // third-party
 import ApexCharts from 'apexcharts';
 import Chart from 'react-apexcharts';
-import chartData from './bajaj-area-chart';
+import chartData from './Bajaj-area-chart';
 
 // project imports
 

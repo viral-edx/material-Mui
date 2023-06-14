@@ -6,10 +6,10 @@ import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
 
 // project imports
-import Breadcrumbs from 'ui-component/extended/Breadcrumbs';
+import Breadcrumbs from 'uiComponent/extended/Breadcrumbs';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import navigation from 'menu-items';
+import navigation from 'menuItems';
 import { drawerWidth } from 'store/constant';
 import { SET_MENU } from 'store/actions';
 

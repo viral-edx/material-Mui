@@ -195,9 +195,6 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
 function Items({ currentItems, selected, toggle, setSelected = () => {}, setSplitData, setToggle }) {
   const navigate = useNavigate();
 
-  // const { setSplitData } = useContext(UiContextStructure);
-  // const { splitData, setSplitData } = useContext(UiContextStructure);
-
   //multiple row selection and de-selection function
   function handleAllSelection() {
     if (selected.length < currentItems.length) {

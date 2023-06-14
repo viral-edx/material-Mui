@@ -3,7 +3,7 @@ import { Typography, Box, Grid, Stack, Paper, CardContent, Button } from '@mui/m
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import HomeIcon from '@mui/icons-material/Home';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 
 function ButtonPage() {
   return (

@@ -7,7 +7,7 @@ import { List, Typography } from '@mui/material';
 // project imports
 import NavItem from '../NavItem';
 import NavCollapse from '../NavCollapse';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 
 // ==============================|| SIDEBAR MENU LIST GROUP ||============================== //
 
