@@ -10,8 +10,6 @@ import CheckboxPage from 'components/Checkbox';
 import SelectPage from 'components/Select';
 import SwitchPage from 'components/Switch';
 import RatingPage from 'components/Rating';
-import EmailPage from 'matrixPages/Email';
-import InvoicePage from 'matrixPages/Invoice';
 import SliderPage from 'components/Slider';
 import TextFieldPage from 'components/TextField';
 import BadgePage from 'components/Badge';
@@ -20,21 +18,19 @@ import TooltipPage from 'components/Tooltip';
 import AlertPage from 'components/Alert';
 import CardPage from 'components/Card';
 import PaginationPage from 'components/Pagination';
-import InvoiceDetailed from 'matrixPages/InvoiceDetailed';
 import Progress from '../components/Progress';
-import { Outlet } from 'react-router';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
 // ==============================|| MAIN ROUTING ||============================== //
-const MainRoutes = {
+const ComponentLayoutRoute = {
   path: '/',
   element: <MainLayout />,
   children: [
     {
       path: '/',
-      element: <ButtonPage />
+      element: <DashboardDefault />
     },
     {
       path: 'dashboard',
@@ -72,22 +68,6 @@ const MainRoutes = {
     {
       path: '/components-rating',
       element: <RatingPage />
-    },
-    {
-      path: '/matrix-grid',
-      element: <EmailPage />
-    },
-    {
-      path: '/matrix-invoice',
-      element: <Outlet />,
-      // element: <InvoicePage />,
-      children: [
-        { index: true, element: <InvoicePage /> },
-        {
-          path: `/matrix-invoice/:id`,
-          element: <InvoiceDetailed />
-        }
-      ]
     },
 
     {
@@ -133,4 +113,4 @@ const MainRoutes = {
   ]
 };
 
-export default MainRoutes;
+export default ComponentLayoutRoute;

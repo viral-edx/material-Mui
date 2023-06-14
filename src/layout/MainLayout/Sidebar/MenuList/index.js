@@ -7,16 +7,17 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate, useParams } from 'react-router';
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 
 const MenuList = () => {
+  const dataId = useParams();
   const components = [
     {
       id: 'components-buttons',
       title: 'Button',
       type: 'item',
-      url: '/',
+      url: '/components-button',
       breadcrumbs: false
     },
     {
@@ -130,7 +131,7 @@ const MenuList = () => {
       id: 'matrix-invoice',
       title: 'Invoice',
       type: 'item',
-      url: '/matrix-invoice',
+      url: dataId.id ? `/matrix-invoice/${dataId.id}` : '/matrix-invoice',
       breadcrumbs: false
     }
   ];
@@ -141,10 +142,14 @@ const MenuList = () => {
   return (
     <>
       {/* dashboard pages */}
-      {navigate.pathname === '/dashboard/default' && (
+      {(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && (
         <List>
           {['Dashboard'].map((text, index) => (
-            <ListItem key={text} disablePadding className={navigate.pathname === '/dashboard/default' && 'selectedMenu'}>
+            <ListItem
+              key={text}
+              disablePadding
+              className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selectedMenu'}
+            >
               <ListItemButton className="options">
                 <ListItemIcon>{index % 2 === 0 ? <MailIcon /> : <InboxIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
@@ -175,7 +180,7 @@ const MenuList = () => {
       )}
 
       {/* components pages */}
-      {(navigate.pathname.includes('/components') || navigate.pathname === '/') && (
+      {navigate.pathname.includes('/components') && (
         <List>
           {components.map((key) => {
             return (

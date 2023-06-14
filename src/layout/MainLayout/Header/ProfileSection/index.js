@@ -25,11 +25,11 @@ import {
 
 // project imports
 import MainCard from 'uiComponent/cards/MainCard';
-import Transitions from 'ui-component/extended/Transitions';
 // import UpgradePlanCard from './UpgradePlanCard';
 
 // assets
 import { IconLogout, IconSettings, IconUser } from '@tabler/icons';
+import Transitions from 'uiComponent/extended/Transitions';
 
 // ==============================|| PROFILE MENU ||============================== //
 
@@ -37,7 +37,6 @@ const ProfileSection = () => {
   const theme = useTheme();
   const customization = useSelector((state) => state.customization);
   const navigate = useNavigate();
-
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [open, setOpen] = useState(false);
   /**
@@ -45,7 +44,6 @@ const ProfileSection = () => {
    * */
   const anchorRef = useRef(null);
   const handleLogout = async () => {
-    console.log('Logout');
   };
 
   const handleClose = (event) => {
