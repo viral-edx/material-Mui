@@ -3,12 +3,10 @@ import { useTheme, styled } from '@mui/material/styles';
 import { Avatar, Chip, Grid, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, Typography } from '@mui/material';
 
 // styles
-const ListItemWrapper = styled('div')(({ theme }) => ({
+const ListItemWrapper = styled('div')(() => ({
   cursor: 'pointer',
   padding: 16,
-  '&:hover': {
-    background: theme.palette.primary.light
-  },
+
   '& .MuiListItem-root': {
     padding: 0
   }

@@ -25,8 +25,7 @@ import {
 
 // project imports
 import MainCard from 'uiComponent/cards/MainCard';
-import Transitions from 'ui-component/extended/Transitions';
-// import UpgradePlanCard from './UpgradePlanCard';
+import Transitions from 'uiComponent/extended/Transitions';
 
 // assets
 import { IconLogout, IconSettings, IconUser } from '@tabler/icons';
@@ -40,9 +39,7 @@ const ProfileSection = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [open, setOpen] = useState(false);
-  /**
-   * anchorRef is used on different componets and specifying one type leads to other components throwing an error
-   * */
+
   const anchorRef = useRef(null);
   const handleLogout = async () => {
     console.log('Logout');
@@ -120,7 +117,7 @@ const ProfileSection = () => {
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
                 <MainCard border={false} elevation={16} content={false} boxShadow shadow={theme.shadows[16]}>
-                  <Box sx={{ p: 2, width: '400px', background: theme.palette.background.paper }}>
+                  <Box sx={{ p: 2, width: '400px', background: theme.palette.secondary.dark }}>
                     <Stack>
                       <Typography variant="subtitle2" textAlign="center" marginBottom="10px">
                         This account is managed by ioMarket.team

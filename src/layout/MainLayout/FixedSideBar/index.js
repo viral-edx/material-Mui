@@ -48,7 +48,7 @@ const FixedSideBar = () => {
             key={key.id}
             sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '10px', marginTop: '10px' }}
           >
-            <div className={key.url === state ? 'icon-fixed-sidebar-upper' : ' icon-fixed-upper'}>
+            <div className={key.url === state ? 'icon-fixed-sidebar-upper' : 'icon-fixed-upper'}>
               <IconComponent size={22} />
             </div>
             <span>{key.title}</span>

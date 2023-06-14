@@ -23,11 +23,11 @@ import {
 
 // project imports
 import MainCard from 'uiComponent/cards/MainCard';
-import Transitions from 'ui-component/extended/Transitions';
 import NotificationList from './NotificationList';
 
 // assets
 import { IconBell } from '@tabler/icons';
+import Transitions from 'uiComponent/extended/Transitions';
 
 // notification status options
 const status = [

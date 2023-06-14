@@ -87,8 +87,8 @@ const SalesColumnChart = () => {
   const { primary, secondary } = theme.palette.text;
   const line = theme.palette.divider;
 
-  const warning = theme.palette.success.main; // Net Profit Color
-  const primaryMain = theme.palette.green.main; // Revenue Color
+  const warning = '#0b5a28'; // Net Profit Color
+  const primaryMain = '#36af56'; // Revenue Color
   const successDark = theme.palette.success.dark;
 
   const [series] = useState([
