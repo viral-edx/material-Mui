@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CardContent, FormControlLabel, Grid, Box, Paper, Radio, RadioGroup, Stack, Typography } from '@mui/material';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import { orange, pink, red } from '@mui/material/colors';
 
 const RadioPage = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, Divider, CardContent, Checkbox, FormControlLabel } from '@mui/material';
 
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import { pink } from '@mui/material/colors';
 import { FavoriteBorder } from '@mui/icons-material';
 import Favorite from '@mui/icons-material/Favorite';

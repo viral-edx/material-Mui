@@ -15,7 +15,7 @@ import {
   CardMedia,
   CardActionArea
 } from '@mui/material';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';

@@ -29,14 +29,6 @@ const components = [
     icon: IconComponents,
     url: '/components-button',
     breadcrumbs: false
-  },
-  {
-    id: 'components-meet',
-    title: 'Meet',
-    type: 'item',
-    icon: IconBrandZoom,
-    url: '/meet',
-    breadcrumbs: false
   }
 ];
 

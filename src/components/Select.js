@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, FormControl, InputLabel, Select, MenuItem, FormHelperText } from '@mui/material';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 
 const SelectPage = () => {
   const [age1, setAge1] = useState('');

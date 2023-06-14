@@ -7,7 +7,7 @@ import { Avatar, CardContent, Divider, Grid, Menu, MenuItem, Typography } from '
 
 // project imports
 import MainCard from './MainCard';
-import SkeletonPopularCard from 'ui-component/cards/Skeleton/PopularCard';
+import SkeletonPopularCard from 'uiComponent/cards/PopularCard';
 
 // assets
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';

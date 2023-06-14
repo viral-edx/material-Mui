@@ -1,6 +1,6 @@
-import components from './components';
-import dashboard from './dashboard';
-import email from './email';
+import components from './Components';
+import dashboard from './Dashboard';
+import email from './Email';
 
 // ==============================|| MENU ITEMS ||============================== //
 

@@ -2,27 +2,26 @@ import { lazy } from 'react';
 
 // project imports
 import MainLayout from 'layout/MainLayout';
-import Loadable from 'ui-component/Loadable';
-import ButtonPage from 'components/button';
-import RadioPage from 'components/radio';
-import MenuPage from 'components/menu';
-import CheckboxPage from 'components/checkbox';
-import SelectPage from 'components/select';
-import SwitchPage from 'components/switch';
-import RatingPage from 'components/rating';
-import EmailPage from 'matrixPages/email';
+import Loadable from 'uiComponent/Loadable';
+import ButtonPage from 'components/Button';
+import RadioPage from 'components/Radio';
+import MenuPage from 'components/Menu';
+import CheckboxPage from 'components/Checkbox';
+import SelectPage from 'components/Select';
+import SwitchPage from 'components/Switch';
+import RatingPage from 'components/Rating';
+import EmailPage from 'matrixPages/Email';
 import InvoicePage from 'matrixPages/Invoice';
-import MeetPage from 'components/meetPage';
-import SliderPage from 'components/slider';
-import TextFieldPage from 'components/textField';
-import BadgePage from 'components/badge';
-import DividerPageComp from 'components/dividerComp';
-import TooltipPage from 'components/tooltip';
-import AlertPage from 'components/alert';
-import CardPage from 'components/card';
-import PaginationPage from 'components/pagination';
-import InvoiceDetailed from 'matrixPages/invoiceDetailed';
-import Progress from '../components/progress';
+import SliderPage from 'components/Slider';
+import TextFieldPage from 'components/TextField';
+import BadgePage from 'components/Badge';
+import DividerPageComp from 'components/DividerComp';
+import TooltipPage from 'components/Tooltip';
+import AlertPage from 'components/Alert';
+import CardPage from 'components/Card';
+import PaginationPage from 'components/Pagination';
+import InvoiceDetailed from 'matrixPages/InvoiceDetailed';
+import Progress from '../components/Progress';
 import { Outlet } from 'react-router';
 
 // dashboard routing
@@ -90,10 +89,7 @@ const MainRoutes = {
         }
       ]
     },
-    {
-      path: '/meet',
-      element: <MeetPage />
-    },
+
     {
       path: '/components-switch',
       element: <SwitchPage />

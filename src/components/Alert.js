@@ -1,6 +1,6 @@
 import { Box, CardContent, Grid, Paper, Stack, Typography, Alert, AlertTitle } from '@mui/material';
 import React from 'react';
-import DividerPage from 'utils/divider';
+import DividerPage from 'utils/Divider';
 import CheckIcon from '@mui/icons-material/Check';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
