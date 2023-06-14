@@ -14,8 +14,8 @@ import { drawerWidth } from 'store/constant';
 import { SET_MENU } from 'store/actions';
 
 // assets
-import { IconChevronRight } from '@tabler/icons';
 import FixedSideBar from './FixedSideBar';
+import { ChevronRight } from '@mui/icons-material';
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
@@ -92,7 +92,7 @@ const MainLayout = () => {
       {/* main content */}
       <Main theme={theme} open={leftDrawerOpened} sx={{ bgcolor: theme.palette.secondary.dark }}>
         {/* breadcrumb */}
-        <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
+        <Breadcrumbs separator={ChevronRight} navigation={navigation} icon title rightAlign />
         <Outlet />
       </Main>
       {/* </Box> */}

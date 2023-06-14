@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, IconButton, MenuItem, Checkbox, Menu } from '@mui/material';
 import MailListItem from './MailListItem';
-import { IconChevronDown, IconChevronLeft, IconChevronRight, IconDotsVertical, IconReload } from '@tabler/icons';
+import { KeyboardArrowDownOutlined, KeyboardArrowLeft, KeyboardArrowRight, MoreVert, Refresh } from '@mui/icons-material';
 
 const EmailPage = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -20,23 +20,23 @@ const EmailPage = () => {
         <Box display="inline-flex">
           <Checkbox color="default" />
           <IconButton onClick={handleMenuOpen}>
-            <IconChevronDown size={20} />
+            <KeyboardArrowDownOutlined size={20} />
           </IconButton>
         </Box>
         <IconButton>
-          <IconReload size={20} />
+          <Refresh size={20} />
         </IconButton>
         <IconButton>
-          <IconDotsVertical size={20} />
+          <MoreVert size={20} />
         </IconButton>
 
         <Box display="inline-flex" alignItems="center" ml="auto">
           <Box fontSize={12}>1-50 of 1,971</Box>
           <IconButton disabled>
-            <IconChevronLeft size={20} />
+            <KeyboardArrowLeft size={20} />
           </IconButton>
           <IconButton>
-            <IconChevronRight size={20} />
+            <KeyboardArrowRight size={20} />
           </IconButton>
         </Box>
       </Box>

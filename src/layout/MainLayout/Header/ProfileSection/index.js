@@ -28,7 +28,7 @@ import MainCard from 'uiComponent/cards/MainCard';
 import Transitions from 'uiComponent/extended/Transitions';
 
 // assets
-import { IconLogout, IconSettings, IconUser } from '@tabler/icons';
+import { Logout, Person, Settings } from '@mui/icons-material';
 
 // ==============================|| PROFILE MENU ||============================== //
 
@@ -136,7 +136,7 @@ const ProfileSection = () => {
                           onClick={(event) => handleListItemClick(event, 0, '#')}
                         >
                           <ListItemIcon>
-                            <IconSettings stroke={2.5} size="1.3rem" />
+                            <Settings stroke={2.5} size="1.3rem" />
                           </ListItemIcon>
                           <ListItemText primary={<Typography variant="body2">Account Settings</Typography>} />
                         </ListItemButton>
@@ -147,7 +147,7 @@ const ProfileSection = () => {
                           onClick={(event) => handleListItemClick(event, 1, '#')}
                         >
                           <ListItemIcon>
-                            <IconUser stroke={2.5} size="1.3rem" />
+                            <Person stroke={2.5} size="1.3rem" />
                           </ListItemIcon>
                           <ListItemText
                             primary={
@@ -168,7 +168,7 @@ const ProfileSection = () => {
                       className="item-profile-section"
                     >
                       <ListItemIcon>
-                        <IconLogout stroke={2.5} size="1.3rem" />
+                        <Logout stroke={2.5} size="1.3rem" />
                       </ListItemIcon>
                       <ListItemText primary={<Typography variant="body2">Sign Out</Typography>} />
                     </ListItemButton>

@@ -6,17 +6,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import {
-  IconMenu2,
-  IconTrash,
-  IconChevronLeft,
-  IconChevronRight,
-  IconChevronDown,
-  IconX,
-  IconLayoutSidebarLeftCollapse
-} from '@tabler/icons';
+import { IconLayoutSidebarLeftCollapse } from '@tabler/icons';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router';
+import { Clear, KeyboardArrowDown, KeyboardArrowLeft, KeyboardArrowRight, Menu, Delete } from '@mui/icons-material';
 
 const GridPage = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -75,7 +68,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           <div className="grid-header-right">
             {selected.length > 0 && (
               <div className="delete-icon-grid-page">
-                <IconTrash size={24} />
+                <Delete size={24} />
               </div>
             )}
 
@@ -94,7 +87,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
                   }}
                 />
               ) : (
-                <IconMenu2
+                <Menu
                   size="20px"
                   onClick={() => {
                     setToggle('vertical'); //by default split preview will be vertical
@@ -104,7 +97,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
               )}
 
               <div className="arrow-icon">
-                <IconChevronDown size={20} onClick={() => setDropdown((prev) => !prev)} />
+                <KeyboardArrowDown size={18} onClick={() => setDropdown((prev) => !prev)} />
               </div>
 
               {dropdown && (
@@ -159,11 +152,11 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           {/* ---pagination for total pages--- */}
           <ReactPaginate
             breakLabel="..."
-            nextLabel={<IconChevronRight size={16} />}
+            nextLabel={<KeyboardArrowRight size={16} />}
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}
             pageCount={pageCount}
-            previousLabel={<IconChevronLeft size={16} />}
+            previousLabel={<KeyboardArrowLeft size={16} />}
             renderOnZeroPageCount={null}
             className="pagination"
             pageLinkClassName="pagination-link"
@@ -320,11 +313,11 @@ const SearchableDropdown = ({ dropdownData, setSearchKey, searchKey }) => {
       />
       {searchKey.length > 0 && (
         <div onClick={() => setSearchKey('')}>
-          <IconX />
+          <Clear />
         </div>
       )}
       <div className="dropdown--arrow" onClick={() => setDropdown((prev) => !prev)}>
-        <IconChevronDown />
+        <KeyboardArrowDown />
       </div>
 
       {/* ---searchable dropdown--- */}
