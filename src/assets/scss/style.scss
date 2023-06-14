@@ -1,5 +1,4 @@
 // color variants
-@import './colorCode.scss';
 @import './fixedSideBar.scss';
 @import './profileSection.scss';
 @import './buttonPage.scss';
@@ -8,6 +7,7 @@
 @import './dashboard.scss';
 @import './table.scss';
 @import './stepperRoot.scss';
+@import './colorCode.scss';
 
 .scroll-bar-drawer {
   padding-left: 16px;
@@ -26,7 +26,7 @@
   margin-bottom: 5px;
   margin-top: 5px;
   border-radius: 10px;
-  background-color: #99ba09b0;
+  background-color: var(--selected-color);
 
   .options {
     border-radius: 10px;
@@ -59,29 +59,24 @@
   align-items: center;
 }
 
-.hoveredBox {
-  display: flex;
-  width: 150px;
-  flex-shrink: 0;
-  margin-left: 1px;
-  margin-right: 0.5px;
-  justify-content: space-between;
-}
-
 .descriptionTable {
   width: 745px;
   padding-left: 18px;
+
+  div {
+    display: flex;
+  }
 }
 
-.css-1dybbl5-MuiChip-label {
-  padding-left: 0px !important;
-}
+// .css-1dybbl5-MuiChip-label {
+//   padding-left: 0px !important;
+// }
 
 .icon-fixed-sidebar-upper {
   border-radius: 22px;
   height: auto;
   position: relative;
-  background-color: #99ba09b0;
+  background-color: var(--selected-color);
   width: auto;
   display: flex;
   padding: 8px;
@@ -90,63 +85,36 @@
 .icon-fixed-upper {
   display: flex;
   padding: 8px;
+
+  :hover {
+    border-radius: 22px;
+    height: auto;
+    position: relative;
+    background-color: var(--hover-color);
+    width: auto;
+    display: flex;
+    padding: 8px;
+  }
 }
 
-.icon-fixed-upper:hover {
-  border-radius: 22px;
-  height: auto;
-  position: relative;
-  background-color: var(--hover-color);
-  width: auto;
-  display: flex;
-  padding: 8px;
-}
 
-// css for main background color
-.css-1d53kat {
-  background-color: #1c1c1e0d;
-}
-
-.css-12fhpbg {
-  background-color: #1c1c1e0d;
-}
 
 .bell_icon {
   transition: all 0.2s ease-in-out;
   color: var(--text-color);
-  background: white;
+  background: var(--white-color);
 }
 
-.css-uc0022:hover {
-  background-color: transparent;
-}
-
-.percentage-chip {
-  max-width: 100%;
-  font-size: 0.8125rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-  white-space: nowrap;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  cursor: default;
-  outline: 0px;
-  text-decoration: none;
-  padding: 0px 0px 0px 8px;
-  vertical-align: middle;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid #69b1ff;
-  margin-left: 10px;
-}
+// .css-uc0022:hover {
+//   background-color: transparent;
+// }
 
 .title-typography {
   margin: 0px;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.57;
-  color: #8c8c8c;
+  color: var(--tertiary-color);
 }
 
 .count-typography {
@@ -154,15 +122,10 @@
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.4;
-  color: #383838;
+  color: var(--black-color);
 }
 
 .logo-toggler-button-css {
   display: flex;
   flex-direction: row;
-}
-
-
-.bajajAreaChartCard {
-  background-color: var(--secondary-color);
 }

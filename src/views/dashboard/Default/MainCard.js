@@ -5,9 +5,6 @@ import { forwardRef } from 'react';
 import { useTheme } from '@mui/material/styles';
 import { Card, CardContent, CardHeader, Typography } from '@mui/material';
 
-// project import
-// import Highlighter from './third-party/Highlighter';
-
 // header style
 const headerSX = {
   p: 2.5,
@@ -32,7 +29,7 @@ const MainCard = forwardRef(
         sx={{
           border: border ? '1px solid' : 'none',
           borderRadius: 1,
-          borderColor: theme.palette.mode === 'dark' ? theme.palette.divider : 'rgb(230, 235, 241)',
+          borderColor: theme.palette.mode === 'dark' ? theme.palette.divider : theme.palette.borderColor.main,
           boxShadow: boxShadow && (!border || theme.palette.mode === 'dark') ? shadow || theme.customShadows.z1 : 'inherit',
           ':hover': {
             boxShadow: boxShadow ? shadow || theme.customShadows.z1 : 'inherit'

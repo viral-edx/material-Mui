@@ -30,7 +30,7 @@ const MailListItem = ({ read, initialStarred = false, description, date, title }
         <div style={{ display: 'flex' }}>{title}</div>
       </td>
       <td className="descriptionTable">
-        <div style={{ display: 'flex' }}>{description}</div>
+        <div>{description}</div>
       </td>
       <td>
         {hovered ? (

@@ -17,17 +17,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 130px;
-    color: #0000008a;
+    color: var(--black-color);
 
     &:hover {
         color: var(--black-color);
-    }
-}
-
-.MailListItem-checked {
-    color: #00000033;
-
-    &:hover {
-        color: #000000de;
     }
 }

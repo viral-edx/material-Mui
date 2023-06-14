@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 // project imports
 import componentStyleOverrides from './compStyleOverride';
-// import themePalette from './palette';
+import themePalette from './palette';
 import themeTypography from './typography';
 
 /**
@@ -27,7 +27,7 @@ export const theme = (customization) => {
 
   const themeOptions = {
     direction: 'ltr',
-    // palette: themePalette(themeOption), // Use only when we want to changed the css of color variant of success
+    palette: themePalette(themeOption), // Use only when we want to changed the css of color variant of success
     mixins: {
       toolbar: {
         minHeight: '48px',

@@ -120,7 +120,7 @@ const ProfileSection = () => {
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
                 <MainCard border={false} elevation={16} content={false} boxShadow shadow={theme.shadows[16]}>
-                  <Box sx={{ p: 2, width: '400px', background: '#EEF2F6' }}>
+                  <Box sx={{ p: 2, width: '400px', background: theme.palette.background.paper }}>
                     <Stack>
                       <Typography variant="subtitle2" textAlign="center" marginBottom="10px">
                         This account is managed by ioMarket.team

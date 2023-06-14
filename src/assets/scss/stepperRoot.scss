@@ -1,6 +1,6 @@
 .stepper-root {
     width: 100%;
-    background-color: #ededed;
+    background-color: #d8d5d5;
     border-radius: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -21,8 +21,11 @@
     border-radius: 50px;
 
     span {
+        .Mui-active {
+            color: #2e7d32;
+        }
+
         svg {
-            // color: #2E7D32;
             margin-bottom: 6px;
             width: 1.5em;
             height: 1.5em;

@@ -1,10 +1,20 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef, useState } from 'react';
-import { IconArrowNarrowLeft, IconDotsVertical, IconTrash, IconSearch } from '@tabler/icons';
+import {
+  IconArrowNarrowLeft,
+  IconDotsVertical,
+  IconTrash,
+  IconSearch,
+  IconArrowLeft,
+  IconCopy,
+  IconMenu2,
+  IconSquare,
+  IconCalculator,
+  IconPlus
+} from '@tabler/icons';
 import { useNavigate } from 'react-router';
-import { Box, Button, FormControl, MenuItem, Select, Step, StepLabel, Stepper, TextField, Typography } from '@mui/material';
-import { IconMenu2, IconSquare, IconCalculator } from '@tabler/icons';
+import { Box, Button, MenuItem, Select, Step, StepLabel, Stepper, TextField, Typography } from '@mui/material';
 
 const InvoiceDetailed = () => {
   const navigate = useNavigate();
@@ -76,83 +86,158 @@ const InvoiceHeader = () => {
   ];
   return (
     <div className="form-container">
-      <Box component="form" noValidate autoComplete="off" className="my-form">
+      <form className="my-form">
         <div className="full-width">
-          <label className="input-title">Select Invoice Type</label>
-          <FormControl fullWidth size="small">
-            <TextField select defaultValue="USD" className="textfield-border">
-              {currencies.map((option) => (
-                <>
-                  <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                  </MenuItem>
-                </>
-              ))}
-            </TextField>
-          </FormControl>
+          <div>
+            <label className="input-title">Select Invoice Type</label>
+          </div>
+          <Select className="text-field textfield-border" variant="outlined" size="small">
+            {invoiceTypes.map((index, i) => (
+              <MenuItem key={i} value={index.type}>
+                {index.type}
+              </MenuItem>
+            ))}
+          </Select>
         </div>
-
-        {/* <div style={{ display: 'flex' }}> */}
-        <TextField label="Invoice No:" variant="outlined" size="small" type="number" className="textfield-border" />
-        <TextField label="Select Receiver:" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Purchaser:" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Select Sender:" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Invoice Date:" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Bank/IBAN:" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Reference No:" variant="outlined" size="small" className="textfield-border" />
-        {/* </div> */}
-
-        {/* write form code of header here  */}
-      </Box>
+        <div>
+          <TextField label="Invoice No:" type="number" className="text-field textfield-border" size="small" />
+        </div>
+        <div>
+          <TextField label="Select Receiver:" variant="outlined" size="small" className="text-field textfield-border" />
+        </div>
+        <div className="input-row">
+          <TextField label="Purchaser:" variant="outlined" size="small" className="text-field textfield-border" />
+          <div className="default-icon form-icon">
+            <IconMenu2 size="20px" />
+          </div>
+        </div>
+        <div className="input-row">
+          <TextField label="Select Sender:" variant="outlined" size="small" className="text-field textfield-border" />
+          <div className="default-icon form-icon">
+            <IconMenu2 size="20px" />
+          </div>
+        </div>
+        <div>
+          <TextField label="Invoice Date:" variant="outlined" size="small" className="text-field textfield-border" />
+        </div>
+        <div>
+          <TextField label="Bank/IBAN:" variant="outlined" size="small" className="text-field textfield-border" />
+        </div>
+        <div>
+          <TextField label="Reference No:" variant="outlined" size="small" className="text-field textfield-border" />
+        </div>
+      </form>
       <div className="invoice-header">
         <h5>Invoice Header Data</h5>
       </div>
-      <Box component="form" noValidate autoComplete="off" className="my-form">
-        <FormControl fullWidth size="small">
-          <label>
-            <b>Currency</b>
-          </label>
-          <TextField select defaultValue="USD" className="textfield-border">
-            {currencies.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
+      <form className="my-form">
+        <div className="">
+          <div>
+            <label className="input-title">Currency</label>
+          </div>
+          <div className="">
+            <Select className="text-field textfield-border" variant="outlined" size="small">
+              <MenuItem disabled defaultValue="Please Select">
+                Please Select
               </MenuItem>
-            ))}
-          </TextField>
-        </FormControl>
-        <FormControl fullWidth size="small">
-          <label>
-            <b>Total from line items</b>
-          </label>
-          <TextField select defaultValue="USD" className="textfield-border">
-            {currencies.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-        </FormControl>
-        <TextField label="0.00" variant="outlined" size="small" type="number" className="textfield-border" />
-        <TextField label="Charges" variant="outlined" size="small" type="number" className="textfield-border" />
-        <TextField label="Allows" variant="outlined" size="small" className="textfield-border" />
+              {currencies.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </Select>
+          </div>
+        </div>
+        <div className="">
+          <label className="input-title">Total from line items</label>
+          <div className="input-row">
+            <TextField
+              label="Total Amount excl. VAT"
+              variant="outlined"
+              size="small"
+              type="number"
+              className="text-field textfield-border"
+            />
+            <div className="arrow-back form-icon default-icon">
+              <IconArrowLeft size="20px" />
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <TextField placeholder="0.00" variant="outlined" size="small" type="number" className="text-field textfield-border" />
+        </div>
 
-        <label>
-          <b>VAT:</b>
-        </label>
-        <TextField label="Tax Base:" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="VAT" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Percentage" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Total Amount incl. VAT:" variant="outlined" size="small" className="textfield-border" />
+        <div className="input-row">
+          <TextField label="Charges" variant="outlined" size="small" type="number" className="text-field textfield-border" />
+          <div className="form-icon default-icon">
+            <IconCopy size="20px" />
+          </div>
+        </div>
+        <div className="full-width">
+          <div className="input-row">
+            <TextField label="Allows" variant="outlined" size="small" className="text-field textfield-border" />
+            <div className="default-icon form-icon">
+              <IconCopy size="20px" />
+            </div>
+          </div>
+        </div>
+        <div className="full-width">
+          <label className="input-title">VAT:</label>
+          <div>
+            <div className="input-row vat-row">
+              <div>
+                <TextField label="Tax Base" variant="outlined" size="small" type="text" className="text-field textfield-border" />
+              </div>
+              <div className="">
+                <TextField label="VAT" type="text" variant="outlined" size="small" className="text-field textfield-border" />
+              </div>
+              <div className="">
+                <TextField label="Percentage" type="text" variant="outlined" size="small" className="text-field textfield-border" />
+              </div>
+              <div className="default-icon form-icon">
+                <IconCalculator size="20px" />
+              </div>
+              <div className="default-icon form-icon">
+                <IconTrash size="20px" />
+              </div>
+              <div className="default-icon form-icon">
+                <IconPlus size="20px" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="full-width">
+          <div className="input-row">
+            <TextField label="Total Amount incl. VAT" variant="outlined" size="small" type="text" className="text-field textfield-border" />
+            <div className="form-icon default-icon">
+              <IconCalculator size="20px" />
+            </div>
+          </div>
+        </div>
+        <div className="full-width">
+          <label className="input-title">Cash Discount: Days</label>
+          <div className="">
+            <div className="input-row">
+              <TextField placeholder="0" type="number" variant="outlined" size="small" className="text-field textfield-border" />
+              <TextField placeholder="0.00" type="number" variant="outlined" size="small" className="text-field textfield-border" />
+              <TextField placeholder="0.00" type="number" variant="outlined" size="small" className="text-field textfield-border" />
+              <div className="default-icon form-icon ">
+                <IconCalculator size="20px" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <label>
-          <b>VAT:</b>
-        </label>
-        <TextField label="0" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="0.00" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="0.00" variant="outlined" size="small" className="textfield-border" />
-        <TextField label="Total Cash:" variant="outlined" size="small" className="textfield-border" />
-        {/* write form code of header here  */}
-      </Box>
+        <div className="full-width">
+          <div className="input-row">
+            <TextField label="Total Cash" type="number" variant="outlined" size="small" className="text-field textfield-border" />
+            <div className=" form-icon default-icon">
+              <IconCalculator size="20px" />
+            </div>
+          </div>
+        </div>
+      </form>
+
       <div className="notes-footer">
         <div className="button-box">
           <Button variant="contained" color="success">
@@ -188,7 +273,7 @@ const InvoiceItems = () => {
         </div>
         <div className="full-width">
           <label className="input-title">Description</label>
-          <textarea rows={6} type="text" className="text-area textfield-border" size="small" />
+          <TextField fullWidth placeholder="Description..." className="textfield-border description-field" />
         </div>
         <div>
           <TextField label="Quantity" className="text-field textfield-border" size="small" />
@@ -379,13 +464,11 @@ const Workflow = () => {
 
   return (
     <div>
-      <div className="progress-box">
-        <div className="invoice-header">
-          <h5>Process Step: Capture</h5>
-        </div>
-      </div>
       <form className="right-invoice-form">
         <div ref={wrapperRef} className="wrapper">
+          <div>
+            <label className="input-title">Select Standard Task</label>
+          </div>
           <TextField label="Send Back to" className="text-field textfield-border" size="small" />
         </div>
         <div>
@@ -396,7 +479,7 @@ const Workflow = () => {
           <div>
             <label className="input-title">Select Standard Task</label>
           </div>
-          <Select fullWidth className="textfield-border">
+          <Select fullWidth className="textfield-border" size="small">
             {firstSteps.map((index, i) => (
               <MenuItem key={i} value={index}>
                 {index}
@@ -406,7 +489,7 @@ const Workflow = () => {
         </div>
         <div>
           <label className="input-title">Comment</label>
-          <TextField fullWidth placeholder="Comment…" className="textfield-border" />
+          <TextField fullWidth placeholder="Comment…" className="textfield-border description-field" />
         </div>
       </form>
       <div className="button-box">

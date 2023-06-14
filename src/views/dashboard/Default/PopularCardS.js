@@ -104,7 +104,7 @@ const PopularCards = ({ isLoading }) => {
                                 height: 16,
                                 borderRadius: '5px',
                                 backgroundColor: theme?.palette?.success?.light,
-                                color: theme?.palette?.success?.main,
+                                color: theme?.palette?.default?.paper,
                                 ml: 2
                               }}
                             >
@@ -144,8 +144,8 @@ const PopularCards = ({ isLoading }) => {
                                 width: 16,
                                 height: 16,
                                 borderRadius: '5px',
-                                backgroundColor: theme?.palette?.error?.light,
-                                color: theme?.palette?.error?.main,
+                                backgroundColor: theme?.palette?.error?.main,
+                                color: theme?.palette?.default?.paper,
                                 marginLeft: 1.875
                               }}
                             >
@@ -186,7 +186,7 @@ const PopularCards = ({ isLoading }) => {
                                 height: 16,
                                 borderRadius: '5px',
                                 backgroundColor: theme?.palette?.success?.light,
-                                color: theme?.palette?.success?.main,
+                                color: theme?.palette?.default?.paper,
                                 ml: 2
                               }}
                             >

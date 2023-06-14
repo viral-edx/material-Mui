@@ -6,7 +6,6 @@ import { Box, Drawer, useMediaQuery } from '@mui/material';
 
 // project imports
 import MenuList from './MenuList';
-import MenuCard from './MenuCard';
 import { drawerWidth } from 'store/constant';
 
 // ==============================|| SIDEBAR DRAWER ||============================== //
@@ -25,7 +24,6 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
         }}
       >
         <MenuList />
-        <MenuCard />
       </Box>
     </>
   );

@@ -25,15 +25,15 @@ const NotificationList = () => {
   };
   const chipErrorSX = {
     ...chipSX,
-    color: 'black',
-    backgroundColor: '#B8CF65',
+    color: theme.palette.common.black,
+    backgroundColor: theme.palette.green.dark,
     marginRight: '15px'
   };
 
   const chipWarningSX = {
     ...chipSX,
-    color: 'black',
-    backgroundColor: '#B8CF65'
+    color: theme.palette.common.black,
+    backgroundColor: theme.palette.green.dark
   };
 
   return (
