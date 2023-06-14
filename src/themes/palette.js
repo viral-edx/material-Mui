@@ -43,7 +43,7 @@ export default function themePalette(theme) {
       light: '#EBF9B8',
       main: '#b7eb00',
       dark: '#B9CF55',
-      veryDark: '#b7eb0047'
+      800: '#b7eb0047'
     },
     dark: {
       main: '#29314f'

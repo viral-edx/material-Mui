@@ -1,20 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef, useState } from 'react';
-import {
-  IconArrowNarrowLeft,
-  IconDotsVertical,
-  IconTrash,
-  IconSearch,
-  IconArrowLeft,
-  IconCopy,
-  IconMenu2,
-  IconSquare,
-  IconCalculator,
-  IconPlus
-} from '@tabler/icons';
 import { useNavigate } from 'react-router';
 import { Box, Button, MenuItem, Select, Step, StepLabel, Stepper, TextField, Typography } from '@mui/material';
+import { Add, Delete, Menu, Search, Calculate, ContentCopy, CropSquare, ArrowBack } from '@mui/icons-material';
 
 const InvoiceDetailed = () => {
   const navigate = useNavigate();
@@ -25,14 +14,14 @@ const InvoiceDetailed = () => {
       <div className="invoice-container">
         <div className="invoiceId-header">
           <div className="back-arrow default-icon">
-            <IconArrowNarrowLeft size={20} onClick={() => navigate('/matrix-invoice')} />
+            <ArrowBack size={20} onClick={() => navigate('/matrix-invoice')} />
           </div>
           <div>
             <div className="delete-icon default-icon">
-              <IconTrash size={20} />
+              <Delete size={20} />
             </div>
             <div className="more-icon default-icon">
-              <IconDotsVertical size={20} />
+              <Menu size={20} />
             </div>
           </div>
         </div>
@@ -108,13 +97,13 @@ const InvoiceHeader = () => {
         <div className="input-row">
           <TextField label="Purchaser:" variant="outlined" size="small" className="text-field textfield-border" />
           <div className="default-icon form-icon">
-            <IconMenu2 size="20px" />
+            <Menu size="20px" />
           </div>
         </div>
         <div className="input-row">
           <TextField label="Select Sender:" variant="outlined" size="small" className="text-field textfield-border" />
           <div className="default-icon form-icon">
-            <IconMenu2 size="20px" />
+            <Menu size="20px" />
           </div>
         </div>
         <div>
@@ -159,7 +148,7 @@ const InvoiceHeader = () => {
               className="text-field textfield-border"
             />
             <div className="arrow-back form-icon default-icon">
-              <IconArrowLeft size="20px" />
+              <ArrowBack size="20px" />
             </div>
           </div>
         </div>
@@ -170,14 +159,14 @@ const InvoiceHeader = () => {
         <div className="input-row">
           <TextField label="Charges" variant="outlined" size="small" type="number" className="text-field textfield-border" />
           <div className="form-icon default-icon">
-            <IconCopy size="20px" />
+            <ContentCopy size="20px" />
           </div>
         </div>
         <div className="full-width">
           <div className="input-row">
             <TextField label="Allows" variant="outlined" size="small" className="text-field textfield-border" />
             <div className="default-icon form-icon">
-              <IconCopy size="20px" />
+              <ContentCopy size="20px" />
             </div>
           </div>
         </div>
@@ -195,13 +184,13 @@ const InvoiceHeader = () => {
                 <TextField label="Percentage" type="text" variant="outlined" size="small" className="text-field textfield-border" />
               </div>
               <div className="default-icon form-icon">
-                <IconCalculator size="20px" />
+                <Calculate size="20px" />
               </div>
               <div className="default-icon form-icon">
-                <IconTrash size="20px" />
+                <Delete size="20px" />
               </div>
               <div className="default-icon form-icon">
-                <IconPlus size="20px" />
+                <Add size="20px" />
               </div>
             </div>
           </div>
@@ -210,7 +199,7 @@ const InvoiceHeader = () => {
           <div className="input-row">
             <TextField label="Total Amount incl. VAT" variant="outlined" size="small" type="text" className="text-field textfield-border" />
             <div className="form-icon default-icon">
-              <IconCalculator size="20px" />
+              <Calculate size="20px" />
             </div>
           </div>
         </div>
@@ -222,7 +211,7 @@ const InvoiceHeader = () => {
               <TextField placeholder="0.00" type="number" variant="outlined" size="small" className="text-field textfield-border" />
               <TextField placeholder="0.00" type="number" variant="outlined" size="small" className="text-field textfield-border" />
               <div className="default-icon form-icon ">
-                <IconCalculator size="20px" />
+                <Calculate size="20px" />
               </div>
             </div>
           </div>
@@ -232,7 +221,7 @@ const InvoiceHeader = () => {
           <div className="input-row">
             <TextField label="Total Cash" type="number" variant="outlined" size="small" className="text-field textfield-border" />
             <div className=" form-icon default-icon">
-              <IconCalculator size="20px" />
+              <Calculate size="20px" />
             </div>
           </div>
         </div>
@@ -265,7 +254,7 @@ const InvoiceItems = () => {
         <div className="input-row">
           <TextField label="Article Number" className="text-field textfield-border" type="number" size="small" />
           <div className="form-icon default-icon">
-            <IconMenu2 />
+            <Menu />
           </div>
         </div>
         <div>
@@ -287,7 +276,7 @@ const InvoiceItems = () => {
         <div className="input-row">
           <TextField label="Price Quantity" className="text-field textfield-border" type="number" size="small" />
           <div className="default-icon menu-icon">
-            <IconSquare />
+            <CropSquare />
           </div>
           <span className="vat-width">incl. VAT</span>
         </div>
@@ -297,7 +286,7 @@ const InvoiceItems = () => {
         <div className="input-row">
           <TextField label="Percentage:" className="text-field textfield-border" type="number" size="small" />
           <div className=" form-icon default-icon ">
-            <IconCalculator />
+            <Calculate />
           </div>
         </div>
         <div>
@@ -306,7 +295,7 @@ const InvoiceItems = () => {
         <div className="input-row">
           <TextField label="Price Position incl. VAT" className="text-field textfield-border" type="number" size="small" />
           <div className=" form-icon default-icon">
-            <IconCalculator />
+            <Calculate />
           </div>
         </div>
       </form>
@@ -413,11 +402,12 @@ const Pdf = () => {
     </div>
   );
 };
-const Search = () => {
+
+const SearchBar = () => {
   return (
     <form className="search-form">
       <span className="">
-        <IconSearch size="20" />
+        <Search size="20" />
       </span>
       <input type="search" className="search-input" placeholder="Search here" />
     </form>
@@ -501,7 +491,7 @@ const Workflow = () => {
         </Button>
       </div>
       <div className="search-container">
-        <Search />
+        <SearchBar />
       </div>
       <div className="notes-container">
         <div className="notes-box">
@@ -536,7 +526,7 @@ const Notes = () => {
   return (
     <div className="notes-container">
       <div className="search-container">
-        <Search />
+        <SearchBar />
         <Button sx={{ borderRadius: '20px', width: '100px', height: '40px' }} variant="contained" color="success">
           Add
         </Button>

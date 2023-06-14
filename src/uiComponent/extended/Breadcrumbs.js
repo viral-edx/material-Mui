@@ -12,7 +12,6 @@ import config from 'config';
 import { gridSpacing } from 'store/constant';
 
 // assets
-import { IconTallymark1 } from '@tabler/icons';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 import HomeIcon from '@mui/icons-material/Home';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
@@ -69,7 +68,7 @@ const Breadcrumbs = ({ card, divider, icon, icons, maxItems, navigation, rightAl
 
   // item separator
   const SeparatorIcon = separator;
-  const separatorIcon = separator ? <SeparatorIcon stroke={1.5} size="1rem" /> : <IconTallymark1 stroke={1.5} size="1rem" />;
+  const separatorIcon = separator ? <SeparatorIcon stroke={1.5} size="1rem" /> : null;
 
   let mainContent;
   let itemContent;

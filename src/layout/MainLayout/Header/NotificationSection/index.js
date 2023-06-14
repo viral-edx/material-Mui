@@ -26,8 +26,8 @@ import MainCard from 'uiComponent/cards/MainCard';
 import NotificationList from './NotificationList';
 
 // assets
-import { IconBell } from '@tabler/icons';
 import Transitions from 'uiComponent/extended/Transitions';
+import { NotificationsNone } from '@mui/icons-material';
 
 // notification status options
 const status = [
@@ -121,7 +121,7 @@ const NotificationSection = () => {
             aria-haspopup="true"
             onClick={handleToggle}
           >
-            <IconBell stroke={1.5} size="1.4rem" className="bell_icon" />
+            <NotificationsNone stroke={1.5} size="1.4rem" className="bell_icon" />
           </Avatar>
         </ButtonBase>
       </Box>

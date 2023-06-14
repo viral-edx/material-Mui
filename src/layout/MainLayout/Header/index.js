@@ -11,8 +11,8 @@ import NotificationSection from './NotificationSection';
 import ProfileSection from './ProfileSection';
 
 // assets
-import { IconMenu2 } from '@tabler/icons';
 import React from 'react';
+import { Menu } from '@mui/icons-material';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
@@ -39,7 +39,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
             }}
             onClick={handleLeftDrawerToggle}
           >
-            <IconMenu2 stroke={1.5} size="1.5rem" />
+            <Menu stroke={1.5} size="1.5rem" />
           </Avatar>
         </ButtonBase>
         <Box component="span" sx={{ display: { xs: 'none', md: 'flex' }, marginTop: '15px', marginLeft: '25px' }}>

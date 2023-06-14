@@ -202,6 +202,7 @@
   max-width: 300px;
   align-items: center;
   border: 1px solid var(--darkColor);
+  background-color: white;
 }
 
 .search-input {
@@ -365,7 +366,7 @@ ul.pagination {
 .pagination-link:hover,
 .pagination-previouslink:hover,
 .pagination-nextlink:hover {
-  background-color: rgba(29, 27, 32, 0.08) ;
+  background-color: rgba(29, 27, 32, 0.08);
 }
 
 .pagination-activelink {
@@ -1125,7 +1126,7 @@ box-header-right {
 
 .tab-item.active {
   font-weight: bold;
-  background-color: #2E7D32; // Previous color is 4e9144cf
+  background-color: #39433ae3;
   color: white;
 }
 
@@ -1174,7 +1175,7 @@ box-header-right {
   align-items: center;
   padding: 24px;
   gap: 24px;
-  /* background-color: #f0f0f0; */
+  // background-color: #f0f0f0;
 }
 
 .grid-item-1 {
@@ -1206,7 +1207,7 @@ md-outlined-text-field {
 }
 
 .invoice-header {
-  background-color: #2E7D32;
+  background-color: #39433ae3;
 }
 
 .progress-box .invoice-header {
@@ -1803,6 +1804,7 @@ md-outlined-text-field input {
 .input-row .default-icon {
   border-radius: 4px;
   /* background-color: var(--grey-border); */
+  background-color: white;
 }
 
 .input-row .default-icon::after {
@@ -1867,6 +1869,9 @@ md-outlined-text-field input {
 }
 
 .textfield-border {
+  background-color: white;
+  border-radius: 5px;
+
   fieldset {
     border-radius: 5px;
   }

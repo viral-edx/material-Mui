@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
 import { Box } from '@mui/material';
 import React from 'react';
-import { IconDashboard, IconComponents, IconBrandZoom, IconTable } from '@tabler/icons';
+import { IconComponents, IconTable } from '@tabler/icons';
 import { useLocation, useNavigate } from 'react-router';
 import { useState } from 'react';
+import { Speed } from '@mui/icons-material';
 
 const components = [
   {
     id: 'components-dashboard',
     title: 'Dashboard',
     type: 'item',
-    icon: IconDashboard,
+    icon: Speed,
     url: '/dashboard/default' || '/',
     breadcrumbs: false
   },
