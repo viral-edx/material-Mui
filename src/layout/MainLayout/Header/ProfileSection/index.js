@@ -175,8 +175,12 @@ const ProfileSection = () => {
                     <Divider style={{ marginTop: '10px' }} />
                     <Typography variant="subtitle2" textAlign="center" marginTop="10px">
                       <div className="privacy-terms-of-service-setting">
-                        <Link to="/">Privacy Policy</Link>
-                        <Link to="/">Terms of Service</Link>
+                        <Link to="/" className="blue_link">
+                          Privacy Policy
+                        </Link>
+                        <Link to="/" className="blue_link">
+                          Terms of Service
+                        </Link>
                       </div>
                     </Typography>
                   </Box>
