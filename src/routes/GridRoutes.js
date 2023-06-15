@@ -1,9 +1,9 @@
 // project imports
 
 import MainLayout from 'layout/MainLayout';
-import EmailPage from 'matrixPages/Email';
-import InvoicePage from 'matrixPages/Invoice';
-import InvoiceDetailed from 'matrixPages/InvoiceDetailed';
+import EmailPage from 'matrixPage/GridPage';
+import InvoicePage from 'matrixPage/InvoicePage';
+import InvoiceDetailed from 'matrixPage/InvoicePage/InvoiceDetails';
 import { Outlet } from 'react-router';
 
 // dashboard routing

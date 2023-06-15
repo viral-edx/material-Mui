@@ -13,7 +13,7 @@ export default function themePalette(theme) {
     // This is the demo of the color code combination of light, main, dark, 200 and 800 and we can also add more color
     primary: {
       //   light: '#eef2f6',
-      main: '#2196f3'
+      main: '#3283fb'
       //   dark: '#1e88e5',
       //   200: '#90caf9',
       //   800: '#1565c0'

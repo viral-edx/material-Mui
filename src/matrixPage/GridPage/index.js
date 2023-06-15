@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Box, IconButton, MenuItem, Checkbox, Menu } from '@mui/material';
-import MailListItem from './MailListItem';
 import { KeyboardArrowDownOutlined, KeyboardArrowLeft, KeyboardArrowRight, MoreVert, Refresh } from '@mui/icons-material';
+import MailListItem from 'matrixPage/GridPage/MailListItem';
 
-const EmailPage = () => {
+const GridPage = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleMenuOpen = (event) => {
@@ -16,27 +16,27 @@ const EmailPage = () => {
 
   return (
     <>
-      <Box className="emailDiv">
+      <Box className="email-div">
         <Box display="inline-flex">
           <Checkbox color="default" />
           <IconButton onClick={handleMenuOpen}>
-            <KeyboardArrowDownOutlined size={20} />
+            <KeyboardArrowDownOutlined />
           </IconButton>
         </Box>
         <IconButton>
-          <Refresh size={20} />
+          <Refresh />
         </IconButton>
         <IconButton>
-          <MoreVert size={20} />
+          <MoreVert />
         </IconButton>
 
         <Box display="inline-flex" alignItems="center" ml="auto">
           <Box fontSize={12}>1-50 of 1,971</Box>
           <IconButton disabled>
-            <KeyboardArrowLeft size={20} />
+            <KeyboardArrowLeft />
           </IconButton>
           <IconButton>
-            <KeyboardArrowRight size={20} />
+            <KeyboardArrowRight />
           </IconButton>
         </Box>
       </Box>
@@ -48,14 +48,14 @@ const EmailPage = () => {
         <MenuItem onClick={handleMenuClose}>Unread</MenuItem>
       </Menu>
 
-      {getMailList().map((mail, i) => (
+      {MailList().map((mail, i) => (
         <MailListItem key={i} {...mail} />
       ))}
     </>
   );
 };
 
-const getMailList = () => [
+const MailList = () => [
   {
     starred: true,
     labeled: true,
@@ -256,4 +256,4 @@ const getMailList = () => [
   }
 ];
 
-export default EmailPage;
+export default GridPage;

@@ -8,19 +8,20 @@ import Items from './Items';
 import SearchableDropdown from './SearchableDropdown';
 import SplitData from './SplitData';
 
-const GridPage = ({ data, itemsPerPage, header = '' }) => {
+const InvoiceDataPage = ({ data, itemsPerPage, header = '' }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [searchKey, setSearchKey] = useState('');
   const [toggle, setToggle] = useState(null);
   const [splitData, setSplitData] = useState(null);
-
   const [filteredData, setFilteredData] = useState(data || []);
   const [selected, setSelected] = useState([]);
+  const [dropdown, setDropdown] = useState(false);
+
+  const ref = useRef(null);
+
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filteredData.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(filteredData.length / itemsPerPage);
-  const [dropdown, setDropdown] = useState(false);
-  const ref = useRef(null);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % filteredData.length;
@@ -65,7 +66,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           <div className="grid-header-right">
             {selected.length > 0 && (
               <div className="delete-icon-grid-page">
-                <Delete size={24} />
+                <Delete />
               </div>
             )}
 
@@ -94,7 +95,7 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
               )}
 
               <div className="arrow-icon">
-                <KeyboardArrowDown size={18} onClick={() => setDropdown((prev) => !prev)} />
+                <KeyboardArrowDown onClick={() => setDropdown((prev) => !prev)} />
               </div>
 
               {dropdown && (
@@ -149,11 +150,11 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
           {/* ---pagination for total pages--- */}
           <ReactPaginate
             breakLabel="..."
-            nextLabel={<KeyboardArrowRight size={16} />}
+            nextLabel={<KeyboardArrowRight />}
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}
             pageCount={pageCount}
-            previousLabel={<KeyboardArrowLeft size={16} />}
+            previousLabel={<KeyboardArrowLeft />}
             renderOnZeroPageCount={null}
             className="pagination"
             pageLinkClassName="pagination-link"
@@ -182,4 +183,4 @@ const GridPage = ({ data, itemsPerPage, header = '' }) => {
   );
 };
 
-export default GridPage;
+export default InvoiceDataPage;

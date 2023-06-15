@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+/* eslint-disable react/prop-types */
 import { Archive, CheckBoxOutlineBlank, Delete, Drafts, Star, StarBorder, WatchLater, CheckBox } from '@mui/icons-material';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const MailListItem = ({ read, initialStarred = false, description, date, title }) => {
   const [hovered, setHovered] = useState(false);
@@ -8,7 +9,6 @@ const MailListItem = ({ read, initialStarred = false, description, date, title }
   const [starred] = useState(initialStarred);
 
   return (
-    // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <tr className={read && 'MailListItem-read'} onMouseOver={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <td>
         <div

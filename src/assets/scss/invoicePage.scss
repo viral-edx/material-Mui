@@ -1126,12 +1126,12 @@ box-header-right {
 
 .tab-item.active {
   font-weight: bold;
-  background-color: #39433ae3;
+  background-color: #B9CF55;
   color: white;
 }
 
 .active .tab-label {
-  color: white;
+  color: var(--darkColor);
 }
 
 .tab-label {
@@ -1207,7 +1207,7 @@ md-outlined-text-field {
 }
 
 .invoice-header {
-  background-color: #39433ae3;
+  background-color: #B9CF55;
 }
 
 .progress-box .invoice-header {
@@ -1215,7 +1215,7 @@ md-outlined-text-field {
 }
 
 .invoice-header h5 {
-  color: #fff;
+  color: var(--darkColor);
   font-size: 14px;
   padding: 12px;
 }
@@ -1885,15 +1885,14 @@ md-outlined-text-field input {
   }
 }
 
-
 // Input field border color of Invoice Details Page
 
-.css-1ai4cdw-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-  color: #6c7365;
-}
+// .css-1ai4cdw-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+//   color: #6c7365;
+// }
 
-.css-olti0m-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
-.css-lwmdw7-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
-.css-1se79hc-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: #6c7365;
-}
+// .css-olti0m-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+// .css-lwmdw7-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+// .css-1se79hc-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+//   border-color: #6c7365;
+// }
