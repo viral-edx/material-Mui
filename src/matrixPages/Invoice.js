@@ -15,7 +15,7 @@ const dummyData = [
   {
     invoiceId: 5374186,
     sender: 'Indeed',
-    receiver: 'LinkedIn News India shared a post:…',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '20 Mar',
     totalAmount: '90',
     status: 'Done'
@@ -23,7 +23,7 @@ const dummyData = [
   {
     invoiceId: 9015437,
     sender: 'Youtube',
-    receiver: 'Nodejs Developer Roadmap 2023 | Melih Yumak in JavaScript in Plain English',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '20 Mar',
     totalAmount: '400',
     status: 'Pending'
@@ -31,7 +31,7 @@ const dummyData = [
   {
     invoiceId: 6823051,
     sender: 'MongoDB Team',
-    receiver: 'Deploy a free sandbox cluster and start exploring Atlas',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '22 Mar',
     totalAmount: '800',
     status: 'Pending'
@@ -39,7 +39,7 @@ const dummyData = [
   {
     invoiceId: 7248165,
     sender: 'IT News',
-    receiver: 'How to use chatGPT for UI/UX design: 25 examples | Thalion in Prototypr',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '23 Mar',
     totalAmount: '900',
     status: 'Done'
@@ -47,7 +47,7 @@ const dummyData = [
   {
     invoiceId: 8397024,
     sender: 'Daily Post',
-    receiver: 'Google India just posted something that might be of interest to you.',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '10 Mar',
     totalAmount: '100',
     status: 'Pending'
@@ -55,7 +55,7 @@ const dummyData = [
   {
     invoiceId: 2659104,
     sender: 'Medium Daily Digest',
-    receiver: 'Serializing JSON Data in Rails | Brenden Thornton in Zero Equals False.',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '28 Mar',
     totalAmount: '40',
     status: 'Done'
@@ -63,7 +63,7 @@ const dummyData = [
   {
     invoiceId: 4928173,
     sender: 'Shopping habits',
-    receiver: '10 tips for improving your React code | Sarah Drasner in CSS-Tricks',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '26 Mar',
     totalAmount: '200',
     status: 'Pending'
@@ -71,7 +71,7 @@ const dummyData = [
   {
     invoiceId: 1769350,
     sender: 'Reddit',
-    receiver: 'Discussion: What are some common mistakes new developers make?',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '27 Mar',
     totalAmount: '1500',
     status: 'Done'
@@ -79,7 +79,7 @@ const dummyData = [
   {
     invoiceId: 6345271,
     sender: 'Hacker News',
-    receiver: 'Ask HN: What is the most exciting tech project you’ve worked on?',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '25 Mar',
     totalAmount: '600',
     status: 'Pending'
@@ -87,7 +87,7 @@ const dummyData = [
   {
     invoiceId: 3209451,
     sender: 'Hunt',
-    receiver: 'The best design tools for non-designers in 2023 | Emily Smith in Creative Bloq',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '24 Mar',
     totalAmount: '400',
     status: 'Done'
@@ -95,7 +95,7 @@ const dummyData = [
   {
     invoiceId: 8650412,
     sender: 'Stack Overflow',
-    receiver: 'How to fix "TypeError: Cannot read property \'map\' of undefined" in React',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '22 Mar',
     totalAmount: '1200',
     status: 'Done'
@@ -103,7 +103,7 @@ const dummyData = [
   {
     invoiceId: 5136270,
     sender: 'TechCrunch',
-    receiver: 'NFT marketplace OpenSea confirms executive used insider knowledge to trade on its platform',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '29 Mar',
     totalAmount: '900',
     status: 'Pending'
@@ -111,7 +111,7 @@ const dummyData = [
   {
     invoiceId: 7241396,
     sender: 'GitHub Portal',
-    receiver: 'How to use React with TypeScript | Robin Wieruch in RWieruch',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '28 Mar',
     totalAmount: '250',
     status: 'Done'
@@ -119,7 +119,7 @@ const dummyData = [
   {
     invoiceId: 3859021,
     sender: 'Reddit',
-    receiver: 'Discussion: What are some common mistakes new developers make?',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '27 Mar',
     totalAmount: '1500',
     status: 'Done'
@@ -127,7 +127,7 @@ const dummyData = [
   {
     invoiceId: 9762301,
     sender: 'Hacker News',
-    receiver: 'Ask HN: What is the most exciting tech project you’ve worked on?',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '25 Mar',
     totalAmount: '600',
     status: 'Pending'
@@ -135,7 +135,7 @@ const dummyData = [
   {
     invoiceId: 2781460,
     sender: 'Hunt',
-    receiver: 'The best design tools for non-designers in 2023 | Emily Smith in Creative Bloq',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '24 Mar',
     totalAmount: '400',
     status: 'Done'
@@ -143,7 +143,7 @@ const dummyData = [
   {
     invoiceId: 5038176,
     sender: 'Stack Overflow',
-    receiver: 'How to fix "TypeError: Cannot read property \'map\' of undefined" in React',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '22 Mar',
     totalAmount: '1200',
     status: 'Done'
@@ -151,7 +151,7 @@ const dummyData = [
   {
     invoiceId: 1925736,
     sender: 'TechCrunch',
-    receiver: 'NFT marketplace OpenSea confirms executive used insider knowledge to trade on its platform',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '29 Mar',
     totalAmount: '900',
     status: 'Pending'
@@ -159,7 +159,7 @@ const dummyData = [
   {
     invoiceId: 3489651,
     sender: 'GitHub Portal',
-    receiver: 'How to use React with TypeScript | Robin Wieruch in RWieruch',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '28 Mar',
     totalAmount: '250',
     status: 'Done'
@@ -167,7 +167,7 @@ const dummyData = [
   {
     invoiceId: 7650129,
     sender: 'Reddit',
-    receiver: 'Discussion: What are some common mistakes new developers make?',
+    receiver: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     date: '27 Mar',
     totalAmount: '1500',
     status: 'Done'
