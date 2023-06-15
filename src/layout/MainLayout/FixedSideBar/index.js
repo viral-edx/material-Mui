@@ -11,7 +11,7 @@ const components = [
     id: 'components-dashboard',
     title: 'Dashboard',
     type: 'item',
-    icon: IconDashboard,
+    icon: Speed,
     url: '/dashboard/default',
     breadcrumbs: false
   },
