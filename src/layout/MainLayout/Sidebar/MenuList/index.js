@@ -151,7 +151,6 @@ const MenuList = () => {
               className={(navigate.pathname === '/dashboard/default' || navigate.pathname === '/') && 'selectedMenu'}
             >
               <ListItemButton className="options">
-                <ListItemIcon>{index % 2 === 0 ? <MailIcon /> : <InboxIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
