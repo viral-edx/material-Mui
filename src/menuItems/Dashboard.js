@@ -1,5 +1,5 @@
 // assets
-import { IconDashboard } from '@tabler/icons';
+import { Speed } from '@mui/icons-material';
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -13,7 +13,7 @@ const dashboard = {
       title: 'Dashboard',
       type: 'item',
       url: '/dashboard/default',
-      icon: IconDashboard,
+      icon: Speed,
       breadcrumbs: false
     }
   ]

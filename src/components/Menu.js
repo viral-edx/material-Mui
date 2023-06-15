@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import {
   Typography,
   Box,
@@ -14,13 +14,9 @@ import {
   MenuList,
   ListItemIcon
 } from '@mui/material';
-import ContentCut from '@mui/icons-material/ContentCut';
-import ContentCopy from '@mui/icons-material/ContentCopy';
-import ContentPaste from '@mui/icons-material/ContentPaste';
-import Cloud from '@mui/icons-material/Cloud';
+import { ContentCut, ContentCopy, ContentPaste, Cloud } from '@mui/icons-material';
 import DividerPage from 'utils/Divider';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-import { Fragment } from 'react';
 
 const MenuPage = () => {
   const [anchorEl, setAnchorEl] = useState(null);

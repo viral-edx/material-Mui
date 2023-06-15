@@ -10,9 +10,7 @@ import MainCard from './MainCard';
 import SkeletonPopularCard from 'uiComponent/cards/PopularCard';
 
 // assets
-import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
-import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
-import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import { MoreHorizOutlined, KeyboardArrowUpOutlined, KeyboardArrowDownOutlined } from '@mui/icons-material';
 import BajajAreaChartCard from './BajajAreaChartCard';
 
 // ==============================|| DASHBOARD DEFAULT - POPULAR CARD ||============================== //
@@ -44,7 +42,7 @@ const PopularCards = ({ isLoading }) => {
                     <Typography variant="h4">Popular Stocks</Typography>
                   </Grid>
                   <Grid item>
-                    <MoreHorizOutlinedIcon
+                    <MoreHorizOutlined
                       fontSize="small"
                       sx={{
                         color: theme.palette.primary[200],
@@ -108,7 +106,7 @@ const PopularCards = ({ isLoading }) => {
                                 ml: 2
                               }}
                             >
-                              <KeyboardArrowUpOutlinedIcon fontSize="small" color="inherit" />
+                              <KeyboardArrowUpOutlined fontSize="small" color="inherit" />
                             </Avatar>
                           </Grid>
                         </Grid>
@@ -149,7 +147,7 @@ const PopularCards = ({ isLoading }) => {
                                 marginLeft: 1.875
                               }}
                             >
-                              <KeyboardArrowDownOutlinedIcon fontSize="small" color="inherit" />
+                              <KeyboardArrowDownOutlined fontSize="small" color="inherit" />
                             </Avatar>
                           </Grid>
                         </Grid>
@@ -190,7 +188,7 @@ const PopularCards = ({ isLoading }) => {
                                 ml: 2
                               }}
                             >
-                              <KeyboardArrowUpOutlinedIcon fontSize="small" color="inherit" />
+                              <KeyboardArrowUpOutlined fontSize="small" color="inherit" />
                             </Avatar>
                           </Grid>
                         </Grid>

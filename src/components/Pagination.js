@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { CardContent, Grid, Pagination, PaginationItem, Paper, Typography, Box, Stack } from '@mui/material';
 import DividerPage from 'utils/Divider';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 const PaginationPage = () => {
   const [page, setPage] = useState(1);
@@ -107,7 +106,7 @@ const PaginationPage = () => {
                     <Stack spacing={2}>
                       <Pagination
                         count={10}
-                        renderItem={(item) => <PaginationItem slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }} {...item} />}
+                        renderItem={(item) => <PaginationItem slots={{ previous: ArrowBack, next: ArrowForward }} {...item} />}
                       />
                     </Stack>
                   </Grid>

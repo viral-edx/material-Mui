@@ -1,5 +1,5 @@
 import React from 'react';
-import GridPage from './GridPage';
+import GridPage from './GridPage/GridPage';
 
 const InvoicePage = () => {
   return (

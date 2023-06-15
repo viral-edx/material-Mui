@@ -1,8 +1,6 @@
 import React from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, Button } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
-import HomeIcon from '@mui/icons-material/Home';
+import { Delete, Send, Home } from '@mui/icons-material';
 import DividerPage from 'utils/Divider';
 
 function ButtonPage() {
@@ -119,10 +117,10 @@ function ButtonPage() {
                   <Button variant="outlined" disabled>
                     Outlined
                   </Button>
-                  <Button startIcon={<HomeIcon />} disabled>
+                  <Button startIcon={<Home />} disabled>
                     Home
                   </Button>
-                  <Button variant="contained" endIcon={<SendIcon />} disabled>
+                  <Button variant="contained" endIcon={<Send />} disabled>
                     Send
                   </Button>
                 </Grid>
@@ -137,13 +135,13 @@ function ButtonPage() {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Button color="success" startIcon={<HomeIcon />}>
+                  <Button color="success" startIcon={<Home />}>
                     Home
                   </Button>
-                  <Button variant="contained" color="success" endIcon={<SendIcon />}>
+                  <Button variant="contained" color="success" end={<Send />}>
                     Send
                   </Button>
-                  <Button variant="outlined" color="success" startIcon={<DeleteIcon />}>
+                  <Button variant="outlined" color="success" startIcon={<Delete />}>
                     Delete
                   </Button>
                 </Grid>

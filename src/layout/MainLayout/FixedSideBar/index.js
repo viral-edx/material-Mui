@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { Box } from '@mui/material';
 import React from 'react';
-import { IconComponents, IconTable } from '@tabler/icons';
 import { useLocation, useNavigate } from 'react-router';
 import { useState } from 'react';
-import { Speed } from '@mui/icons-material';
+import { Speed, TableChart, GridView } from '@mui/icons-material';
 
 const components = [
   {
@@ -19,7 +18,7 @@ const components = [
     id: 'components-matrix',
     title: 'Matrix',
     type: 'item',
-    icon: IconTable,
+    icon: TableChart,
     url: '/matrix-grid',
     breadcrumbs: false
   },
@@ -27,7 +26,7 @@ const components = [
     id: 'components-comp',
     title: 'Components',
     type: 'item',
-    icon: IconComponents,
+    icon: GridView,
     url: '/components-button',
     breadcrumbs: false
   }

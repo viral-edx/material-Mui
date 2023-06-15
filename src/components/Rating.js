@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, Rating } from '@mui/material';
 import DividerPage from 'utils/Divider';
-import StarIcon from '@mui/icons-material/Star';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Star, Favorite, FavoriteBorder } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
 const labels = {
@@ -116,7 +114,7 @@ const RatingPage = () => {
                     onChangeActive={(event, newHover) => {
                       setHover(newHover);
                     }}
-                    emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                    emptyIcon={<Star style={{ opacity: 0.55 }} fontSize="inherit" />}
                   />
                   {value !== null && <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>}
                 </Grid>
@@ -155,8 +153,8 @@ const RatingPage = () => {
                     defaultValue={2}
                     getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                     precision={0.5}
-                    icon={<FavoriteIcon fontSize="inherit" />}
-                    emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                    icon={<Favorite fontSize="inherit" />}
+                    emptyIcon={<FavoriteBorder fontSize="inherit" />}
                   />
                 </Grid>
               </CardContent>

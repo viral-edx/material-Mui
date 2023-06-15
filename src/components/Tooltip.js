@@ -15,7 +15,7 @@ import {
   Zoom
 } from '@mui/material';
 import DividerPage from 'utils/Divider';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { Delete } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 
 const TooltipPage = () => {
@@ -71,7 +71,7 @@ const TooltipPage = () => {
                 <Grid container spacing={2} className="gridCard">
                   <Tooltip title="Delete">
                     <IconButton>
-                      <DeleteIcon />
+                      <Delete />
                     </IconButton>
                   </Tooltip>
                 </Grid>

@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, Divider, CardContent, Checkbox, FormControlLabel } from '@mui/material';
-
 import DividerPage from 'utils/Divider';
-import { pink } from '@mui/material/colors';
-import { FavoriteBorder } from '@mui/icons-material';
-import Favorite from '@mui/icons-material/Favorite';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { FavoriteBorder, Favorite, BookmarkBorder, Bookmark } from '@mui/icons-material';
 
 const CheckboxPage = () => {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -123,9 +118,9 @@ const CheckboxPage = () => {
                     {...colorLabel}
                     defaultChecked
                     sx={{
-                      color: pink[800],
+                      color: '#ad1457',
                       '&.Mui-checked': {
-                        color: pink[600]
+                        color: '#d81b60'
                       }
                     }}
                   />
@@ -142,7 +137,7 @@ const CheckboxPage = () => {
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
                   <Checkbox {...label} icon={<FavoriteBorder />} color="success" checkedIcon={<Favorite />} />
-                  <Checkbox {...label} icon={<BookmarkBorderIcon />} color="success" checkedIcon={<BookmarkIcon />} />
+                  <Checkbox {...label} icon={<BookmarkBorder />} color="success" checkedIcon={<Bookmark />} />
                 </Grid>
               </CardContent>
             </Paper>

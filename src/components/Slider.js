@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Stack, Paper, CardContent, Slider } from '@mui/material';
 import DividerPage from 'utils/Divider';
-import VolumeDown from '@mui/icons-material/VolumeDown';
-import VolumeUp from '@mui/icons-material/VolumeUp';
+import { VolumeUp, VolumeDown } from '@mui/icons-material';
 
 function valuetext(value) {
   return `${value}°C`;

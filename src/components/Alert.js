@@ -1,8 +1,7 @@
 import { Box, CardContent, Grid, Paper, Stack, Typography, Alert, AlertTitle } from '@mui/material';
 import React from 'react';
 import DividerPage from 'utils/Divider';
-import CheckIcon from '@mui/icons-material/Check';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { Check, CheckCircleOutline } from '@mui/icons-material';
 
 const AlertPage = () => {
   return (
@@ -72,12 +71,12 @@ const AlertPage = () => {
               <DividerPage />
               <CardContent className="demoOutput">
                 <Grid container spacing={2} className="gridCard">
-                  <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+                  <Alert icon={<Check fontSize="inherit" />} severity="success">
                     This is a success alert — check it out!
                   </Alert>
                   <Alert
                     iconMapping={{
-                      success: <CheckCircleOutlineIcon fontSize="inherit" />
+                      success: <CheckCircleOutline fontSize="inherit" />
                     }}
                   >
                     This is a success alert — check it out!

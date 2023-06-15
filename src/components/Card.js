@@ -16,15 +16,10 @@ import {
   CardActionArea
 } from '@mui/material';
 import DividerPage from 'utils/Divider';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Favorite, Share, MoreVert, SkipPrevious, PlayArrow, SkipNext } from '@mui/icons-material';
 import PaellaDish from '../assets/images/paella.jpg';
 import ContemplativeReptile from '../assets/images/contemplative-reptile.jpg';
 import LiveFromSpace from '../assets/images/live-from-space.jpg';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { useTheme } from '@mui/material/styles';
 
 const bull = (
@@ -101,7 +96,7 @@ const CardPage = () => {
                       }
                       action={
                         <IconButton aria-label="settings">
-                          <MoreVertIcon />
+                          <MoreVert />
                         </IconButton>
                       }
                       title="CheeseCake"
@@ -116,10 +111,10 @@ const CardPage = () => {
                     </CardContent>
                     <CardActions disableSpacing>
                       <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
+                        <Favorite />
                       </IconButton>
                       <IconButton aria-label="share">
-                        <ShareIcon />
+                        <Share />
                       </IconButton>
                     </CardActions>
                   </Card>
@@ -180,11 +175,11 @@ const CardPage = () => {
                         </Typography>
                       </CardContent>
                       <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                        <IconButton aria-label="previous">{theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}</IconButton>
+                        <IconButton aria-label="previous">{theme.direction === 'rtl' ? <SkipNext /> : <SkipPrevious />}</IconButton>
                         <IconButton aria-label="play/pause">
-                          <PlayArrowIcon sx={{ height: 38, width: 38 }} />
+                          <PlayArrow sx={{ height: 38, width: 38 }} />
                         </IconButton>
-                        <IconButton aria-label="next">{theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}</IconButton>
+                        <IconButton aria-label="next">{theme.direction === 'rtl' ? <SkipPrevious /> : <SkipNext />}</IconButton>
                       </Box>
                     </Box>
                     <CardMedia component="img" sx={{ width: 151 }} image={LiveFromSpace} alt="Live from space album cover" />

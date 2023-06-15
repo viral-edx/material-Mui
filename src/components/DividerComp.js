@@ -14,14 +14,16 @@ import {
 } from '@mui/material';
 import React from 'react';
 import DividerPage from 'utils/Divider';
-import ImageIcon from '@mui/icons-material/Image';
-import WorkIcon from '@mui/icons-material/Work';
-import BeachAccessIcon from '@mui/icons-material/BeachAccess';
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
-import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
-import FormatBoldIcon from '@mui/icons-material/FormatBold';
-import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import {
+  Image,
+  Work,
+  BeachAccess,
+  FormatAlignLeft,
+  FormatAlignCenter,
+  FormatAlignRight,
+  FormatBold,
+  FormatItalic
+} from '@mui/icons-material';
 
 const DividerPageComp = () => {
   const style = {
@@ -90,7 +92,7 @@ const DividerPageComp = () => {
                     <ListItem>
                       <ListItemAvatar>
                         <Avatar>
-                          <ImageIcon />
+                          <Image />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText primary="Photos" secondary="Jan 9, 2014" />
@@ -99,7 +101,7 @@ const DividerPageComp = () => {
                     <ListItem>
                       <ListItemAvatar>
                         <Avatar>
-                          <WorkIcon />
+                          <Work />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText primary="Work" secondary="Jan 7, 2014" />
@@ -108,7 +110,7 @@ const DividerPageComp = () => {
                     <ListItem>
                       <ListItemAvatar>
                         <Avatar>
-                          <BeachAccessIcon />
+                          <BeachAccess />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText primary="Vacation" secondary="July 20, 2014" />
@@ -156,7 +158,7 @@ const DividerPageComp = () => {
                     <ListItem>
                       <ListItemAvatar>
                         <Avatar>
-                          <BeachAccessIcon />
+                          <BeachAccess />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText primary="Vacation" secondary="July 20, 2014" />
@@ -191,12 +193,12 @@ const DividerPageComp = () => {
                         }
                       }}
                     >
-                      <FormatAlignLeftIcon />
-                      <FormatAlignCenterIcon />
-                      <FormatAlignRightIcon />
+                      <FormatAlignLeft />
+                      <FormatAlignCenter />
+                      <FormatAlignRight />
                       <Divider orientation="vertical" flexItem />
-                      <FormatBoldIcon />
-                      <FormatItalicIcon />
+                      <FormatBold />
+                      <FormatItalic />
                     </Box>
                   </div>
                 </Grid>
