@@ -2,8 +2,22 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { Box, Button, MenuItem, Select, Step, StepLabel, Stepper, TextField, Typography } from '@mui/material';
-import { Add, Delete, Menu, Search, Calculate, ContentCopy, CropSquare, ArrowBack } from '@mui/icons-material';
+import {
+  Box,
+  Button,
+  InputAdornment,
+  MenuItem,
+  OutlinedInput,
+  Select,
+  Step,
+  StepLabel,
+  Stepper,
+  TextField,
+  Typography
+} from '@mui/material';
+import { Add, Delete, Menu, Search, Calculate, ContentCopy, ArrowBack } from '@mui/icons-material';
+import { useTheme, styled } from '@mui/material/styles';
+import { shouldForwardProp } from '@mui/system';
 
 const InvoiceDetailed = () => {
   const navigate = useNavigate();
@@ -73,6 +87,7 @@ const InvoiceHeader = () => {
       label: 'US Dollar'
     }
   ];
+
   return (
     <div className="form-container">
       <form className="my-form">
@@ -229,10 +244,10 @@ const InvoiceHeader = () => {
 
       <div className="notes-footer">
         <div className="button-box">
-          <Button variant="contained" color="success">
+          <Button variant="outlined" color="tertiary">
             Save
           </Button>
-          <Button variant="outlined" color="success">
+          <Button variant="outlined" color="tertiary">
             Clear
           </Button>
         </div>
@@ -275,10 +290,6 @@ const InvoiceItems = () => {
         </div>
         <div className="input-row">
           <TextField label="Price Quantity" className="text-field textfield-border" type="number" size="small" />
-          <div className="default-icon menu-icon">
-            <CropSquare />
-          </div>
-          <span className="vat-width">incl. VAT</span>
         </div>
         <div>
           <TextField label="VAT" className="text-field textfield-border" type="number" size="small" />
@@ -301,10 +312,10 @@ const InvoiceItems = () => {
       </form>
       <div className="notes-footer">
         <div className="button-box">
-          <Button variant="contained" color="success">
+          <Button variant="outlined" color="tertiary">
             Add into item list
           </Button>
-          <Button variant="outlined" color="success">
+          <Button variant="outlined" color="tertiary">
             Clear Values
           </Button>
         </div>
@@ -403,14 +414,45 @@ const Pdf = () => {
   );
 };
 
+const OutlineInputStyle = styled(OutlinedInput, { shouldForwardProp })(({ theme }) => ({
+  width: 434,
+  marginLeft: 16,
+  paddingLeft: 16,
+  paddingRight: 16,
+  '& input': {
+    background: 'transparent !important',
+    paddingLeft: '4px !important'
+  },
+  [theme.breakpoints.down('lg')]: {
+    width: 250
+  },
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+    marginLeft: 4,
+    background: theme.palette.background.paper
+  }
+}));
+
 const SearchBar = () => {
+  const theme = useTheme();
+  const [value, setValue] = useState('');
+
   return (
-    <form className="search-form">
-      <span className="">
-        <Search size="20" />
-      </span>
-      <input type="search" className="search-input" placeholder="Search here" />
-    </form>
+    <Box sx={{ display: { xs: 'none', md: 'block' }, paddingTop: '14px', width: '50%' }}>
+      <OutlineInputStyle
+        className="text-field textfield-border"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Search"
+        startAdornment={
+          <InputAdornment position="start">
+            <Search stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
+          </InputAdornment>
+        }
+        aria-describedby="search-helper-text"
+        inputProps={{ 'aria-label': 'weight' }}
+      />
+    </Box>
   );
 };
 
@@ -483,10 +525,10 @@ const Workflow = () => {
         </div>
       </form>
       <div className="button-box">
-        <Button variant="contained" color="success">
+        <Button variant="outlined" color="tertiary">
           Submit
         </Button>
-        <Button variant="outlined" color="success">
+        <Button variant="outlined" color="tertiary">
           Clear Values
         </Button>
       </div>
@@ -509,10 +551,10 @@ const Workflow = () => {
         <div className="notes-footer">
           <div className="entries-width">Showing 1 to 1 of 1 entries</div>
           <div className="button-box">
-            <Button variant="contained" color="success">
+            <Button variant="outlined" color="tertiary">
               Previous
             </Button>
-            <Button variant="contained" color="success">
+            <Button variant="outlined" color="tertiary">
               Next
             </Button>
           </div>
@@ -527,7 +569,7 @@ const Notes = () => {
     <div className="notes-container">
       <div className="search-container">
         <SearchBar />
-        <Button sx={{ borderRadius: '20px', width: '100px', height: '40px' }} variant="contained" color="success">
+        <Button sx={{ borderRadius: '20px', width: '100px', height: '40px' }} variant="outlined" color="tertiary">
           Add
         </Button>
         <Select defaultValue={10}>
@@ -549,10 +591,10 @@ const Notes = () => {
       <div className="notes-footer">
         <div className="entries-width">Showing 0 to 0 of 0 entries</div>
         <div className="button-box">
-          <Button variant="contained" color="success">
+          <Button variant="outlined" color="tertiary">
             Previous
           </Button>
-          <Button variant="contained" color="success">
+          <Button variant="outlined" color="tertiary">
             Next
           </Button>
         </div>

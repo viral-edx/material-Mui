@@ -319,6 +319,11 @@
 
 .full-width {
   grid-column: 1 / -1;
+
+  .Mui-focused {
+    border: 1px solid red!important;
+  }
+
   /* span the full width of the grid */
 }
 
@@ -664,6 +669,7 @@ body .table-container tr:hover {
   margin-bottom: 30px;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 
 .entries-width {
