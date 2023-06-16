@@ -113,6 +113,7 @@ const MenuList = () => {
       breadcrumbs: false
     }
   ];
+
   const Matrix = [
     {
       id: 'matrix-grid',
@@ -153,7 +154,7 @@ const MenuList = () => {
       )}
 
       {/* matrix pages */}
-      {navigate.pathname.includes('/matrix') && (
+      {navigate.pathname.includes('matrix') && (
         <List>
           {Matrix.map((key) => {
             return (

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Box } from '@mui/material';
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import { Speed, TableChart, GridView } from '@mui/icons-material';
 
@@ -33,7 +33,6 @@ const components = [
 ];
 
 const FixedSideBar = () => {
-  const location = useLocation();
   const navigate = useNavigate();
   const [state, setState] = useState('/dashboard/default');
   return (

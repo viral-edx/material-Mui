@@ -109,7 +109,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--white-color);
   font-style: normal;
   font-weight: 500;
   font-size: var(--md-body-size);
@@ -202,7 +202,7 @@
   max-width: 300px;
   align-items: center;
   border: 1px solid var(--darkColor);
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .search-input {
@@ -306,7 +306,7 @@
 
 .display-wrapper {
   display: block;
-  background-color: #ffffff;
+  background-color: var(--white-color)fff;
   padding: var(--column-gap) 0;
   border-radius: var(--h4-size);
   height: calc(100vh - var(--topbar-height) - 17px);
@@ -533,7 +533,7 @@ form.searchable-dropdown {
 }
 
 .search-dropdown span:hover {
-  background-color: #f8f8f8;
+  background-color: var(--white-color);
 }
 
 .dropdown--arrow {
@@ -588,7 +588,7 @@ body .table-container th {
 }
 
 .table-container tr.table-row {
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 body .table-container tr {
@@ -639,12 +639,12 @@ body .table-container td.last-col {
 }
 
 body .table-container tr:hover {
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .table-data {
   padding: 20px;
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 10px;
   margin: 10px;
 }
@@ -715,7 +715,7 @@ body .table-container tr:hover {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  background: white;
+  background: var(--white-color);
 }
 
 .splitempty {
@@ -753,7 +753,7 @@ body .table-container tr:hover {
 .dropdown-arrow-wrapper {
   position: absolute;
   top: 100%;
-  background: #fff;
+  background: var(--white-color);
   padding: 0;
   right: 0;
   min-width: 160px;
@@ -1041,6 +1041,7 @@ box-header-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--white-color);
 }
 
 .date-tab {
@@ -1099,8 +1100,8 @@ box-header-right {
   border: 1px solid var(--grey-border);
   border-radius: 4px;
   overflow: hidden;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .tab-nav {
@@ -1127,11 +1128,11 @@ box-header-right {
 .tab-item.active {
   font-weight: bold;
   background-color: #B9CF55;
-  color: white;
+  color: var(--white-color);
 }
 
 .active .tab-label {
-  color: var(--darkColor);
+  color: var(--white-color);
 }
 
 .tab-label {
@@ -1175,7 +1176,6 @@ box-header-right {
   align-items: center;
   padding: 24px;
   gap: 24px;
-  // background-color: #f0f0f0;
 }
 
 .grid-item-1 {
@@ -1321,7 +1321,7 @@ label {
 }
 
 .filled-container * {
-  color: #fff;
+  color: var(--white-color);
 }
 
 .card--description {
@@ -1330,7 +1330,7 @@ label {
 
 .card-container.elevated-container {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .card--button {
@@ -1364,7 +1364,7 @@ label {
   transition: all var(--transition-duration) ease;
   gap: 11px;
   background: var(--tertiaryColor);
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 a[disabled],
@@ -1804,7 +1804,7 @@ md-outlined-text-field input {
 .input-row .default-icon {
   border-radius: 4px;
   /* background-color: var(--grey-border); */
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .input-row .default-icon::after {
@@ -1840,7 +1840,7 @@ md-outlined-text-field input {
   flex-direction: row;
   justify-content: center;
   margin: 10px;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -1869,7 +1869,7 @@ md-outlined-text-field input {
 }
 
 .textfield-border {
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 5px;
 
   fieldset {
@@ -1877,22 +1877,10 @@ md-outlined-text-field input {
   }
 
   input {
-    background-color: white;
+    background-color: var(--white-color);
   }
 
   select {
-    background-color: white;
+    background-color: var(--white-color);
   }
 }
-
-// Input field border color of Invoice Details Page
-
-// .css-1ai4cdw-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-//   color: #6c7365;
-// }
-
-// .css-olti0m-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
-// .css-lwmdw7-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
-// .css-1se79hc-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-//   border-color: #6c7365;
-// }
