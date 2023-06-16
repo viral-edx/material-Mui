@@ -172,13 +172,13 @@ const InvoiceDataPage = ({ data, itemsPerPage, header = '' }) => {
         {/* ---vertical split preview ended--- */}
       </div>
 
-      {/* ---vertical split preview started--- */}
+      {/* ---horizontal split preview started--- */}
       {toggle === 'horizontal' && (
         <div className={`full-view ${toggle === 'horizontal' ? 'active' : 'non-active'}`}>
           <SplitData setToggle={setToggle} toggle={toggle} splitData={splitData} />
         </div>
       )}
-      {/* ---vertical split preview ended--- */}
+      {/* ---horizontal split preview ended--- */}
     </>
   );
 };
