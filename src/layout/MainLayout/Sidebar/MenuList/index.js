@@ -126,10 +126,24 @@ const MenuList = () => {
       url: '/components-chips'
     },
     {
-      id: 'components-Avatar',
+      id: 'components-avatar',
       title: 'Avatar',
       type: 'item',
       url: '/components-avatar',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-dialog',
+      title: 'Dialog',
+      type: 'item',
+      url: '/components-dialog',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-snackbar',
+      title: 'SnackBar',
+      type: 'item',
+      url: '/components-snackbar',
       breadcrumbs: false
     }
   ];

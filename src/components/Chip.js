@@ -28,7 +28,7 @@ const ChipPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
@@ -55,7 +55,7 @@ const ChipPage = () => {
             </Paper>
 
             {/* Deletable Icon */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Deletable Icon
               </Typography>
@@ -69,7 +69,7 @@ const ChipPage = () => {
             </Paper>
 
             {/* Size */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Size
               </Typography>
@@ -86,7 +86,7 @@ const ChipPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Outlined */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Outlined
               </Typography>
@@ -114,7 +114,7 @@ const ChipPage = () => {
             </Paper>
 
             {/* Avatar & Icon */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Avatar & Icon
               </Typography>
@@ -139,7 +139,7 @@ const ChipPage = () => {
             </Paper>
 
             {/* Color */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Color
               </Typography>

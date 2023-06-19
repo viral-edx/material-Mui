@@ -577,7 +577,7 @@ const AutoCompletePage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Basic
               </Typography>
@@ -603,7 +603,7 @@ const AutoCompletePage = () => {
             </Paper>
 
             {/* With Image */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 With Image
               </Typography>
@@ -644,7 +644,7 @@ const AutoCompletePage = () => {
             </Paper>
 
             {/* Limit tags */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Limit tags
               </Typography>
@@ -669,7 +669,7 @@ const AutoCompletePage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Multiple Tags */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Multiple Tags
               </Typography>
@@ -691,7 +691,7 @@ const AutoCompletePage = () => {
             </Paper>
 
             {/* Fixed options */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Fixed options
               </Typography>
@@ -719,7 +719,7 @@ const AutoCompletePage = () => {
             </Paper>
 
             {/* Sizes */}
-            <Paper root elevation rounded elevation0 className="demoPaper">
+            <Paper root rounded className="demoPaper">
               <Typography variant="body1" title className="demoTypography">
                 Sizes
               </Typography>
