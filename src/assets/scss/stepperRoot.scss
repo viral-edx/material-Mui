@@ -22,12 +22,16 @@
 
     span {
         .Mui-active {
-            color: #B9CF55;
+            color: #B7EB00;
         }
         svg {
             margin-bottom: 6px;
             width: 1.5em;
             height: 1.5em;
+
+            text{
+                fill: black;
+            }
         }
     }
 }

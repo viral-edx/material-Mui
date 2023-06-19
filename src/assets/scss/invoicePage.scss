@@ -1041,7 +1041,6 @@ box-header-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--white-color);
 }
 
 .date-tab {
@@ -1127,12 +1126,12 @@ box-header-right {
 
 .tab-item.active {
   font-weight: bold;
-  background-color: #B9CF55;
+  background-color: #B7EB00;
   color: var(--white-color);
 }
 
 .active .tab-label {
-  color: var(--white-color);
+  color: black;
 }
 
 .tab-label {
@@ -1207,7 +1206,7 @@ md-outlined-text-field {
 }
 
 .invoice-header {
-  background-color: #B9CF55;
+  background-color: #B7EB00;
 }
 
 .progress-box .invoice-header {

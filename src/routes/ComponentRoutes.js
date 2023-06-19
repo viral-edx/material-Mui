@@ -18,7 +18,9 @@ import TooltipPage from 'components/Tooltip';
 import AlertPage from 'components/Alert';
 import CardPage from 'components/Card';
 import PaginationPage from 'components/Pagination';
-import Progress from '../components/Progress';
+import Progress from 'components/Progress';
+import AutoCompletePage from 'components/AutoComplete';
+import ChipPage from 'components/Chip';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -109,6 +111,14 @@ const ComponentLayoutRoute = {
     {
       path: '/components-pagination',
       element: <PaginationPage />
+    },
+    {
+      path: '/components-auto-complete',
+      element: <AutoCompletePage />
+    },
+    {
+      path: '/components-chips',
+      element: <ChipPage />
     }
   ]
 };

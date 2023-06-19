@@ -53,6 +53,20 @@ const components = {
       type: 'item',
       url: '/components-rating',
       breadcrumbs: false
+    },
+    {
+      id: 'components-auto-complete',
+      title: 'Auto Complete',
+      type: 'item',
+      url: '/components-auto-complete',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-chips',
+      title: 'Chips',
+      type: 'item',
+      url: '/components-chips',
+      breadcrumbs: false
     }
   ]
 };

@@ -25,31 +25,31 @@ function ProgressBar() {
           <Step name="Step 1">
             <div className="stepLabelRoot">
               <StepLabel className="stepLabel" />
-              <Typography>Steps 1</Typography>
+              <Typography variant="subtitle1">Steps 1</Typography>
             </div>
           </Step>
           <Step name="Step 2">
             <div className="stepLabelRoot">
               <StepLabel className="stepLabel" />
-              <Typography>Steps 2</Typography>
+              <Typography variant="subtitle1">Steps 2</Typography>
             </div>
           </Step>
           <Step name="Step 3">
             <div className="stepLabelRoot">
               <StepLabel className="stepLabel" />
-              <Typography>Steps 3</Typography>
+              <Typography variant="subtitle1">Steps 3</Typography>
             </div>
           </Step>
           <Step name="Step 4">
             <div className="stepLabelRoot">
               <StepLabel className="stepLabel" />
-              <Typography>Steps 4</Typography>
+              <Typography variant="subtitle1">Steps 4</Typography>
             </div>
           </Step>
           <Step name="Step 5">
             <div className="stepLabelRoot">
               <StepLabel className="stepLabel" />
-              <Typography>Steps 5</Typography>
+              <Typography variant="subtitle1">Steps 5</Typography>
             </div>
           </Step>
         </Stepper>
