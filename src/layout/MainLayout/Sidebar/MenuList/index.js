@@ -123,7 +123,13 @@ const MenuList = () => {
       id: 'components-chips',
       title: 'Chips',
       type: 'item',
-      url: '/components-chips',
+      url: '/components-chips'
+    },
+    {
+      id: 'components-Avatar',
+      title: 'Avatar',
+      type: 'item',
+      url: '/components-avatar',
       breadcrumbs: false
     }
   ];

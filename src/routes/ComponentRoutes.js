@@ -21,6 +21,7 @@ import PaginationPage from 'components/Pagination';
 import Progress from 'components/Progress';
 import AutoCompletePage from 'components/AutoComplete';
 import ChipPage from 'components/Chip';
+import AvtarPage from 'components/Avtar';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -119,6 +120,10 @@ const ComponentLayoutRoute = {
     {
       path: '/components-chips',
       element: <ChipPage />
+    },
+    {
+      path: '/components-avatar',
+      element: <AvtarPage />
     }
   ]
 };
