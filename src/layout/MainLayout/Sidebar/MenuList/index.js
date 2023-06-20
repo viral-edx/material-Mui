@@ -145,6 +145,34 @@ const MenuList = () => {
       type: 'item',
       url: '/components-snackbar',
       breadcrumbs: false
+    },
+    {
+      id: 'components-breadcrumbs',
+      title: 'Breadcrumbs',
+      type: 'item',
+      url: '/components-breadcrumbs',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-lists',
+      title: 'Lists',
+      type: 'item',
+      url: '/components-lists',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-typography',
+      title: 'Typography',
+      type: 'item',
+      url: '/components-typography',
+      breadcrumbs: false
+    },
+    {
+      id: 'components-accordion',
+      title: 'Accordion',
+      type: 'item',
+      url: '/components-accordion',
+      breadcrumbs: false
     }
   ];
 

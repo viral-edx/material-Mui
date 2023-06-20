@@ -24,6 +24,10 @@ import ChipPage from 'components/Chip';
 import AvtarPage from 'components/Avatar';
 import DialogPage from 'components/Dialog';
 import SnackbarPage from 'components/Snackbar';
+import BreadcrumbsPage from 'components/Breadcrumbs';
+import ListsPage from 'components/Lists';
+import TypographyPage from 'components/Typography';
+import AccordionPage from 'components/Accordion';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -134,6 +138,22 @@ const ComponentLayoutRoute = {
     {
       path: '/components-snackbar',
       element: <SnackbarPage />
+    },
+    {
+      path: '/components-breadcrumbs',
+      element: <BreadcrumbsPage />
+    },
+    {
+      path: '/components-lists',
+      element: <ListsPage />
+    },
+    {
+      path: '/components-typography',
+      element: <TypographyPage />
+    },
+    {
+      path: '/components-accordion',
+      element: <AccordionPage />
     }
   ]
 };

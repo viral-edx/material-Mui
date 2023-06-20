@@ -588,6 +588,7 @@ const AutoCompletePage = () => {
                     disablePortal
                     id="combo-box-demo"
                     options={top100Films}
+                    getOptionLabel={(option) => option.title}
                     sx={{ width: 300 }}
                     renderInput={(params) => <TextField {...params} label="Movie" />}
                   />
@@ -595,6 +596,7 @@ const AutoCompletePage = () => {
                     disablePortal
                     id="combo-box-demo"
                     options={top100Films}
+                    getOptionLabel={(option) => option.title}
                     sx={{ width: 300 }}
                     renderInput={(params) => <TextField {...params} placeholder="Movie" />}
                   />
