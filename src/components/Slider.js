@@ -53,12 +53,12 @@ const SliderPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Continuous sliders */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Continuous sliders
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
+              <CardContent className="demo-output">
                 <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
                   <VolumeDown />
                   <Slider aria-label="Volume" value={value} color="success" onChange={handleChange} />
@@ -69,14 +69,14 @@ const SliderPage = () => {
             </Paper>
 
             {/* Sizes */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Sizes
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
+              <CardContent className="demo-output">
                 <Box>
-                  <Grid container spacing={2} className="gridCard">
+                  <Grid container spacing={2} className="grid-card">
                     <Slider size="small" defaultValue={70} aria-label="Small" color="success" valueLabelDisplay="auto" />
                     <Slider defaultValue={50} aria-label="Default" color="success" valueLabelDisplay="auto" />
                   </Grid>
@@ -85,14 +85,14 @@ const SliderPage = () => {
             </Paper>
 
             {/* Discrete sliders */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Discrete sliders
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
+              <CardContent className="demo-output">
                 <Box>
-                  <Grid container spacing={2} className="gridCard">
+                  <Grid container spacing={2} className="grid-card">
                     <Slider
                       aria-label="Temperature"
                       defaultValue={30}
@@ -111,14 +111,14 @@ const SliderPage = () => {
             </Paper>
 
             {/* Colors */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Colors
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
+              <CardContent className="demo-output">
                 <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-                  <Grid container spacing={2} className="gridCard">
+                  <Grid container spacing={2} className="grid-card">
                     <Slider aria-label="Temperature" defaultValue={15} getAriaValueText={valuetext} />
                     <Slider aria-label="Temperature" defaultValue={30} getAriaValueText={valuetext} color="success" />
                     <Slider aria-label="Temperature" defaultValue={50} getAriaValueText={valuetext} color="warning" />
@@ -132,14 +132,14 @@ const SliderPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Range slider */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Range slider
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
+              <CardContent className="demo-output">
                 <Box>
-                  <Grid container spacing={2} className="gridCard">
+                  <Grid container spacing={2} className="grid-card">
                     <Slider
                       getAriaLabel={() => 'Temperature range'}
                       value={value1}
@@ -154,14 +154,14 @@ const SliderPage = () => {
             </Paper>
 
             {/* Vertical Slider */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Range slider
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
+              <CardContent className="demo-output">
                 <Box>
-                  <Grid container spacing={2} className="gridCard" height={500}>
+                  <Grid container spacing={2} className="grid-card" height={500}>
                     <Slider
                       aria-label="Temperature"
                       orientation="vertical"

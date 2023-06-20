@@ -172,13 +172,13 @@ const SnackbarPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Simple Snackbars */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Simple Snackbars
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button onClick={handleClick}>Open simple snackbar</Button>
                   <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} message="Note archived" action={action} />
                 </Grid>
@@ -186,13 +186,13 @@ const SnackbarPage = () => {
             </Paper>
 
             {/* Customization */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Customization
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" onClick={handleClickCustomized}>
                     Open success snackbar
                   </Button>
@@ -210,13 +210,13 @@ const SnackbarPage = () => {
             </Paper>
 
             {/* Positioned Snackbars*/}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Positioned Snackbars
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <div>
                     {buttons}
                     <Snackbar
@@ -235,13 +235,13 @@ const SnackbarPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Message Length */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Message Length
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Stack spacing={2} sx={{ maxWidth: 600 }}>
                     <SnackbarContent message="I love snacks." action={actionLength} />
                     <SnackbarContent
@@ -264,13 +264,13 @@ const SnackbarPage = () => {
             </Paper>
 
             {/* Control Slide Direction */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Control Slide Direction
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button onClick={handleClickTransition(TransitionLeft)}>Right</Button>
                   <Button onClick={handleClickTransition(TransitionUp)}>Up</Button>
                   <Button onClick={handleClickTransition(TransitionRight)}>Left</Button>

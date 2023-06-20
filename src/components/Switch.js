@@ -35,13 +35,13 @@ const SwitchPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Switch */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Switch {...label} defaultChecked color="success" />
                   <Switch {...label} color="success" />
                   <Switch {...label} disabled defaultChecked color="success" />
@@ -51,13 +51,13 @@ const SwitchPage = () => {
             </Paper>
 
             {/* Labeled Switch */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Labeled Switch
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <FormControlLabel control={<Switch defaultChecked color="success" />} label="Label" />
                   <FormControlLabel required control={<Switch color="success" />} label="Required" />
                   <FormControlLabel disabled control={<Switch color="success" />} label="Disabled" />
@@ -65,13 +65,13 @@ const SwitchPage = () => {
               </CardContent>
             </Paper>
             {/* With Size */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Size
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Switch {...label} defaultChecked size="small" color="success" />
                   <Switch {...label} defaultChecked color="success" />
                 </Grid>
@@ -82,13 +82,13 @@ const SwitchPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Color Switch */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Color
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Switch {...colorLabel} defaultChecked />
                   <Switch {...colorLabel} defaultChecked color="success" />
                   <Switch {...colorLabel} defaultChecked color="warning" />
@@ -99,13 +99,13 @@ const SwitchPage = () => {
             </Paper>
 
             {/* Label placement Switch */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Label placement
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <FormControlLabel value="top" control={<Switch color="success" />} label="Top" labelPlacement="top" />
                   <FormControlLabel value="start" control={<Switch color="success" />} label="Start" labelPlacement="start" />
                   <FormControlLabel value="bottom" control={<Switch color="success" />} label="Bottom" labelPlacement="bottom" />

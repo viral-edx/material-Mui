@@ -159,13 +159,13 @@ const DialogPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Dialog */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic Dialog
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Typography variant="subtitle1" component="div">
                     Selected: {selectedValue}
                   </Typography>
@@ -179,13 +179,13 @@ const DialogPage = () => {
             </Paper>
 
             {/* Transitions */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Transitions
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" onClick={handleClickOpenTransition}>
                     Slide in alert dialog
                   </Button>
@@ -213,13 +213,13 @@ const DialogPage = () => {
             </Paper>
 
             {/* Optional Sizes */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Optional Sizes
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" onClick={handleClickOpenWidth}>
                     Open max-width dialog
                   </Button>
@@ -276,13 +276,13 @@ const DialogPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Alerts */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Alerts
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" onClick={handleClickOpenAlert}>
                     Open alert dialog
                   </Button>
@@ -311,13 +311,13 @@ const DialogPage = () => {
             </Paper>
 
             {/* Form Dialogs */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Form Dialogs
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" onClick={handleClickOpenForm}>
                     Open form dialog
                   </Button>

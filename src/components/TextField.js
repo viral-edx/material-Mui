@@ -51,13 +51,13 @@ const TextFieldPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic TextField */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic TextField
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <TextField id="outlined-basic" label="Outlined" variant="outlined" />
                   <TextField id="filled-basic" label="Filled" variant="filled" />
                   <TextField id="standard-basic" label="Standard" variant="standard" />
@@ -66,13 +66,13 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Validation */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Validation
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <TextField error id="outlined-error" label="Error" defaultValue="Hello World" />
                   <TextField error id="outlined-error-helper-text" label="Error" defaultValue="Hello World" helperText="Incorrect entry." />
                 </Grid>
@@ -80,13 +80,13 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Form Props */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Form Props
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <TextField required id="filled-required" label="Required" defaultValue="Hello World" variant="filled" />
                   <TextField disabled id="filled-disabled" label="Disabled" defaultValue="Hello World" variant="filled" />
                   <TextField id="filled-password-input" label="Password" type="password" autoComplete="current-password" variant="filled" />
@@ -124,13 +124,13 @@ const TextFieldPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Select */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Select
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <TextField
                     id="filled-select-currency"
                     select
@@ -167,13 +167,13 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Input Adornments */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Input Adornments
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <TextField
                     placeholder="Website URL"
                     id="url-start-adornment"
@@ -212,13 +212,13 @@ const TextFieldPage = () => {
             </Paper>
 
             {/* Sizes */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Sizes
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <TextField label="Size" id="filled-size-small" defaultValue="Small" variant="filled" size="small" />
                   <TextField label="Size" id="filled-size-normal" defaultValue="Normal" variant="filled" />
                 </Grid>

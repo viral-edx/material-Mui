@@ -42,13 +42,13 @@ const MenuPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Menu */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic Menu
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button
                     id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -77,13 +77,13 @@ const MenuPage = () => {
             </Paper>
 
             {/* Icon menu */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Icon menu
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <MenuList sx={{ backgroundColor: '#f3f3f4' }}>
                     <MenuItem>
                       <ListItemIcon>
@@ -129,13 +129,13 @@ const MenuPage = () => {
 
           <Stack className="stack" spacing={2}>
             {/* Popup-state */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Popup-state
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <PopupState variant="popover" popupId="demo-popup-menu">
                     {(popupState) => (
                       <Fragment>

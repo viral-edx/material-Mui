@@ -49,13 +49,13 @@ const DividerPageComp = () => {
           <Stack className="stack" spacing={2}>
             {/* Inset dividers */}
 
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 List dividers
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List sx={style} component="nav" aria-label="mailbox folders">
                     <ListItem>
                       <ListItemText primary="Inbox" />
@@ -75,13 +75,13 @@ const DividerPageComp = () => {
                 </Grid>
               </CardContent>
             </Paper>
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Inset dividers
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List
                     sx={{
                       width: '100%',
@@ -123,13 +123,13 @@ const DividerPageComp = () => {
 
           <Stack className="stack" spacing={2}>
             {/* Subheader dividers */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Subheader dividers
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List
                     sx={{
                       width: '100%',
@@ -168,13 +168,13 @@ const DividerPageComp = () => {
               </CardContent>
             </Paper>
 
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Vertical dividers
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <div>
                     <Box
                       sx={{

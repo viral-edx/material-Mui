@@ -55,13 +55,13 @@ const BreadcrumbsPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Breadcrumbs */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic Breadcrumbs
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                       MUI
@@ -76,13 +76,13 @@ const BreadcrumbsPage = () => {
             </Paper>
 
             {/* Breadcrumbs With Icons */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Breadcrumbs With Icons
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" sx={{ display: 'flex', alignItems: 'center' }} color="inherit" href="/">
                       <Home sx={{ mr: 0.5 }} fontSize="inherit" />
@@ -107,13 +107,13 @@ const BreadcrumbsPage = () => {
             </Paper>
 
             {/* Customization */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Customization
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Breadcrumbs aria-label="breadcrumb">
                     <StyledBreadcrumb component="a" href="#" label="Home" icon={<Home fontSize="small" />} />
                     <StyledBreadcrumb component="a" href="#" label="Catalog" />
@@ -127,13 +127,13 @@ const BreadcrumbsPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Custom Separator */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Custom Separator
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Breadcrumbs separator="›" aria-label="breadcrumb">
                     {breadcrumbs}
                   </Breadcrumbs>
@@ -148,13 +148,13 @@ const BreadcrumbsPage = () => {
             </Paper>
 
             {/* Collapsed Breadcrumbs */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Collapsed Breadcrumbs
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Breadcrumbs maxItems={2} aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="#">
                       Home

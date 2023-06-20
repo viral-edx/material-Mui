@@ -25,13 +25,13 @@ const PaginationPage = () => {
             {/* First Stack (Left Side) */}
             <Stack className="stack" spacing={2}>
               {/*  Basic pagination */}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Basic pagination
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack spacing={2}>
                       <Pagination count={10} />
                       <Pagination count={10} color="primary" />
@@ -43,13 +43,13 @@ const PaginationPage = () => {
               </Paper>
 
               {/*   Rounded pagination */}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Rounded pagination
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack spacing={2}>
                       <Pagination count={10} shape="rounded" />
                       <Pagination count={10} variant="outlined" shape="rounded" />
@@ -59,13 +59,13 @@ const PaginationPage = () => {
               </Paper>
 
               {/* Pagination  size*/}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Pagination size
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack spacing={2}>
                       <Pagination count={10} size="small" />
                       <Pagination count={10} />
@@ -80,13 +80,13 @@ const PaginationPage = () => {
             <Stack className="stack" spacing={2}>
               {/* Buttons pagination */}
 
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Buttons
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack spacing={2}>
                       <Pagination count={10} showFirstButton showLastButton />
                       <Pagination count={10} hidePrevButton hideNextButton />
@@ -96,13 +96,13 @@ const PaginationPage = () => {
               </Paper>
 
               {/* Custom pagination */}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Custom
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack spacing={2}>
                       <Pagination
                         count={10}
@@ -114,13 +114,13 @@ const PaginationPage = () => {
               </Paper>
 
               {/*   Controlled pagination */}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Controlled pagination
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack spacing={2}>
                       <Typography>Page: {page}</Typography>
                       <Pagination count={10} page={page} onChange={handleChange} />

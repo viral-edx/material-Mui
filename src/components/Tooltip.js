@@ -62,13 +62,13 @@ const TooltipPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Simple Tooltips */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Simple Tooltips
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Tooltip title="Delete">
                     <IconButton>
                       <Delete />
@@ -79,13 +79,13 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Positioned Tooltips */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Positioned Tooltips
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Grid container justifyContent="center">
                     <Grid item>
                       <Tooltip title="Add" placement="top-start" color="success">
@@ -149,13 +149,13 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Triggers */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Triggers
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Grid container justifyContent="center">
                     <Grid item>
                       <Tooltip disableFocusListener title="Add" color="success">
@@ -201,13 +201,13 @@ const TooltipPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Variable width */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Variable width
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Tooltip title={longText} color="success">
                     <Button sx={{ m: 1 }}>Default Width [300px]</Button>
                   </Tooltip>
@@ -222,13 +222,13 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Interactive  */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Interactive
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Tooltip title="Add" disableInteractive color="success">
                     <Button>Not interactive</Button>
                   </Tooltip>
@@ -237,13 +237,13 @@ const TooltipPage = () => {
             </Paper>
 
             {/* Transitions  */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Transitions
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Tooltip title="Add" color="success">
                     <Button>Grow</Button>
                   </Tooltip>

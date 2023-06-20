@@ -60,13 +60,13 @@ const ProgressPage = () => {
             {/* First Stack (Left Side) */}
             <Stack className="stack" spacing={2}>
               {/*   Circular Indeterminate Progress */}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Circular Indeterminate
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <CircularProgress sx={{ color: 'red' }} />
                     <CircularProgress color="secondary" />
                     <CircularProgress color="success" />
@@ -78,13 +78,13 @@ const ProgressPage = () => {
               </Paper>
 
               {/* Linear Indeterminate*/}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Linear Indeterminate
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Box sx={{ width: '100%' }}>
                       <LinearProgress color="success" />
                     </Box>
@@ -96,13 +96,13 @@ const ProgressPage = () => {
             {/* Right Stack (Right Side) */}
             <Stack className="stack" spacing={2}>
               {/* Linear buffer progress*/}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Linear buffer
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Box sx={{ width: '100%' }}>
                       <LinearProgress variant="buffer" value={progress} color="success" valueBuffer={buffer} />
                     </Box>
@@ -111,13 +111,13 @@ const ProgressPage = () => {
               </Paper>
 
               {/* Linear  progress*/}
-              <Paper root rounded className="demoPaper">
-                <Typography variant="body1" title className="demoTypography">
+              <Paper root rounded className="demo-paper">
+                <Typography variant="body1" title className="demo-typography">
                   Linear color
                 </Typography>
                 <DividerPage />
-                <CardContent className="demoOutput">
-                  <Grid container spacing={2} className="gridCard">
+                <CardContent className="demo-output">
+                  <Grid container spacing={2} className="grid-card">
                     <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
                       <LinearProgress color="secondary" />
                       <LinearProgress color="success" />

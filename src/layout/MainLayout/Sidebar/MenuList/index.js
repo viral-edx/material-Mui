@@ -147,6 +147,7 @@ const MenuList = () => {
       breadcrumbs: false
     },
     {
+<<<<<<< HEAD
       id: 'components-breadcrumbs',
       title: 'Breadcrumbs',
       type: 'item',
@@ -172,6 +173,12 @@ const MenuList = () => {
       title: 'Accordion',
       type: 'item',
       url: '/components-accordion',
+    },
+    {
+      id: 'components-speed-dial',
+      title: 'Speed Dial',
+      type: 'item',
+      url: '/components-speed-dial',
       breadcrumbs: false
     }
   ];

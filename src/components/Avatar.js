@@ -62,13 +62,13 @@ const AvatarPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Vector avatars */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Vector avatars
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Stack direction="row" spacing={2}>
                     <Avatar alt="Remy Sharp" src={avatar1} />
                     <Avatar alt="Travis Howard" src={avatar2} />
@@ -79,13 +79,13 @@ const AvatarPage = () => {
             </Paper>
 
             {/* Letter avatars */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Letter avatars
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Avatar>H</Avatar>
                   <Avatar sx={{ bgcolor: '#fb8c00' }}>N</Avatar>
                   <Avatar sx={{ bgcolor: '#8e24aa' }}>OP</Avatar>
@@ -94,13 +94,13 @@ const AvatarPage = () => {
             </Paper>
 
             {/* Sizes Avatar */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Sizes Avatar
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   {' '}
                   <Avatar alt="Remy Sharp" src={avatar2} sx={{ width: 24, height: 24 }} />
                   <Avatar alt="Remy Sharp" src={avatar2} />
@@ -113,13 +113,13 @@ const AvatarPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Icon avatars */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Icon avatars
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Avatar>
                     <FolderIcon />
                   </Avatar>
@@ -134,13 +134,13 @@ const AvatarPage = () => {
             </Paper>
 
             {/* Interactive */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Interactive
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <AvatarGroup total={24}>
                     <Avatar alt="Remy Sharp" src={avatar1} />
                     <Avatar alt="Travis Howard" src={avatar2} />
@@ -152,13 +152,13 @@ const AvatarPage = () => {
             </Paper>
 
             {/* Transitions */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Transitions
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Stack direction="row" spacing={2}>
                     <StyledBadge overlap="circular" anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} variant="dot">
                       <Avatar alt="Remy Sharp" src={avatar2} />

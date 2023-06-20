@@ -45,13 +45,13 @@ const CheckboxPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Checkbox */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic Checkbox
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Checkbox {...label} defaultChecked color="success" />
                   <Checkbox {...label} color="success" />
                   <Checkbox {...label} disabled color="success" />
@@ -61,13 +61,13 @@ const CheckboxPage = () => {
             </Paper>
 
             {/* Labeled Checkbox */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Labeled Checkbox
               </Typography>
               <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <FormControlLabel control={<Checkbox defaultChecked color="success" />} label="Label" />
                   <FormControlLabel required control={<Checkbox color="success" />} label="Required" />
                   <FormControlLabel disabled control={<Checkbox color="success" />} label="Disabled" />
@@ -75,13 +75,13 @@ const CheckboxPage = () => {
               </CardContent>
             </Paper>
             {/* With Indeterminate */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Indeterminate
               </Typography>
               <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <div>
                     <FormControlLabel
                       label="Parent"
@@ -104,13 +104,13 @@ const CheckboxPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Color Checkbox */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Color
               </Typography>
               <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Checkbox {...colorLabel} defaultChecked />
                   <Checkbox {...colorLabel} defaultChecked color="success" />
                   <Checkbox {...colorLabel} defaultChecked color="default" />
@@ -129,13 +129,13 @@ const CheckboxPage = () => {
             </Paper>
 
             {/* Icon Checkbox */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Icon
               </Typography>
               <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Checkbox {...label} icon={<FavoriteBorder />} color="success" checkedIcon={<Favorite />} />
                   <Checkbox {...label} icon={<BookmarkBorder />} color="success" checkedIcon={<Bookmark />} />
                 </Grid>
@@ -143,13 +143,13 @@ const CheckboxPage = () => {
             </Paper>
 
             {/* Sizes Button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Size
               </Typography>
               <Divider sx={{ mt: 0.25, mb: 1.25 }} />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Checkbox {...sizeLabel} defaultChecked size="small" color="success" />
                   <Checkbox {...sizeLabel} defaultChecked color="success" />
                   <Checkbox {...sizeLabel} defaultChecked color="success" sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} />

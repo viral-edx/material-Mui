@@ -80,13 +80,13 @@ const ListsPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic List */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic List
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List className="list-page" component="nav" aria-label="mailbox folders">
                     <ListItem divider>
                       <ListItemButton className="list-hover-item">
@@ -128,13 +128,13 @@ const ListsPage = () => {
             </Paper>
 
             {/* Sticky Sub-Header */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Sticky Sub-Header
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List
                     sx={{
                       width: '100%',
@@ -168,13 +168,13 @@ const ListsPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Nested List */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Nested List
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List className="list-page" component="nav" aria-label="mailbox folders">
                     <ListItemButton className="list-hover-item">
                       <ListItemIcon>
@@ -211,13 +211,13 @@ const ListsPage = () => {
             </Paper>
 
             {/* List Controls */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 List Controls
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                     {[0, 1, 2, 3].map((value) => {
                       const labelId = `checkbox-list-secondary-label-${value}`;
@@ -249,13 +249,13 @@ const ListsPage = () => {
             </Paper>
 
             {/* Virtualized List */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Virtualized List
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Box sx={{ width: '100%', height: 400, maxWidth: 360, bgcolor: 'background.paper' }}>
                     <FixedSizeList height={400} width={360} itemSize={46} itemCount={200} overscanCount={5}>
                       {renderRow}

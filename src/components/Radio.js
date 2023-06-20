@@ -44,13 +44,13 @@ const RadioPage = () => {
       <Box className="demoBox">
         <Grid container className="demoGrid">
           <Stack className="stack" spacing={2}>
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <RadioGroup aria-label="gender" defaultValue="male" name="radio-buttons-group" row>
                     <FormControlLabel value="male" control={<Radio color="success" />} label="Male" />
                     <FormControlLabel value="female" control={<Radio color="success" />} label="Female" />
@@ -61,13 +61,13 @@ const RadioPage = () => {
             </Paper>
 
             {/* colored radio button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Color
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <RadioGroup aria-label="gender" defaultValue="Primary" name="radio-buttons-group" row>
                     <FormControlLabel value="Primary" control={<Radio {...controlColorProps('a')} />} label="Primary" />
                     <FormControlLabel value="Success" control={<Radio {...controlColorProps('c')} color="success" />} label="Success" />
@@ -124,13 +124,13 @@ const RadioPage = () => {
 
           <Stack className="stack" spacing={2}>
             {/* size radio button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Size
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <RadioGroup aria-label="gender" defaultValue="Default" name="radio-buttons-group" row>
                     <FormControlLabel
                       value="Default"
@@ -160,13 +160,13 @@ const RadioPage = () => {
             </Paper>
 
             {/* label placement radio */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Label placement
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <RadioGroup row aria-labelledby="demo-form-control-label-placement" name="position" defaultValue="top">
                     <FormControlLabel value="top" control={<Radio color="success" />} label="Top" labelPlacement="top" />
                     <FormControlLabel value="start" control={<Radio color="success" />} label="Start" labelPlacement="start" />

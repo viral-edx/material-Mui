@@ -20,13 +20,13 @@ const AlertPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic alerts */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic alerts
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Alert severity="error">This is an error alert — check it out!</Alert>
                   <Alert severity="warning">This is a warning alert — check it out!</Alert>
                   <Alert severity="info">This is an info alert — check it out!</Alert>
@@ -36,13 +36,13 @@ const AlertPage = () => {
             </Paper>
 
             {/* Description */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Description
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Alert severity="error">
                     <AlertTitle>Error</AlertTitle>
                     This is an error alert — <strong>check it out!</strong>
@@ -64,13 +64,13 @@ const AlertPage = () => {
             </Paper>
 
             {/* Icons */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Icons
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Alert icon={<Check fontSize="inherit" />} severity="success">
                     This is a success alert — check it out!
                   </Alert>
@@ -92,13 +92,13 @@ const AlertPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Variants with outlined */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Variants with outlined
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Alert variant="outlined" severity="error">
                     This is an error alert — check it out!
                   </Alert>
@@ -116,13 +116,13 @@ const AlertPage = () => {
             </Paper>
 
             {/* Variants with filled */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Variants with filled
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Alert variant="filled" severity="error">
                     This is an error alert — check it out!
                   </Alert>
@@ -140,13 +140,13 @@ const AlertPage = () => {
             </Paper>
 
             {/* Color */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Color
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Alert severity="success">This is a success alert — check it out!</Alert>
                   <Alert severity="success" color="secondary">
                     This is a success alert — check it out!

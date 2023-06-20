@@ -28,6 +28,7 @@ import BreadcrumbsPage from 'components/Breadcrumbs';
 import ListsPage from 'components/Lists';
 import TypographyPage from 'components/Typography';
 import AccordionPage from 'components/Accordion';
+import SpeedDialPage from 'components/SpeedDial';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -154,6 +155,10 @@ const ComponentLayoutRoute = {
     {
       path: '/components-accordion',
       element: <AccordionPage />
+    },
+    {
+      path: '/components-speed-dial',
+      element: <SpeedDialPage />
     }
   ]
 };

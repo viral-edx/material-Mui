@@ -19,13 +19,13 @@ function ButtonPage() {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic Button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic Button
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="contained">Default</Button>
                   <Button variant="contained" color="success">
                     Success
@@ -41,13 +41,13 @@ function ButtonPage() {
             </Paper>
 
             {/* Text Button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Text Button
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button>Default</Button>
                   <Button color="success">Success</Button>
                   <Button color="warning">Warning</Button>
@@ -57,13 +57,13 @@ function ButtonPage() {
             </Paper>
 
             {/* Sizes Button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Sizes
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined" color="success" size="small">
                     Small
                   </Button>
@@ -81,13 +81,13 @@ function ButtonPage() {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Outlined Button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Outlined Button
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button variant="outlined">Default</Button>
                   <Button variant="outlined" color="success">
                     Success
@@ -103,13 +103,13 @@ function ButtonPage() {
             </Paper>
 
             {/* Disabled Button */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Disabled Button
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button disabled>Default</Button>
                   <Button variant="contained" disabled>
                     Contained
@@ -128,13 +128,13 @@ function ButtonPage() {
             </Paper>
 
             {/* With Icon */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 With Icon
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Button color="success" startIcon={<Home />}>
                     Home
                   </Button>

@@ -28,13 +28,13 @@ const ChipPage = () => {
           {/* First Stack (Left Side) */}
           <Stack className="stack" spacing={2}>
             {/* Basic */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Basic
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Chip label="Default" />
                   <Chip label="Color" color="primary" />
                   <Chip label="Disabled" color="primary" disabled />
@@ -55,13 +55,13 @@ const ChipPage = () => {
             </Paper>
 
             {/* Deletable Icon */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Deletable Icon
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Chip label="Deletable" onDelete={handleDelete} color="error" />
                   <Chip label="Deletable" variant="outlined" onDelete={handleDelete} color="error" />
                 </Grid>
@@ -69,13 +69,13 @@ const ChipPage = () => {
             </Paper>
 
             {/* Size */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Size
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Chip label="Small" size="small" />
                   <Chip label="Medium" />
                 </Grid>
@@ -86,13 +86,13 @@ const ChipPage = () => {
           {/* Right Stack (Right Side) */}
           <Stack className="stack" spacing={2}>
             {/* Outlined */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Outlined
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Chip label="Default" variant="outlined" />
                   <Chip label="Color" color="primary" variant="outlined" />
                   <Chip label="Disabled" color="primary" disabled variant="outlined" />
@@ -114,13 +114,13 @@ const ChipPage = () => {
             </Paper>
 
             {/* Avatar & Icon */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Avatar & Icon
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Chip color="secondary" variant="light" icon={<PlayCircleFilled />} label="Play" />
                   <Chip
                     color="primary"
@@ -139,13 +139,13 @@ const ChipPage = () => {
             </Paper>
 
             {/* Color */}
-            <Paper root rounded className="demoPaper">
-              <Typography variant="body1" title className="demoTypography">
+            <Paper root rounded className="demo-paper">
+              <Typography variant="body1" title className="demo-typography">
                 Color
               </Typography>
               <DividerPage />
-              <CardContent className="demoOutput">
-                <Grid container spacing={2} className="gridCard">
+              <CardContent className="demo-output">
+                <Grid container spacing={2} className="grid-card">
                   <Chip label="Primary" color="primary" />
                   <Chip label="Secondary" color="secondary" />
                   <Chip label="Success" color="success" />
