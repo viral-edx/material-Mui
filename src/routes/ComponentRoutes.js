@@ -24,6 +24,7 @@ import ChipPage from 'components/Chip';
 import AvtarPage from 'components/Avatar';
 import DialogPage from 'components/Dialog';
 import SnackbarPage from 'components/Snackbar';
+import SpeedDialPage from 'components/SpeedDial';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -134,6 +135,10 @@ const ComponentLayoutRoute = {
     {
       path: '/components-snackbar',
       element: <SnackbarPage />
+    },
+    {
+      path: '/components-speed-dial',
+      element: <SpeedDialPage />
     }
   ]
 };

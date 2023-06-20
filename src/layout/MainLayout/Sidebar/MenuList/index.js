@@ -145,6 +145,13 @@ const MenuList = () => {
       type: 'item',
       url: '/components-snackbar',
       breadcrumbs: false
+    },
+    {
+      id: 'components-speed-dial',
+      title: 'Speed Dial',
+      type: 'item',
+      url: '/components-speed-dial',
+      breadcrumbs: false
     }
   ];
 
