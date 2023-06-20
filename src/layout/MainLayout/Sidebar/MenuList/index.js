@@ -167,12 +167,12 @@ const MenuList = () => {
       url: '/components-typography',
       breadcrumbs: false
     },
-    {
-      id: 'components-accordion',
-      title: 'Accordion',
-      type: 'item',
-      url: '/components-accordion'
-    },
+    // {
+    //   id: 'components-accordion',
+    //   title: 'Accordion',
+    //   type: 'item',
+    //   url: '/components-accordion'
+    // },
     {
       id: 'components-speed-dial',
       title: 'Speed Dial',
